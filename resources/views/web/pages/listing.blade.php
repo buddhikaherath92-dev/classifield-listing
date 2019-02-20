@@ -130,7 +130,7 @@
                                                 <li class="list-group-item ellipsis">
                                                     <a href="{{url('/list/'.$category['sub_cat'][$subCatIndex]['slug'])}}">
                                                         <img src="{{$subCategory['image']}}" alt="category" class="img-fluid" style="width: 24px">
-                                                        {{ $subategory['name'] === 'All' ? '('.$category['count'].')' : '('.$subCategory['sub_count'].')'}} {{$subCategory['name']}}
+                                                        {{ $subCategory['name'] === 'All' ? '('.$category['count'].')' : '('.$subCategory['sub_count'].')'}} {{$subCategory['name']}}
                                                     </a>
                                                 </li>
                                             @endforeach
