@@ -30,7 +30,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fa fa-phone" aria-hidden="true">  +9470 366 3217</i>
+                                    <i class="fa fa-phone" aria-hidden="true">  +9470 311 3217</i>
                                 </a>
                             </li>
                         </ul>

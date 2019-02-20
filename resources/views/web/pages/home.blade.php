@@ -36,6 +36,10 @@
                         <h2>Featured Advertisements</h2>
                     </div>
                     <div class="cp-carousel nav-control-top category-grid-layout2" data-loop="true" data-items="3" data-margin="30" data-autoplay="true" data-autoplay-timeout="10000" data-smart-speed="2000" data-dots="false" data-nav="true" data-nav-speed="false" data-r-x-small="1" data-r-x-small-nav="true" data-r-x-small-dots="false" data-r-x-medium="2" data-r-x-medium-nav="true" data-r-x-medium-dots="false" data-r-small="2" data-r-small-nav="true" data-r-small-dots="false" data-r-medium="2" data-r-medium-nav="true" data-r-medium-dots="false" data-r-large="3" data-r-large-nav="true" data-r-large-dots="false">
+                        @if(count($featured_advertisements) === 0 )
+                            <h4>There are no advertisements at this movement</h4>
+                        @endif
+
                         @foreach($featured_advertisements as  $featuredAdsIndex => $featured_advertisement)
                             <div class="product-box item-mb zoom-gallery">
                                 <div class="item-mask-wrapper">

@@ -487,5 +487,5 @@ return [
         25=>'Nuwara eliya'
 
     ],
-    'admin_email'=>'kevinforgithub@gmail.com'
+    'admin_email'=>'adrpdmail@gmail.com'
 ];
