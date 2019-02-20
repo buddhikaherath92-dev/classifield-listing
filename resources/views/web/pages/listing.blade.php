@@ -79,7 +79,7 @@
                                                 {{config('constance.categories')[$advertisement->category_id]['name']}}
                                             </div>
 
-                                            <h3 class="short-title ellipsis" style="width: 80%">
+                                            <h3 class="short-title ellipsis" style="width: 55%">
                                                 <a href="{{url('/ad/'.config('constance.categories')[$advertisement
                                         ->category_id]['slug']).'/'.$advertisement->slug}}">
                                                     {{$advertisement->title}}
@@ -95,7 +95,7 @@
 
                                             <p>{{$advertisement->description}}</p>
 
-                                            <div class="price">{{$advertisement->price ? 'Rs '.number_format($advertisement->price) : "N/A"}}</div>
+                                            <div class="price" style="width: 45%">{{$advertisement->price ? 'Rs '.number_format($advertisement->price) : "N/A"}}</div>
 
                                             <a href="#" class="product-details-btn">Details</a>
                                         </div>
