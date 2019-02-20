@@ -120,7 +120,7 @@
                                     <li>
                                         <a data-toggle="collapse" href="{{'#subcat'.$catIndex}}">
                                             <img src="{{$category['icon']}}" alt="category" class="img-fluid">
-                                            {{$category['name']}} ({{$category['count']}})
+                                            <b>{{$category['name']}}</b> ({{$category['count']}})
                                         </a>
 
                                     </li>
@@ -129,8 +129,8 @@
                                             @foreach($category['sub_cat'] as $subCatIndex => $subCategory)
                                                 <li class="list-group-item ellipsis">
                                                     <a href="{{url('/list/'.$category['sub_cat'][$subCatIndex]['slug'])}}">
-                                                        <img src="{{$subCategory['image']}}" alt="category" class="img-fluid">
-                                                        {{$subCategory['name']}}
+                                                        <img src="{{$subCategory['image']}}" alt="category" class="img-fluid" style="width: 24px">
+                                                        {{ $subCategory['name'] === 'All' ? '('.$category['count'].')' : '('.$subCategory['sub_count'].')'}} {{$subCategory['name']}}
                                                     </a>
                                                 </li>
                                             @endforeach
