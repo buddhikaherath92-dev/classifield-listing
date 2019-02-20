@@ -1,3 +1,5 @@
 .env
 .idea/
 /vendor/
+/public/images/advertisements/
+/public/images/user_profile_pictures/
