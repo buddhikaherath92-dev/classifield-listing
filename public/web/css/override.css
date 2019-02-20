@@ -1,0 +1,100 @@
+#logo-part-one{
+    color: yellow;
+    font-family: cursive;
+    font-style: italic;
+}
+#logo-part-two{
+    color: white;
+    font-family: Roboto;
+}
+
+.s-space-bottom-full {
+    margin-top: 123px;
+}
+
+
+#ad-box-img-wrapper{
+    position: relative;
+}
+
+.ad-image{
+    height: 150px;
+    width: auto;
+    display: block;
+    margin: auto;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.item-mask:hover{
+    background: #1D976C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.item-mask:hover .ad-image {
+    background-color: #222222;
+    opacity: 0.9;
+}
+
+.item-mask:hover .middle {
+    opacity: 1;
+}
+
+.icon {
+    color: white;
+    font-size: 16px;
+}
+
+.ellipsis {
+    text-overflow: ellipsis;
+
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 991px) {
+    .s-space-bottom-full {
+        margin-top: 0;
+    }
+}
+
+.iti-flag {background-image: url("../vendor/intl-tel-input-14.0.0/build/img/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .iti-flag {background-image: url("../vendor/intl-tel-input-14.0.0/build/img/flags@2x.png");}
+}
+.invalid-feedback {
+    display: none;
+    margin-top: .25rem;
+    font-size: -3.125rem;
+    color: #dc3545;
+    background: antiquewhite;
+    padding: 4px;
+    width: fit-content;
+    border: coral solid 0.8px;
+    border-radius: 3px;
+}
+
+@-moz-document url-prefix() {
+    input[type="file"] {
+        height: auto;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+}
