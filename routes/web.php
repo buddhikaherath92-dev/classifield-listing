@@ -23,6 +23,7 @@ Route::get('/list/{slug}', 'ListingController@show');
 Route::get('/search', 'SearchController@show')->name('search_ads');
 Route::get('/show_verification', 'VerificationController@show')->name('show_verification');
 Route::post('/verify_user', 'VerificationController@checkVerifyCode')->name('verify_user');
+Route::get('/show_aboutAs','AboutAsController@show');
 
 // admin panel routes
 Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'admin' ], function () {
