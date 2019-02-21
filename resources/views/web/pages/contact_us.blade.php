@@ -66,19 +66,19 @@
                     <div class="sidebar-item-box">
                         <ul class="sidebar-more-option">
                             <li>
-                                <a href="{{'/show_aboutAs'}}"><img src="{{asset('web/img/contact/more1.png')}}">Post a Free Ad</a>
+                                <a href="{{'/post_advertisement'}}"><img src="{{asset('web/img/contact/more1.png')}}">Post a Free Ad</a>
                             </li>
                             <li>
-                                <a href="#"><img src="{{asset('web/img/contact/more2.png')}}">Manage Product</a>
+                                <a class="login-btn"data-toggle="modal" data-target="#myModal"><img src="{{asset('web/img/contact/more2.png')}}">Manage Product</a>
                             </li>
-                            <li>
-                                <a href="favourite-ad-list.html"><img src="{{asset('web/img/contact/more3.png')}}">Favorite Ad list</a>
-                            </li>
+                            {{--<li>--}}
+                                {{--<a href="favourite-ad-list.html"><img src="{{asset('web/img/contact/more3.png')}}">Favorite Ad list</a>--}}
+                            {{--</li>--}}
                         </ul>
                     </div>
                     <div class="sidebar-item-box">
                         {{--<img src="img/banner/sidebar-banner1.jpg" alt="banner" class="img-fluid m-auto">--}}
-                        <img src="{{asset('web/img/contact/sidebar-banner1.jpg')}}"alt="banner" class="img-fluid m-auto">
+                        <img src="{{asset('web/img/contact/online_shopping_concept_male_and_various_goods_illustration_6826369.jpg')}}"alt="banner" class="img-fluid m-auto">
                     </div>
                 </div>
             </div>

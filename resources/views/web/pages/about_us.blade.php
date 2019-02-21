@@ -27,7 +27,7 @@
 </style>
 <div class="col-10">
 
-    <div class="container" style="margin-top: 150px ; text-align: center;margin-left: 10%">
+    <div class="container jumbotron" style="margin-top: 150px ; text-align: center;margin-left: 10%;background-color: #f2f2f3!important;;">
         <br>
         <div class="well">
             <h2 class="text-divider"><span >What is AluthAdslk?</span></h2>
