@@ -374,7 +374,7 @@
                                                 <td width="580" valign="top" align="center" style="padding:0;Margin:0;">
                                                     <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
                                                         <tr style="border-collapse:collapse;">
-                                                            <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:25px;padding-bottom:25px;"> <img src="http://aluthads.developers-in.com/web/img/logo.png" alt="" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;" width="398"></td>
+                                                            <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:25px;padding-bottom:25px;"> <img src="{{env('APP_URL')}}web/img/logo.png" alt="" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;" width="398"></td>
                                                         </tr>
                                                     </table> </td>
                                             </tr>
