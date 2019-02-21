@@ -22,7 +22,8 @@
         [class*="col-"] {
             width: 100%;
         }
-    };
+    }
+
 </style>
 <div class="col-10">
 
