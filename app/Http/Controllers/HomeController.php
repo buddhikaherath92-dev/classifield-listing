@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Advertisement;
+use App\Subscriber;
 use App\User;
 use Illuminate\Http\Request;
 use Alert;
@@ -23,5 +24,12 @@ class HomeController extends Controller
         ]);
     }
 
-
+    public function subscribe()
+    {
+        $incomingData = request()->validate(['email_subscribe' => 'required|string|min:6']);
+        Subscriber::create([
+            'subscriber_email' => $incomingData['email_subscribe']
+        ]);
+        return redirect()->back();
+    }
 }
