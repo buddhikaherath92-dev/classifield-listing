@@ -89,6 +89,5 @@
            $('#display'+id).remove();
            array.splice(id);
         }
-
     </script>
 @endsection

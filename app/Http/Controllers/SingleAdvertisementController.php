@@ -17,6 +17,7 @@ class SingleAdvertisementController extends Controller
         $advertisement = Advertisement::where('slug', $request->slug)->first();
         return view('web.pages.single_advertisement', [
             'advertisement' => $advertisement,
+            'price_type'=>$advertisement->is_negotiable,
             'category' => config('constance.categories')[$advertisement->category_id]['name'],
             'seller' => User::where('id', $advertisement->user_id)->first(),
             'seller_ads' => Advertisement::where('user_id', $advertisement->user_id)->where('is_inactive', 0)

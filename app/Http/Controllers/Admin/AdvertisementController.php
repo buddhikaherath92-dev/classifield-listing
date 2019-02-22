@@ -56,11 +56,11 @@ class AdvertisementController extends Controller
         unset($data['id']);
         $email1=Advertisement::join('users', 'advertisements.user_id', 'users.id')->where('advertisements.id',request('id'))->get();
         $email=($email1[0]['email']);
-        $featured_add=" now featured";
-        $featured_remove="remove from featured ";
+        $featured_add=" on featured advertisements";
+        $featured_remove="remove from featured advertisements";
         $user_name=($email1[0]['name']);
-        $activate_msg="now on live ";
-        $deactivate_msg="deactivate";
+        $activate_msg="on live ";
+        $deactivate_msg="deactivated";
         $inactive=request('is_inactive');
         $featured_ad=request('is_featured');
         if (isset($inactive)){

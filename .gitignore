@@ -1,4 +1,9 @@
 .env
 .idea/
 /vendor/
+<<<<<<< HEAD
 public/images/advertisements/
+=======
+/public/images/advertisements/
+/public/images/user_profile_pictures/
+>>>>>>> 1583daa983567d3e2c7a1cc4a72a7ac3a11945ea

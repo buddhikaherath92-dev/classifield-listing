@@ -336,7 +336,7 @@
                 mapTypeControlOptions: {
                     mapTypeIds: ['Styled']
                 },
-                center: new google.maps.LatLng(-37.81618, 144.95692),
+                center: new google.maps.LatLng(6.927079,79.861244),
                 zoom: 11,
                 disableDefaultUI: true,
                 mapTypeId: 'Styled'
@@ -344,6 +344,12 @@
             var div = document.getElementById('googleMap');
             var map = new google.maps.Map(div, options);
             var styledMapType = new google.maps.StyledMapType(styles, {name: 'Styled'});
+            var marker = new google.maps.Marker({
+                position: options,
+                map: map
+            });
+
+
             map.mapTypes.set('Styled', styledMapType);
         };
     }

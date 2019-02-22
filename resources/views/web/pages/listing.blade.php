@@ -56,6 +56,11 @@
                         <h2>{{$heading}}</h2>
                     </div>
                     <div class="row category-grid-layout2 zoom-gallery">
+                        @if(count($advertisements) === 0 )
+
+                            <div class="alert alert-success" role="alert" style="">There Are No  {{$heading}}  At This Movement.</div>
+
+                        @endif
                         @foreach($advertisements as  $featuredAdsIndex => $advertisement)
                                 <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-12">
                                     <div class="product-box item-mb zoom-gallery">

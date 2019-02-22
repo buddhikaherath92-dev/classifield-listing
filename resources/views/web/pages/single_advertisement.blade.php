@@ -146,6 +146,15 @@
                                         </div>
                                     </div>
                                 </li>
+                                <li>
+                                    <div class="media">
+                                        <img src="{{asset('web/img/user/bank.png')}}" alt="user" class="img-fluid pull-left">
+                                        <div class="media-body">
+                                            <span>Price</span>
+                                            <h4>{{$price_type == 1 ? 'Negotiable':'Fixed'}}</h4>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
