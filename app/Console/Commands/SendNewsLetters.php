@@ -55,8 +55,6 @@ class SendNewsLetters extends Command
                     ->join('advertisements', 'news_letter_details.advertisement_id', 'advertisements.id')
                     ->select('advertisements.*')
                     ->get();
-
-
             }
         }
         Mail::to($subscriber->subscriber_email)->send(new SendNewsLetterMailable($this->advertisements));
