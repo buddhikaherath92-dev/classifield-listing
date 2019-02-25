@@ -37,17 +37,30 @@ class PostAdvertisementController extends Controller
     /**
      * Show post advertisement page
      */
-    public function index(){
-        $checkBox=0;
-        if (isset($_GET['ad'])){
-            $_GET['ad'] === 'Premium'? $checkBox=1:$checkBox=0;
+    public function index()
+    {
+        $user = Auth::user();
+//        dd($user);
+        if ($user == null) {
+            return redirect('/show_login');
+        }
+        $email_verified_at=request()->user()->email_verified_at;
+
+        if ($email_verified_at==null){
+            return redirect('/show_verification');
+        }
+        $checkBox = 0;
+        if (isset($_GET['ad'])) {
+            $_GET['ad'] === 'Premium' ? $checkBox = 1 : $checkBox = 0;
         }
         return view('web.pages.post_advertisement', [
             'categories' => config('constance.categories'),
             'districts' => config('constance.districts'),
-            'checkbox'=>$checkBox
+            'checkbox' => $checkBox
         ]);
     }
+
+//    }
 
 
     /**
