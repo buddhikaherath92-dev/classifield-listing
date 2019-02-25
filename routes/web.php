@@ -25,7 +25,7 @@ Route::get('/show_verification', 'VerificationController@show')->name('show_veri
 Route::post('/verify_user', 'VerificationController@checkVerifyCode')->name('verify_user');
 Route::get('/show_aboutAs','AboutAsController@show');
 Route::get('/show_contact','ContactController@show');
-Route::get('/show_login','LoginController@show');
+Route::get('/show_login','LoginBladeController@show');
 
 // admin panel routes
 Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'admin' ], function () {

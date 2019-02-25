@@ -54,7 +54,6 @@
                                        Sign in
                                     </button>
                                     <button type="submit" class="btn btn-primary"style="background-color: seagreen;width: 150px" href="#">
-                                        {{--<a href="{{'/web/pages/register'}}"> </a>--}}
                                         Register
                                     </button>
 
