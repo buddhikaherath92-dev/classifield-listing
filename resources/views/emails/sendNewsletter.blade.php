@@ -361,7 +361,7 @@
                                                             <td align="center" style="padding:0;Margin:0;">
                                                                 <h2
                                                                         style="Margin:0;line-height:29px;mso-line-height-rule:exactly;font-family:'playfair display', georgia, 'times new roman', serif;font-size:24px;font-style:normal;font-weight:normal;color:#F1DB03;">
-                                                                    Introducing The Latest Advertisements On AluthAds
+                                                                    Latest Advertisements On AluthAds
                                                                 </h2>
                                                             </td>
                                                         </tr>
@@ -382,444 +382,8 @@
                             <table class="es-content-body" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff"
                                    align="center"
                                    style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;">
-                                @if(isset($advertisement1))
-                                    <tr style="border-collapse:collapse;">
-                                        <td style="padding:0;Margin:0;background-color:#FFF2CC;" bgcolor="#fff2cc"
-                                            align="left">
-                                            <!--[if mso]>
-                                            <table width="600" cellpadding="0"
-                                                   cellspacing="0">
-                                                <tr>
-                                                    <td width="300" valign="top"><![endif]-->
-                                            <table class="es-left" cellspacing="0" cellpadding="0" align="left"
-                                                   style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;">
-                                                <tr style="border-collapse:collapse;">
-                                                    <td class="es-m-p0r es-m-p20b" width="300" valign="top"
-                                                        align="center"
-                                                        style="padding:0;Margin:0;">
-                                                        <table width="100%" cellspacing="0" cellpadding="0"
-                                                               style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                            <tr style="border-collapse:collapse;">
-                                                                <td style="padding:0;Margin:0;position:relative;"
-                                                                    align="center">
-                                                                    <img class="adapt-img"
-                                                                         src="{{env('APP_URL').$advertisement1['advertisement_img']}}"
-                                                                         alt="" title=""
-                                                                         style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
-                                                                         width="100%">
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            <!--[if mso]></td>
-                                            <td width="0"></td>
-                                            <td width="300" valign="top"><![endif]-->
-                                            <table cellspacing="0" cellpadding="0" align="right"
-                                                   style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                <tr style="border-collapse:collapse;">
-                                                    <td width="300" align="left" style="padding:0;Margin:0;">
-                                                        <table width="100%" cellspacing="0" cellpadding="0"
-                                                               style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                            <tr style="border-collapse:collapse;">
-                                                                <td align="right" style="padding:0;Margin:0;">
-                                                                    <table width="100%" cellspacing="0" cellpadding="0"
-                                                                           style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                                        <tr style="border-collapse:collapse;">
-                                                                            <td valign="top" align="right"
-                                                                                style="padding:0;Margin:0;padding-bottom:5px;padding-left:20px;padding-top:25px;">
-                                                                                <img src="https://piotr.stripocdn.email/content/guids/CABINET_d5ea46388acfe1badf1dcd793f108612/images/5981524039330024.png"
-                                                                                     alt=""
-                                                                                     style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
-                                                                                     width="36"></td>
-                                                                            <td align="right"
-                                                                                style="padding:0;Margin:0;">
-                                                                                <table width="100%" cellspacing="0"
-                                                                                       cellpadding="0"
-                                                                                       style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                                                    <tr style="border-collapse:collapse;">
-                                                                                        <td class="es-m-txt-l"
-                                                                                            align="left"
-                                                                                            style="Margin:0;padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:20px;">
-                                                                                            <h3 style="Margin:0;line-height:24px;mso-line-height-rule:exactly;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#3A412F;">
-                                                                                                {{{ $advertisement1['advertisement_title'] }}}
-                                                                                            </h3>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                            <tr style="border-collapse:collapse;">
-                                                                <td class="es-m-txt-c" esdev-links-color="#ffffff"
-                                                                    align="left"
-                                                                    style="padding:0;Margin:0;padding-bottom:15px;padding-left:20px;padding-right:20px;">
-                                                                    <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;
-                                                                font-size:14px;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;line-height:21px;color:#666666;">
-                                                                    <span class="product-description">
-                                                                        {{ $advertisement1['advertisement_description'] }}
-                                                                    </span>
-                                                                    </p>
-                                                                </td>
-                                                            </tr>
-                                                            <tr style="border-collapse:collapse;">
-                                                                <td esdev-links-color="#ffffff" class="es-m-txt-c"
-                                                                    align="left"
-                                                                    style="padding:0;Margin:0;padding-bottom:5px;padding-left:20px;padding-right:20px;">
-                                                                    <h3 style="Margin:0;line-height:30px;mso-line-height-rule:exactly;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#CC0000;">
-                                                                    <span style="color:#A9A9A9;">
-                                                                    </span>RS<span class="price">
-                                                                        {{ $advertisement1['advertisement_price'] }}
-                                                                    </span>
-                                                                    </h3>
-                                                                </td>
-                                                            </tr>
-                                                            {{--<tr style="border-collapse:collapse;">--}}
-                                                            {{--<td class="es-m-txt-c" align="left" style="Margin:0;padding-top:10px;padding-bottom:20px;padding-left:20px;padding-right:20px;"> <span class="es-button-border" style="border-style:solid;border-color:#CCCCCC;background:#FFFFFF;border-width:2px;display:inline-block;border-radius:3px;width:auto;"> <a href="https://viewstripo.email/" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:16px;color:#999999;border-style:solid;border-color:#FFFFFF;border-width:5px 30px 5px 30px;display:inline-block;background:#FFFFFF;border-radius:3px;font-weight:normal;font-style:normal;line-height:19px;width:auto;text-align:center;">BUY NOW</a> </span> </td>--}}
-                                                            {{--</tr>--}}
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            <!--[if mso]></td></tr></table><![endif]--> </td>
-                                    </tr>
-                                @endif
-                                @if(isset($advertisement2))
-                                    <tr style="border-collapse:collapse;">
-                                        <td style="padding:0;Margin:0;background-color:#F6ECED;" bgcolor="#f6eced"
-                                            align="left">
-                                            <!--[if mso]>
-                                            <table dir="rtl" width="600" cellpadding="0"
-                                                   cellspacing="0">
-                                                <tr>
-                                                    <td dir="ltr" width="300" valign="top"><![endif]-->
-                                            <table cellspacing="0" cellpadding="0" align="right"
-                                                   style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                <tr style="border-collapse:collapse;">
-                                                    <td class="es-m-p20b" width="300" align="left"
-                                                        style="padding:0;Margin:0;">
-                                                        <table width="100%" cellspacing="0" cellpadding="0"
-                                                               style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                            <tr style="border-collapse:collapse;">
-                                                                <td style="padding:0;Margin:0;position:relative;"
-                                                                    align="center">
-                                                                    <img class="adapt-img"
-                                                                         src=src="{{env('APP_URL').$advertisement2['advertisement_img']}}"
-                                                                         alt="" title=""
-                                                                         style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
-                                                                         width="100%">
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            <!--[if mso]></td>
-                                            <td dir="ltr" width="0"></td>
-                                            <td dir="ltr" width="300" valign="top"><![endif]-->
-                                            <table class="es-left" cellspacing="0" cellpadding="0" align="left"
-                                                   style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;">
-                                                <tr style="border-collapse:collapse;">
-                                                    <td class="es-m-p0r" width="300" valign="top" align="center"
-                                                        style="padding:0;Margin:0;">
-                                                        <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;border-color:transparent;border-style:solid;border-width:1px;"
-                                                               width="100%" cellspacing="0" cellpadding="0">
-                                                            <tr style="border-collapse:collapse;">
-                                                                <td align="right" style="padding:0;Margin:0;">
-                                                                    <table width="100%" cellspacing="0" cellpadding="0"
-                                                                           style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                                        <tr style="border-collapse:collapse;">
-                                                                            <td align="right"
-                                                                                style="padding:0;Margin:0;">
-                                                                                <table width="100%" cellspacing="0"
-                                                                                       cellpadding="0"
-                                                                                       style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                                                    <tr style="border-collapse:collapse;">
-                                                                                        <td class="es-m-txt-r"
-                                                                                            align="right"
-                                                                                            style="Margin:0;padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:20px;">
-                                                                                            <h3 style="Margin:0;line-height:24px;mso-line-height-rule:exactly;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#3A412F;">
-                                                                                                {{{ $advertisement2['advertisement_title'] }}}
-                                                                                            </h3>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </table>
-                                                                            </td>
-                                                                            <td valign="top" align="right"
-                                                                                style="padding:0;Margin:0;padding-bottom:5px;padding-right:20px;padding-top:25px;">
-                                                                                <img src="https://piotr.stripocdn.email/content/guids/CABINET_d5ea46388acfe1badf1dcd793f108612/images/54601524039953281.png"
-                                                                                     alt=""
-                                                                                     style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
-                                                                                     width="36">
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                            <tr style="border-collapse:collapse;">
-                                                                <td esdev-links-color="#ffffff" class="es-m-txt-c"
-                                                                    align="right"
-                                                                    style="padding:0;Margin:0;padding-bottom:15px;padding-left:20px;padding-right:20px;">
-                                                                    <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;line-height:21px;color:#666666;">
-                                                                    <span class="product-description">
-                                                                        {{ $advertisement2['advertisement_description'] }}
-                                                                    </span>
-                                                                    </p>
-                                                                </td>
-                                                            </tr>
-                                                            <tr style="border-collapse:collapse;">
-                                                                <td esdev-links-color="#ffffff" class="es-m-txt-c"
-                                                                    align="right"
-                                                                    style="padding:0;Margin:0;padding-bottom:5px;padding-left:20px;padding-right:20px;">
-                                                                    <h3 style="Margin:0;line-height:30px;mso-line-height-rule:exactly;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#CC0000;">
-                                                                        <span style="color:#A9A9A9;"></span>
-                                                                        RS<span class="price">
-                                                                        {{ $advertisement2['advertisement_price'] }}
-                                                                    </span>
-                                                                    </h3>
-                                                                </td>
-                                                            </tr>
-                                                            {{--<tr style="border-collapse:collapse;">--}}
-                                                                {{--<td class="es-m-txt-c" align="right"--}}
-                                                                    {{--style="Margin:0;padding-top:10px;padding-bottom:20px;padding-left:20px;padding-right:20px;">--}}
-                                                                {{--<span class="es-button-border"--}}
-                                                                      {{--style="border-style:solid;border-color:#CCCCCC;background:#FFFFFF;border-width:2px;display:inline-block;border-radius:3px;width:auto;"> <a--}}
-                                                                            {{--href="https://viewstripo.email/"--}}
-                                                                            {{--class="es-button" target="_blank"--}}
-                                                                            {{--style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:16px;color:#999999;border-style:solid;border-color:#FFFFFF;border-width:5px 30px 5px 30px;display:inline-block;background:#FFFFFF;border-radius:3px;font-weight:normal;font-style:normal;line-height:19px;width:auto;text-align:center;">BUY NOW</a> </span>--}}
-                                                                {{--</td>--}}
-                                                            {{--</tr>--}}
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            <!--[if mso]></td></tr></table><![endif]--> </td>
-                                    </tr>
-                                @endif
-                                @if(isset($advertisement3))
-                                    <tr style="border-collapse:collapse;">
-                                        <td style="padding:0;Margin:0;background-color:#FFF2CC;" bgcolor="#fff2cc"
-                                            align="left">
-                                            <!--[if mso]>
-                                            <table width="600" cellpadding="0"
-                                                   cellspacing="0">
-                                                <tr>
-                                                    <td width="300" valign="top"><![endif]-->
-                                            <table class="es-left" cellspacing="0" cellpadding="0" align="left"
-                                                   style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;">
-                                                <tr style="border-collapse:collapse;">
-                                                    <td class="es-m-p0r es-m-p20b" width="300" valign="top"
-                                                        align="center"
-                                                        style="padding:0;Margin:0;">
-                                                        <table width="100%" cellspacing="0" cellpadding="0"
-                                                               style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                            <tr style="border-collapse:collapse;">
-                                                                <td style="padding:0;Margin:0;position:relative;"
-                                                                    align="center">
-                                                                    <img class="adapt-img"
-                                                                         src=src="{{env('APP_URL').$advertisement3['advertisement_img']}}"
-                                                                         alt="" title=""
-                                                                         style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
-                                                                         width="100%"></td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            <!--[if mso]></td>
-                                            <td width="0"></td>
-                                            <td width="300" valign="top"><![endif]-->
-                                            <table cellspacing="0" cellpadding="0" align="right"
-                                                   style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                <tr style="border-collapse:collapse;">
-                                                    <td width="300" align="left" style="padding:0;Margin:0;">
-                                                        <table width="100%" cellspacing="0" cellpadding="0"
-                                                               style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                            <tr style="border-collapse:collapse;">
-                                                                <td align="right" style="padding:0;Margin:0;">
-                                                                    <table width="100%" cellspacing="0" cellpadding="0"
-                                                                           style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                                        <tr style="border-collapse:collapse;">
-                                                                            <td valign="top" align="right"
-                                                                                style="padding:0;Margin:0;padding-bottom:5px;padding-left:10px;padding-top:25px;">
-                                                                                <img src="https://piotr.stripocdn.email/content/guids/CABINET_d5ea46388acfe1badf1dcd793f108612/images/13151524039953410.png"
-                                                                                     alt=""
-                                                                                     style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
-                                                                                     width="36"></td>
-                                                                            <td align="right"
-                                                                                style="padding:0;Margin:0;">
-                                                                                <table width="100%" cellspacing="0"
-                                                                                       cellpadding="0"
-                                                                                       style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                                                    <tr style="border-collapse:collapse;">
-                                                                                        <td class="es-m-txt-l"
-                                                                                            align="left"
-                                                                                            style="Margin:0;padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:20px;">
-                                                                                            <h3 style="Margin:0;line-height:24px;mso-line-height-rule:exactly;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#3A412F;">
-                                                                                                {{{ $advertisement3['advertisement_title'] }}}</h3>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                            <tr style="border-collapse:collapse;">
-                                                                <td esdev-links-color="#ffffff" class="es-m-txt-c"
-                                                                    align="left"
-                                                                    style="padding:0;Margin:0;padding-bottom:15px;padding-left:20px;padding-right:20px;">
-                                                                    <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;line-height:21px;color:#666666;">
-                                                                    <span class="product-description">
-                                                                        {{ $advertisement3['advertisement_description'] }}
-                                                                    </span>
-                                                                    </p>
-                                                                </td>
-                                                            </tr>
-                                                            <tr style="border-collapse:collapse;">
-                                                                <td esdev-links-color="#ffffff" class="es-m-txt-c"
-                                                                    align="left"
-                                                                    style="padding:0;Margin:0;padding-bottom:5px;padding-left:20px;padding-right:20px;">
-                                                                    <h3 style="Margin:0;line-height:30px;mso-line-height-rule:exactly;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#CC0000;"><span
-                                                                                style="color:#A9A9A9;">
-                                                                    </span> RS<span class="price">
-                                                                        {{ $advertisement3['advertisement_price'] }}
-                                                                    </span>
-                                                                    </h3>
-                                                                </td>
-                                                            </tr>
-                                                            {{--<tr style="border-collapse:collapse;">--}}
-                                                                {{--<td class="es-m-txt-c" align="left"--}}
-                                                                    {{--style="Margin:0;padding-top:10px;padding-bottom:20px;padding-left:20px;padding-right:20px;">--}}
-                                                                {{--<span class="es-button-border"--}}
-                                                                      {{--style="border-style:solid;border-color:#CCCCCC;background:#FFFFFF;border-width:2px;display:inline-block;border-radius:3px;width:auto;"> <a--}}
-                                                                            {{--href="https://viewstripo.email/"--}}
-                                                                            {{--class="es-button" target="_blank"--}}
-                                                                            {{--style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:16px;color:#999999;border-style:solid;border-color:#FFFFFF;border-width:5px 30px 5px 30px;display:inline-block;background:#FFFFFF;border-radius:3px;font-weight:normal;font-style:normal;line-height:19px;width:auto;text-align:center;">BUY NOW</a> </span>--}}
-                                                                {{--</td>--}}
-                                                            {{--</tr>--}}
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            <!--[if mso]></td></tr></table><![endif]--> </td>
-                                    </tr>
-                                @endif
-                                @if(isset($advertisement4))
-                                    <tr style="border-collapse:collapse;">
-                                        <td style="padding:0;Margin:0;background-color:#F6ECED;" bgcolor="#f6eced"
-                                            align="left">
-                                            <!--[if mso]>
-                                            <table dir="rtl" width="600" cellpadding="0"
-                                                   cellspacing="0">
-                                                <tr>
-                                                    <td dir="ltr" width="300" valign="top"><![endif]-->
-                                            <table cellspacing="0" cellpadding="0" align="right"
-                                                   style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                <tr style="border-collapse:collapse;">
-                                                    <td class="es-m-p20b" width="300" align="left"
-                                                        style="padding:0;Margin:0;">
-                                                        <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;"
-                                                               width="100%" cellspacing="0" cellpadding="0"
-                                                               bgcolor="#ffffff">
-                                                            <tr style="border-collapse:collapse;">
-                                                                <td style="padding:0;Margin:0;position:relative;"
-                                                                    align="center">
-                                                                    <img class="adapt-img"
-                                                                         {{env('APP_URL').$advertisement4['advertisement_img']}} alt=""
-                                                                         title=""
-                                                                         style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
-                                                                         width="100%">
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            <!--[if mso]></td>
-                                            <td dir="ltr" width="0"></td>
-                                            <td dir="ltr" width="300" valign="top"><![endif]-->
-                                            <table class="es-left" cellspacing="0" cellpadding="0" align="left"
-                                                   style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;">
-                                                <tr style="border-collapse:collapse;">
-                                                    <td class="es-m-p0r" width="300" valign="top" align="center"
-                                                        style="padding:0;Margin:0;">
-                                                        <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;border-color:transparent;border-style:solid;border-width:1px;"
-                                                               width="100%" cellspacing="0" cellpadding="0">
-                                                            <tr style="border-collapse:collapse;">
-                                                                <td align="right" style="padding:0;Margin:0;">
-                                                                    <table width="100%" cellspacing="0" cellpadding="0"
-                                                                           style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                                        <tr style="border-collapse:collapse;">
-                                                                            <td align="right"
-                                                                                style="padding:0;Margin:0;">
-                                                                                <table width="100%" cellspacing="0"
-                                                                                       cellpadding="0"
-                                                                                       style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                                                    <tr style="border-collapse:collapse;">
-                                                                                        <td class="es-m-txt-r"
-                                                                                            align="right"
-                                                                                            style="padding:0;Margin:0;padding-bottom:10px;padding-left:10px;padding-top:20px;">
-                                                                                            <h3 style="Margin:0;line-height:24px;mso-line-height-rule:exactly;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#3A412F;">
-                                                                                                {{{ $advertisement4['advertisement_title'] }}}
-                                                                                            </h3></td>
-                                                                                    </tr>
-                                                                                </table>
-                                                                            </td>
-                                                                            <td valign="top" align="right"
-                                                                                style="padding:0;Margin:0;padding-bottom:5px;padding-right:20px;padding-top:25px;">
-                                                                                <img src="https://piotr.stripocdn.email/content/guids/CABINET_d5ea46388acfe1badf1dcd793f108612/images/73221524039953415.png"
-                                                                                     alt=""
-                                                                                     style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
-                                                                                     width="36"></td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                            <tr style="border-collapse:collapse;">
-                                                                <td esdev-links-color="#ffffff" class="es-m-txt-c"
-                                                                    align="right"
-                                                                    style="padding:0;Margin:0;padding-bottom:15px;padding-left:20px;padding-right:20px;">
-                                                                    <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;line-height:21px;color:#666666;">
-                                                                    <span class="product-description">
-                                                                        {{ $advertisement4['advertisement_description'] }}
-                                                                    </span>
-                                                                    </p>
-                                                                </td>
-                                                            </tr>
-                                                            <tr style="border-collapse:collapse;">
-                                                                <td esdev-links-color="#ffffff" class="es-m-txt-c"
-                                                                    align="right"
-                                                                    style="padding:0;Margin:0;padding-bottom:5px;padding-left:20px;padding-right:20px;">
-                                                                    <h3 style="Margin:0;line-height:30px;mso-line-height-rule:exactly;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#CC0000;">
-                                                                    <span style="color:#A9A9A9;">
-                                                                    </span>RS<span class="price">
-                                                                        {{ $advertisement4['advertisement_price'] }}
-                                                                    </span>
-                                                                    </h3>
-                                                                </td>
-                                                            </tr>
-                                                            {{--<tr style="border-collapse:collapse;">--}}
-                                                                {{--<td class="es-m-txt-c" align="right"--}}
-                                                                    {{--style="Margin:0;padding-top:10px;padding-bottom:20px;padding-left:20px;padding-right:20px;">--}}
-                                                                {{--<span class="es-button-border"--}}
-                                                                      {{--style="border-style:solid;border-color:#CCCCCC;background:#FFFFFF;border-width:2px;display:inline-block;border-radius:3px;width:auto;"> <a--}}
-                                                                            {{--href="https://viewstripo.email/"--}}
-                                                                            {{--class="es-button" target="_blank"--}}
-                                                                            {{--style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:16px;color:#999999;border-style:solid;border-color:#FFFFFF;border-width:5px 30px 5px 30px;display:inline-block;background:#FFFFFF;border-radius:3px;font-weight:normal;font-style:normal;line-height:19px;width:auto;text-align:center;">BUY NOW</a> </span>--}}
-                                                                {{--</td>--}}
-                                                            {{--</tr>--}}
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            <!--[if mso]></td></tr></table><![endif]--> </td>
-                                    </tr>
-                                @endif
-                                    @if(isset($advertisement5))
+                                @if(isset($advertisements))
+                                    @foreach($advertisements as $index => $advertisement)
                                         <tr style="border-collapse:collapse;">
                                             <td style="padding:0;Margin:0;background-color:#FFF2CC;" bgcolor="#fff2cc"
                                                 align="left">
@@ -840,10 +404,11 @@
                                                                     <td style="padding:0;Margin:0;position:relative;"
                                                                         align="center">
                                                                         <img class="adapt-img"
-                                                                             src=src="{{env('APP_URL').$advertisement5['advertisement_img']}}"
+                                                                             src="{{env('APP_URL').$advertisement->img_1}}"
                                                                              alt="" title=""
                                                                              style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
-                                                                             width="100%"></td>
+                                                                             width="100%">
+                                                                    </td>
                                                                 </tr>
                                                             </table>
                                                         </td>
@@ -860,15 +425,12 @@
                                                                    style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
                                                                 <tr style="border-collapse:collapse;">
                                                                     <td align="right" style="padding:0;Margin:0;">
-                                                                        <table width="100%" cellspacing="0" cellpadding="0"
+                                                                        <table width="100%" cellspacing="0"
+                                                                               cellpadding="0"
                                                                                style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
                                                                             <tr style="border-collapse:collapse;">
                                                                                 <td valign="top" align="right"
-                                                                                    style="padding:0;Margin:0;padding-bottom:5px;padding-left:10px;padding-top:25px;">
-                                                                                    <img src="https://piotr.stripocdn.email/content/guids/CABINET_d5ea46388acfe1badf1dcd793f108612/images/13151524039953410.png"
-                                                                                         alt=""
-                                                                                         style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
-                                                                                         width="36"></td>
+                                                                                    style="padding:0;Margin:0;padding-bottom:5px;padding-left:20px;padding-top:25px;"></td>
                                                                                 <td align="right"
                                                                                     style="padding:0;Margin:0;">
                                                                                     <table width="100%" cellspacing="0"
@@ -879,7 +441,8 @@
                                                                                                 align="left"
                                                                                                 style="Margin:0;padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:20px;">
                                                                                                 <h3 style="Margin:0;line-height:24px;mso-line-height-rule:exactly;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#3A412F;">
-                                                                                                    {{{ $advertisement5['advertisement_title'] }}}</h3>
+                                                                                                    {{ $advertisement->title }}
+                                                                                                </h3>
                                                                                             </td>
                                                                                         </tr>
                                                                                     </table>
@@ -889,12 +452,13 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr style="border-collapse:collapse;">
-                                                                    <td esdev-links-color="#ffffff" class="es-m-txt-c"
+                                                                    <td class="es-m-txt-c" esdev-links-color="#ffffff"
                                                                         align="left"
                                                                         style="padding:0;Margin:0;padding-bottom:15px;padding-left:20px;padding-right:20px;">
-                                                                        <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;line-height:21px;color:#666666;">
+                                                                        <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;
+                                                                font-size:14px;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;line-height:21px;color:#666666;">
                                                                     <span class="product-description">
-                                                                        {{ $advertisement5['advertisement_description'] }}
+                                                                        {{ $advertisement->description }}
                                                                     </span>
                                                                         </p>
                                                                     </td>
@@ -902,143 +466,23 @@
                                                                 <tr style="border-collapse:collapse;">
                                                                     <td esdev-links-color="#ffffff" class="es-m-txt-c"
                                                                         align="left"
-                                                                        style="padding:0;Margin:0;padding-bottom:5px;padding-left:20px;padding-right:20px;">
-                                                                        <h3 style="Margin:0;line-height:30px;mso-line-height-rule:exactly;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#CC0000;"><span
-                                                                                    style="color:#A9A9A9;">
-                                                                    </span> RS<span class="price">
-                                                                        {{ $advertisement5['advertisement_price'] }}
-                                                                    </span>
-                                                                        </h3>
-                                                                    </td>
-                                                                </tr>
-                                                                {{--<tr style="border-collapse:collapse;">--}}
-                                                                {{--<td class="es-m-txt-c" align="left"--}}
-                                                                {{--style="Margin:0;padding-top:10px;padding-bottom:20px;padding-left:20px;padding-right:20px;">--}}
-                                                                {{--<span class="es-button-border"--}}
-                                                                {{--style="border-style:solid;border-color:#CCCCCC;background:#FFFFFF;border-width:2px;display:inline-block;border-radius:3px;width:auto;"> <a--}}
-                                                                {{--href="https://viewstripo.email/"--}}
-                                                                {{--class="es-button" target="_blank"--}}
-                                                                {{--style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:16px;color:#999999;border-style:solid;border-color:#FFFFFF;border-width:5px 30px 5px 30px;display:inline-block;background:#FFFFFF;border-radius:3px;font-weight:normal;font-style:normal;line-height:19px;width:auto;text-align:center;">BUY NOW</a> </span>--}}
-                                                                {{--</td>--}}
-                                                                {{--</tr>--}}
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                                <!--[if mso]></td></tr></table><![endif]--> </td>
-                                        </tr>
-                                    @endif
-                                    @if(isset($advertisement5))
-                                        <tr style="border-collapse:collapse;">
-                                            <td style="padding:0;Margin:0;background-color:#F6ECED;" bgcolor="#f6eced"
-                                                align="left">
-                                                <!--[if mso]>
-                                                <table dir="rtl" width="600" cellpadding="0"
-                                                       cellspacing="0">
-                                                    <tr>
-                                                        <td dir="ltr" width="300" valign="top"><![endif]-->
-                                                <table cellspacing="0" cellpadding="0" align="right"
-                                                       style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                    <tr style="border-collapse:collapse;">
-                                                        <td class="es-m-p20b" width="300" align="left"
-                                                            style="padding:0;Margin:0;">
-                                                            <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;"
-                                                                   width="100%" cellspacing="0" cellpadding="0"
-                                                                   bgcolor="#ffffff">
-                                                                <tr style="border-collapse:collapse;">
-                                                                    <td style="padding:0;Margin:0;position:relative;"
-                                                                        align="center">
-                                                                        <img class="adapt-img"
-                                                                             {{env('APP_URL').$advertisement6['advertisement_img']}} alt=""
-                                                                             title=""
-                                                                             style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
-                                                                             width="100%">
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                                <!--[if mso]></td>
-                                                <td dir="ltr" width="0"></td>
-                                                <td dir="ltr" width="300" valign="top"><![endif]-->
-                                                <table class="es-left" cellspacing="0" cellpadding="0" align="left"
-                                                       style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;">
-                                                    <tr style="border-collapse:collapse;">
-                                                        <td class="es-m-p0r" width="300" valign="top" align="center"
-                                                            style="padding:0;Margin:0;">
-                                                            <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;border-color:transparent;border-style:solid;border-width:1px;"
-                                                                   width="100%" cellspacing="0" cellpadding="0">
-                                                                <tr style="border-collapse:collapse;">
-                                                                    <td align="right" style="padding:0;Margin:0;">
-                                                                        <table width="100%" cellspacing="0" cellpadding="0"
-                                                                               style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                                            <tr style="border-collapse:collapse;">
-                                                                                <td align="right"
-                                                                                    style="padding:0;Margin:0;">
-                                                                                    <table width="100%" cellspacing="0"
-                                                                                           cellpadding="0"
-                                                                                           style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                                                        <tr style="border-collapse:collapse;">
-                                                                                            <td class="es-m-txt-r"
-                                                                                                align="right"
-                                                                                                style="padding:0;Margin:0;padding-bottom:10px;padding-left:10px;padding-top:20px;">
-                                                                                                <h3 style="Margin:0;line-height:24px;mso-line-height-rule:exactly;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#3A412F;">
-                                                                                                    {{{ $advertisement6['advertisement_title'] }}}
-                                                                                                </h3></td>
-                                                                                        </tr>
-                                                                                    </table>
-                                                                                </td>
-                                                                                <td valign="top" align="right"
-                                                                                    style="padding:0;Margin:0;padding-bottom:5px;padding-right:20px;padding-top:25px;">
-                                                                                    <img src="https://piotr.stripocdn.email/content/guids/CABINET_d5ea46388acfe1badf1dcd793f108612/images/73221524039953415.png"
-                                                                                         alt=""
-                                                                                         style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
-                                                                                         width="36"></td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr style="border-collapse:collapse;">
-                                                                    <td esdev-links-color="#ffffff" class="es-m-txt-c"
-                                                                        align="right"
-                                                                        style="padding:0;Margin:0;padding-bottom:15px;padding-left:20px;padding-right:20px;">
-                                                                        <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;line-height:21px;color:#666666;">
-                                                                    <span class="product-description">
-                                                                        {{ $advertisement6['advertisement_description'] }}
-                                                                    </span>
-                                                                        </p>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr style="border-collapse:collapse;">
-                                                                    <td esdev-links-color="#ffffff" class="es-m-txt-c"
-                                                                        align="right"
                                                                         style="padding:0;Margin:0;padding-bottom:5px;padding-left:20px;padding-right:20px;">
                                                                         <h3 style="Margin:0;line-height:30px;mso-line-height-rule:exactly;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#CC0000;">
                                                                     <span style="color:#A9A9A9;">
                                                                     </span>RS<span class="price">
-                                                                        {{ $advertisement6['advertisement_price'] }}
+                                                                        {{ $advertisement->price }}
                                                                     </span>
                                                                         </h3>
                                                                     </td>
                                                                 </tr>
-                                                                {{--<tr style="border-collapse:collapse;">--}}
-                                                                {{--<td class="es-m-txt-c" align="right"--}}
-                                                                {{--style="Margin:0;padding-top:10px;padding-bottom:20px;padding-left:20px;padding-right:20px;">--}}
-                                                                {{--<span class="es-button-border"--}}
-                                                                {{--style="border-style:solid;border-color:#CCCCCC;background:#FFFFFF;border-width:2px;display:inline-block;border-radius:3px;width:auto;"> <a--}}
-                                                                {{--href="https://viewstripo.email/"--}}
-                                                                {{--class="es-button" target="_blank"--}}
-                                                                {{--style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:16px;color:#999999;border-style:solid;border-color:#FFFFFF;border-width:5px 30px 5px 30px;display:inline-block;background:#FFFFFF;border-radius:3px;font-weight:normal;font-style:normal;line-height:19px;width:auto;text-align:center;">BUY NOW</a> </span>--}}
-                                                                {{--</td>--}}
-                                                                {{--</tr>--}}
                                                             </table>
                                                         </td>
                                                     </tr>
                                                 </table>
                                                 <!--[if mso]></td></tr></table><![endif]--> </td>
                                         </tr>
-                                    @endif
+                                    @endforeach
+                                @endif
                             </table>
                         </td>
                     </tr>
