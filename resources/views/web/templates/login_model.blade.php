@@ -36,7 +36,7 @@
                         <button class="default-big-btn" type="submit" value="Login">Login</button>
                         <button class="default-big-btn form-cancel" type="button" data-dismiss="modal">Cancel</button>
 
-                        <label class="lost-password"><a href="#">Lost your password?</a></label>
+                        <label class="lost-password"><a href="{{ route('password.request') }}">Lost your password?</a></label>
                     </form>
                 </div>
             </div>

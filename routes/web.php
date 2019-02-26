@@ -14,7 +14,7 @@
 Auth::routes();
 
 
-Route::get('/',   'HomeController@index');
+Route::get('/',   'HomeController@index')->name('index');
 Route::get('/post_advertisement',   'PostAdvertisementController@index')->name('view_post_ad');
 Route::get('/sub','PostAdvertisementController@getSub')->name('sub');
 Route::post('/post_advertisement', 'PostAdvertisementController@store')->name('post_ad');

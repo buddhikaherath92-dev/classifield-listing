@@ -155,6 +155,8 @@
 {{--<br>--}}
 {{--<br>--}}
 {{--<div style="font-style: italic;margin-left:-540px;font-size: 45px;color: yellow;margin-top: 17px;font-family:calibri; ">Aluthඇඩ්ස්.lk</div>--}}
+{{--<div style="color: white;font-style: italic;font-size: 45px;margin-top: -15px;margin-left: -15px" ></div>--}}
+{{--<div style="font-style: italic;font-size: 45px;color: yellow;margin-top: -15px;margin-left: 154px">.</div>--}}
 
 {{--</div>--}}
 {{--</div>--}}
@@ -185,11 +187,14 @@
 {{--<td width="400" align="center">--}}
 {{--<div class="contentEditableContainer contentTextEditable">--}}
 {{--<div class="contentEditable" align='left' style="font-family: fantasy;">--}}
-{{--<p >Hi {{$user_name}},--}}
+{{--<p >Hi {{$user}},--}}
 {{--<br/>--}}
 {{--<br/>--}}
-{{--Your advertisment is </p>--}}
-
+{{--Thank you for the Registering . Please Verify the Email--}}
+{{--<br>--}}
+{{--Please enter the above code to verify--}}
+{{--<br>--}}
+{{--Good luck! Hope it works.--}}
 
 
 {{--</div>--}}
@@ -207,12 +212,11 @@
 {{--<td bgcolor="#ED006F" align="center" style="border-radius:4px;" width="200" height="50">--}}
 {{--<div class="contentEditableContainer contentTextEditable">--}}
 {{--<div class="contentEditable" align='center' >--}}
-{{--<div target='_blank' href="#" class='link2' style="width: 300px;height: 50px;font-family: 'Roboto', sans-serif;font-size: 25px;color: white; margin-top: 20px">{{$pin}}</div>--}}
-
+{{--<a target='_blank' href="#" class='link2'>{{$pin}}</a>--}}
+{{--</div>--}}
 {{--</div>--}}
 {{--</td>--}}
 {{--</tr>--}}
-{{--<p>Thank you for using Aluthඇඩ්ස්.lk</p>--}}
 {{--</table>--}}
 {{--</td>--}}
 {{--<td width="200">&nbsp;</td>--}}
@@ -251,8 +255,6 @@
 {{--</table>--}}
 {{--</body>--}}
 {{--</html>--}}
-
-
         <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html style="width:100%;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0;">
 <head>
@@ -394,7 +396,8 @@
                                                 <td width="600" valign="top" align="center" style="padding:0;Margin:0;">
                                                     <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;background-color:#FFFFFF;border-radius:4px;" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
                                                         <tr style="border-collapse:collapse;">
-                                                            <td align="center" style="Margin:0;padding-bottom:5px;padding-left:30px;padding-right:30px;padding-top:35px;"> <h1 style="Margin:0;line-height:58px;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:48px;font-style:normal;font-weight:normal;color:#111111;">Hello {{ $user_name}},</h1> </td>
+                                                            <td align="center" style="Margin:0;padding-bottom:5px;padding-left:30px;padding-right:30px;padding-top:35px;"> <h1 style="Margin:0;line-height:58px;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:48px;font-style:normal;font-weight:normal;color:#111111;">Hello
+                                                                 </h1> </td>
                                                         </tr>
                                                         <tr style="border-collapse:collapse;">
                                                             <td bgcolor="#ffffff" align="center" style="Margin:0;padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;">
@@ -422,7 +425,25 @@
                                                 <td width="600" valign="top" align="center" style="padding:0;Margin:0;">
                                                     <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
                                                         <tr style="border-collapse:collapse;">
-                                                            <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:30px;padding-right:30px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;">Your advertisement now {{ $pin }}</p> </td>
+                                                            <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:30px;padding-right:30px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;">We're Confirming that your password has successfully been reset.</p> </td>
+                                                        </tr>
+                                                    </table> </td>
+                                            </tr>
+                                        </table> </td>
+                                </tr>
+                                <tr style="border-collapse:collapse;">
+                                    <td align="left" style="padding:0;Margin:0;padding-bottom:20px;padding-left:30px;padding-right:30px;">
+                                        <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                            <tr style="border-collapse:collapse;">
+                                                <td width="540" valign="top" align="center" style="padding:0;Margin:0;">
+                                                    <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                        <tr style="border-collapse:collapse;">
+                                                            <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:40px;padding-bottom:40px;">
+
+                                                                {{$email}},
+                                                                {{--<span class="es-button-border" style="border-style:solid;border-color:#7C72DC;background:#468E24;border-width:1px;display:inline-block;border-radius:2px;width:auto;">--}}
+
+                                                                    {{--<a href="{{env('APP_URL')}}show_verification" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:20px;color:#FFFFFF;border-style:solid;border-color:#468E24;border-width:15px 25px 15px 25px;display:inline-block;background:#468E24;border-radius:2px;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center;">{{$email }}</a> </span> </td>--}}
                                                         </tr>
                                                     </table> </td>
                                             </tr>
