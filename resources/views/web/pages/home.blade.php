@@ -80,16 +80,15 @@
                                     </h3>
                                     <h3 class="long-title"><a href="#">{{$featured_advertisement->title}}</a></h3>
 
-                                    <ul class="upload-info">
+
+                                    <p>{{$featured_advertisement->description}}</p>
+                                    <br>
+                                    <div class="price ellipsis" style="width: 45%;margin-right: 140px;margin-top: 20px">{{$featured_advertisement->price ? 'Rs '.number_format($featured_advertisement->price) : "N/A"}}</div>
+                                    <ul class="upload-info" style="margin-top: 20px">
                                         <li class="date">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>{{$featured_advertisement->created_at}}
                                         </li>
                                     </ul>
-
-                                    <p>{{$featured_advertisement->description}}</p>
-
-                                    <div class="price ellipsis" style="width: 45%">{{$featured_advertisement->price ? 'Rs '.number_format($featured_advertisement->price) : "N/A"}}</div>
-
                                     <a href="#" class="product-details-btn">Details</a>
                                 </div>
                             </div>
@@ -115,7 +114,7 @@
                                         @foreach($category['sub_cat'] as $subCatIndex => $subCategory)
                                             <li class="list-group-item ellipsis">
                                                 <a href="{{url('/list/'.$category['sub_cat'][$subCatIndex]['slug'])}}">
-                                                    <img src="{{$subCategory['image']}}" alt="category" class="img-fluid" style="width: 24px">
+                                                    <img src="{{$subCategory['image']}}" alt="category" class="img-fluid" style="width: 10px">
                                                     {{ $subCategory['name'] === 'All' ? '('.$category['count'].')' : '('.$subCategory['sub_count'].')'}}  {{$subCategory['name']}}
                                                 </a>
                                             </li>
@@ -191,11 +190,13 @@
                                 <h3 class="short-title ellipsis" style="width: 55%"><a href="{{url('/ad/'.config('constance.categories')[$recent_advertisement
                                         ->category_id]['slug']).'/'.$recent_advertisement->slug}}">{{$recent_advertisement->title}}</a></h3>
                                 <h3 class="long-title"><a href="https://www.radiustheme.com/demo/html/classipost/classipost/single-product1.html">{{$recent_advertisement->description}}</a></h3>
-                                <ul class="upload-info">
+
+                                <p>{{$recent_advertisement->description}}</p>
+                                <br>
+                                <div class="price ellipsis" style="width: 45%;margin-right: 140px;margin-top: 20px">{{$recent_advertisement->price ? 'Rs '.number_format($recent_advertisement->price) :  'N/A'}}</div>
+                                <ul class="upload-info" style="margin-top: 20px">
                                     <li class="date"><i class="fa fa-clock-o" style="display: inline-block"></i>{{$recent_advertisement->created_at}}</li>
                                 </ul>
-                                <p>{{$recent_advertisement->description}}</p>
-                                <div class="price ellipsis" style="width: 45%">{{$recent_advertisement->price ? 'Rs '.number_format($recent_advertisement->price) :  'N/A'}}</div>
                                 <a href="single-product-layout1.html" class="product-details-btn">Details</a>
                             </div>
                         </div>
