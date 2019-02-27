@@ -295,12 +295,13 @@
                 <h2 class="size-sm">Receive The Best Offers</h2>
                 <p>Stay in touch with aluthads.lk and we'll notify you about best ads</p>
             </div>
-            <div class="input-group subscribe-area">
-                <input type="text" placeholder="Type your e-mail address" class="form-control">
+            <form class="input-group subscribe-area" action="{{ route('subscribe') }}" method="post">
+                {{csrf_field()}}
+                <input id="email_subscribe" name="email_subscribe" type="text" placeholder="Type your e-mail address" class="form-control">
                 <span class="input-group-addon">
-                        <button type="submit" class="cp-default-btn-xl">Subscribe</button>
+                        <button id="btn_subscribe" type="submit" class="cp-default-btn-xl">Subscribe</button>
                 </span>
-            </div>
+            </form>
         </div>
     </section>
 

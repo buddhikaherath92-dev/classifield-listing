@@ -32,6 +32,7 @@
     <script src="{{asset('admin/js/sb-admin.min.js')}}"></script>
 
     @yield('content')
+    @yield('script')
 
     <script>
         $(document).ready(function() {
