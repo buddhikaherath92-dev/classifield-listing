@@ -25,34 +25,59 @@
     }
 
 </style>
-<div class="col-10">
 
-    <div class="container jumbotron" style="margin-top: 150px ; text-align: center;margin-left: 10%;background-color: #f2f2f3!important;;">
-        <br>
-        <div class="well">
-            <h2 class="text-divider"><span >What is AluthAdslk?</span></h2>
-            <p>
-                AluthAdslk is one of the largest online marketing hub which advertise Electronics , Fashion ,   Events,  Animals ,Jobs, Property and more....... It is a place for everyone, for the people who seek advertise to the marketing team looking for the platform to advertise anything. This website is uniquely designed for the advertise of Sri Lanka.
-            </p>
-            <p>
-                Consumers can easily browse and view all their advances by categories. They also have access to view the details of the Advertiser under the profile section where who has published the advertisements, events and, jobs.
-
-            </p>
-            <br>
-            <h3>How does it work?</h3>
-            <p>If you are a seeker of advertising: we have different portals for the companies listed under different categories showing their advertisements,  Item, Service and job vacancies.</p>
-            <p>If you want to advertise your things: first you have to register with us as a corporate user or Individual user
-                then you acquire to post your advertisement.</p>
-
-            <br>
-            <h3>Target audience?</h3>
-            <p>This is a unique website for everyone who loves shopping. Whether you love shopping  it is the place for it. If you are willing to provide & get services in education, hospital or others, we have separate sections for jobs & education.</p>
-
-            <br>
-            <h3>Vision</h3>
-                <p>To become the worlds’ preferred and the finest free classified platform. We continuously innovate to be the best destination for our customers and partners.</p>
+<section class="s-space-bottom-full bg-accent-shadow-body">
+    <div class="container">
+        <div class="breadcrumbs-area">
+            <ul>
+                <li><a href="#">Home</a> -</li>
+                <li class="active">Who We Are</li>
+            </ul>
         </div>
-
     </div>
-</div>
-@endsection
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12 col-12 mb--sm">
+                <div class="gradient-wrapper">
+                    <div class="gradient-title">
+                        <h2>What Is AluthAdslk?</h2>
+                    </div>
+                    <div class="about-us gradient-padding">
+                        {{--<img src="img/banner/about.jpg" alt="about" class="img-fluid">--}}
+                        <img src="{{asset('images/categories/about_us3.jpg')}}">
+
+                        {{--<h3>Ridolor sit amet, consectetur adipiscing elit. Aliquam consectetur sit amet ante nec vulpute Nullgravida augue.</h3>--}}
+                        <p>AluthAdslk is one of the largest online marketing hub which advertise Electronics , Fashion ,   Events,  Animals ,Jobs, Property and more....... It is a place for everyone, for the people who seek advertise to the marketing team looking for the platform to advertise anything. This website is uniquely designed for the advertise of Sri Lanka.</p>
+                        <p>Consumers can easily browse and view all their advances by categories. They also have access to view the details of the Advertiser under the profile section where who has published the advertisements, events and, jobs.</p>
+                        <h3>How does it work?</h3>
+                        <p>If you are a seeker of advertising: we have different portals for the companies listed under different categories showing their advertisements,  Item, Service and job vacancies.</p>
+                        <p>If you want to advertise your things: first you have to register with us as a corporate user or Individual user
+                            then you acquire to post your advertisement.</p>
+
+                        <br>
+                        <h3>Target audience?</h3>
+                        <p>This is a unique website for everyone who loves shopping. Whether you love shopping  it is the place for it. If you are willing to provide & get services in education, hospital or others, we have separate sections for jobs & education.</p>
+
+                        <br>
+                        <h3>Vision</h3>
+                        <p>To become the worlds’ preferred and the finest free classified platform. We continuously innovate to be the best destination for our customers and partners.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                <div class="sidebar-item-box">
+                    <ul class="sidebar-more-option">
+                        <li>
+                            <a href="{{'/post_advertisement'}}"><img src="{{asset('web/img/contact/more1.png')}}">Post a Free Ad</a>
+                        </li>
+                        <li>
+                            <a class="login-btn"data-toggle="modal" data-target="#myModal"><img src="{{asset('web/img/contact/more2.png')}}">Manage Product</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar-item-box">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
