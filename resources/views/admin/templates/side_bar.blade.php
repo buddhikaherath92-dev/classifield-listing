@@ -11,4 +11,10 @@
             <span>Advertisements</span>
         </a>
     </li>
+    <li class="nav-item @if(Route::currentRouteName() === 'admin_newsletters') active @endif">
+        <a class="nav-link" href="{{route('admin_newsletters')}}">
+            <i class="fas fa-fw fa-audio-description"></i>
+            <span>News Letters</span>
+        </a>
+    </li>
 </ul>
