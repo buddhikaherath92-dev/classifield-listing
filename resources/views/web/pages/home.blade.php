@@ -114,7 +114,7 @@
                                         @foreach($category['sub_cat'] as $subCatIndex => $subCategory)
                                             <li class="list-group-item ellipsis">
                                                 <a href="{{url('/list/'.$category['sub_cat'][$subCatIndex]['slug'])}}">
-                                                    <img src="{{$subCategory['image']}}" alt="category" class="img-fluid" style="width: 10px">
+                                                    <img src="{{$subCategory['image']}}" alt="category" class="img-fluid" style="width: 20px">
                                                     {{ $subCategory['name'] === 'All' ? '('.$category['count'].')' : '('.$subCategory['sub_count'].')'}}  {{$subCategory['name']}}
                                                 </a>
                                             </li>
@@ -295,12 +295,13 @@
                 <h2 class="size-sm">Receive The Best Offers</h2>
                 <p>Stay in touch with aluthads.lk and we'll notify you about best ads</p>
             </div>
-            <div class="input-group subscribe-area">
-                <input type="text" placeholder="Type your e-mail address" class="form-control">
+            <form class="input-group subscribe-area" action="{{ route('subscribe') }}" method="post">
+                {{csrf_field()}}
+                <input id="email_subscribe" name="email_subscribe" type="text" placeholder="Type your e-mail address" class="form-control">
                 <span class="input-group-addon">
-                        <button type="submit" class="cp-default-btn-xl">Subscribe</button>
+                        <button id="btn_subscribe" type="submit" class="cp-default-btn-xl">Subscribe</button>
                 </span>
-            </div>
+            </form>
         </div>
     </section>
 

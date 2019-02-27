@@ -15,6 +15,7 @@ Auth::routes();
 
 
 Route::get('/',   'HomeController@index')->name('index');
+Route::post('/','HomeController@subscribe')->name('subscribe');
 Route::get('/post_advertisement',   'PostAdvertisementController@index')->name('view_post_ad');
 Route::get('/sub','PostAdvertisementController@getSub')->name('sub');
 Route::post('/post_advertisement', 'PostAdvertisementController@store')->name('post_ad');
@@ -25,7 +26,7 @@ Route::get('/show_verification', 'VerificationController@show')->name('show_veri
 Route::post('/verify_user', 'VerificationController@checkVerifyCode')->name('verify_user');
 Route::get('/show_aboutAs','AboutAsController@show');
 Route::get('/show_contact','ContactController@show');
-Route::get('/show_login','LoginBladeController@show');
+Route::get('/login','LoginBladeController@show')->name('login');
 
 // admin panel routes
 Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'admin' ], function () {
@@ -33,7 +34,8 @@ Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'admin' ], function () {
     Route::get('/dashboard', 'Admin\DashboardController@show')->name('admin_dashboard');
     Route::get('/advertisements', 'Admin\AdvertisementController@show')->name('admin_advertisements');
     Route::post('/advertisements', 'Admin\AdvertisementController@update')->name('admin_advertisements_update');
-
+    Route::post('/newsletter', 'Admin\NewsLetterController@store')->name('admin_newsletters_store');
+    Route::get('/newsletter', 'Admin\NewsLetterController@show')->name('admin_newsletters');
 });
 
 

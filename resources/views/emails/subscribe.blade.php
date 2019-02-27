@@ -9,14 +9,11 @@
     <title>New Template</title>
     <!--[if (mso 16)]>
     <style type="text/css">
-
         a {text-decoration: none;}
     </style>
     <![endif]-->
-    <!--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><![endif]-->
-
+    <style>sup { font-size: 100% !important; }</style>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i" rel="stylesheet">
-    <!--<![endif]-->
     <style type="text/css">
         @media only screen and (max-width:600px) {p, ul li, ol li, a { font-size:16px!important; line-height:150%!important } h1 { font-size:30px!important; text-align:center; line-height:120%!important } h2 { font-size:26px!important; text-align:center; line-height:120%!important } h3 { font-size:20px!important; text-align:center; line-height:120%!important } h1 a { font-size:30px!important } h2 a { font-size:26px!important } h3 a { font-size:20px!important } .es-menu td a { font-size:16px!important } .es-header-body p, .es-header-body ul li, .es-header-body ol li, .es-header-body a { font-size:16px!important } .es-footer-body p, .es-footer-body ul li, .es-footer-body ol li, .es-footer-body a { font-size:16px!important } .es-infoblock p, .es-infoblock ul li, .es-infoblock ol li, .es-infoblock a { font-size:12px!important } *[class="gmail-fix"] { display:none!important } .es-m-txt-c, .es-m-txt-c h1, .es-m-txt-c h2, .es-m-txt-c h3 { text-align:center!important } .es-m-txt-r, .es-m-txt-r h1, .es-m-txt-r h2, .es-m-txt-r h3 { text-align:right!important } .es-m-txt-l, .es-m-txt-l h1, .es-m-txt-l h2, .es-m-txt-l h3 { text-align:left!important } .es-m-txt-r img, .es-m-txt-c img, .es-m-txt-l img { display:inline!important } .es-button-border { display:block!important } a.es-button { font-size:20px!important; display:block!important; border-width:15px 25px 15px 25px!important } .es-btn-fw { border-width:10px 0px!important; text-align:center!important } .es-adaptive table, .es-btn-fw, .es-btn-fw-brdr, .es-left, .es-right { width:100%!important } .es-content table, .es-header table, .es-footer table, .es-content, .es-footer, .es-header { width:100%!important; max-width:600px!important } .es-adapt-td { display:block!important; width:100%!important } .adapt-img { width:100%!important; height:auto!important } .es-m-p0 { padding:0px!important } .es-m-p0r { padding-right:0px!important } .es-m-p0l { padding-left:0px!important } .es-m-p0t { padding-top:0px!important } .es-m-p0b { padding-bottom:0!important } .es-m-p20b { padding-bottom:20px!important } .es-mobile-hidden, .es-hidden { display:none!important } .es-desk-hidden { display:table-row!important; width:auto!important; overflow:visible!important; float:none!important; max-height:inherit!important; line-height:inherit!important } .es-desk-menu-hidden { display:table-cell!important } table.es-table-not-adapt, .esd-block-html table { width:auto!important } table.es-social { display:inline-block!important } table.es-social td { display:inline-block!important } }
         #outlook a {
@@ -68,7 +65,7 @@
             <td style="padding:0;Margin:0;">
                 <table width="600" cellspacing="0" cellpadding="0" border="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
                     <tr style="border-collapse:collapse;">
-                        <td cellpadding="0" cellspacing="0" border="0" style="padding:0;Margin:0;line-height:1px;min-width:600px;" height="0"> <img src="https://esputnik.com/repository/applications/images/blank.gif" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;max-height:0px;min-height:0px;min-width:600px;width:600px;" alt="" width="600" height="1"> </td>
+                        <td cellpadding="0" cellspacing="0" border="0" style="padding:0;Margin:0;line-height:1px;min-width:600px;" height="0"><img src="https://esputnik.com/repository/applications/images/blank.gif" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;max-height:0px;min-height:0px;min-width:600px;width:600px;" alt="" width="600" height="1"> </td>
                     </tr>
                 </table> </td>
         </tr>
@@ -120,7 +117,7 @@
                                                 <td width="580" valign="top" align="center" style="padding:0;Margin:0;">
                                                     <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
                                                         <tr style="border-collapse:collapse;">
-                                                            <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:25px;padding-bottom:25px;"> <img src="{{env('APP_URL')}}web/img/logo.png" alt="" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;" width="398"></td>
+                                                            <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:25px;padding-bottom:25px;"> <img src="http://aluthads.developers-in.com/web/img/logo.png" alt="" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;" width="398"></td>
                                                         </tr>
                                                     </table> </td>
                                             </tr>
@@ -140,8 +137,10 @@
                                                 <td width="600" valign="top" align="center" style="padding:0;Margin:0;">
                                                     <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;background-color:#FFFFFF;border-radius:4px;" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
                                                         <tr style="border-collapse:collapse;">
-                                                            <td align="center" style="Margin:0;padding-bottom:5px;padding-left:30px;padding-right:30px;padding-top:35px;"> <h1 style="Margin:0;line-height:58px;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:48px;font-style:normal;font-weight:normal;color:#111111;">Hello
-                                                                </h1> </td>
+                                                            <td align="center" style="Margin:0;padding-bottom:5px;padding-left:30px;padding-right:30px;padding-top:35px;">
+                                                                <h1 style="Margin:0;line-height:58px;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:48px;font-style:normal;font-weight:normal;color:#111111;">Hello {{ explode('@',$email)[0] }},</h1>
+                                                                <center><h3>Thank You For Subscribe</h3></center>
+                                                            </td>
                                                         </tr>
                                                         <tr style="border-collapse:collapse;">
                                                             <td bgcolor="#ffffff" align="center" style="Margin:0;padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;">
@@ -169,7 +168,9 @@
                                                 <td width="600" valign="top" align="center" style="padding:0;Margin:0;">
                                                     <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
                                                         <tr style="border-collapse:collapse;">
-                                                            <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:30px;padding-right:30px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;">You are receiving this email because we received a password reset request for your account.</p> </td>
+                                                            <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:30px;padding-right:30px;">
+                                                                <center><h2 style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;">Welcome To Aluth Ads Subscribers List</h2></center>
+                                                            </td>
                                                         </tr>
                                                     </table> </td>
                                             </tr>
@@ -182,32 +183,6 @@
                                                 <td width="540" valign="top" align="center" style="padding:0;Margin:0;">
                                                     <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
                                                         <tr style="border-collapse:collapse;">
-                                                            <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:40px;padding-bottom:40px;">
-                                                                {{--<button type="submit" class="btn btn-success">Reset Button--}}
-                                                                    {{--{{ __('Send Password Reset Link') }}--}}
-                                                                {{--</button>--}}
-
-
-                                                                @isset($actionText)
-                                                                    <?php
-                                                                    switch ($level) {
-                                                                        case 'success':
-                                                                            $color = 'green';
-                                                                            break;
-                                                                        case 'error':
-                                                                            $color = 'red';
-                                                                            break;
-                                                                        default:
-                                                                            $color = 'blue';
-                                                                    }
-                                                                    ?>
-                                                                    @component('mail::button', ['url' => $actionUrl, 'color' => $color])
-                                                                        {{ $actionText }}
-                                                                    @endcomponent
-                                                                @endisset
-                                                            <br>
-                                                                <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;">If you did not request a password reset , no further action is required.</p>
-
                                                         </tr>
                                                     </table> </td>
                                             </tr>
@@ -227,13 +202,13 @@
                                                 <td width="600" valign="top" align="center" style="padding:0;Margin:0;">
                                                     <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;border-radius:4px;background-color:#111111;" width="100%" cellspacing="0" cellpadding="0" bgcolor="#111111">
                                                         <tr style="border-collapse:collapse;">
-                                                            <td class="es-m-txt-l" bgcolor="#111111" align="left" style="padding:0;Margin:0;padding-left:30px;padding-right:30px;padding-top:35px;"> <h2 style="Margin:0;line-height:29px;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:24px;font-style:normal;font-weight:normal;color:#FFFFFF;">Want any kind of help ?</h2> </td>
+                                                            <td class="es-m-txt-l" bgcolor="#111111" align="left" style="padding:0;Margin:0;padding-left:30px;padding-right:30px;padding-top:35px;"> <h2 style="Margin:0;line-height:29px;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:24px;font-style:normal;font-weight:normal;color:#FFFFFF;">Here After You'll Get The Latest Updates of AluthAds</h2> </td>
                                                         </tr>
                                                         <tr style="border-collapse:collapse;">
-                                                            <td class="es-m-txt-l" align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;">We support two-factor authentication to help keep your information private. Contact us,</p> </td>
+                                                            <td class="es-m-txt-l" align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;">Hope That You'll Enjoy Our Service.</p> </td>
                                                         </tr>
                                                         <tr style="border-collapse:collapse;">
-                                                            <td esdev-links-color="#7c72dc" align="left" style="Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;padding-bottom:40px;"> <a target="_blank" href="{{ env("APP_URL") }}" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:18px;text-decoration:underline;color:#468E24;">+9470 311 3217 or info@aluthads.lk</a></td>
+                                                            <td esdev-links-color="#7c72dc" align="left" style="Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;padding-bottom:40px;"> <a target="_blank" href="https://viewstripo.email/" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:18px;text-decoration:underline;color:#468E24;">+9470 311 3217 or info@aluthads.lk</a></td>
                                                         </tr>
                                                     </table> </td>
                                             </tr>

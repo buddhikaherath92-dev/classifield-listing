@@ -2,29 +2,24 @@
 
 namespace App\Mail;
 
-use http\Client\Curl\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
-
-class ResetSendMassage extends Mailable
+class SendNewsLetterMailable extends Mailable
 {
     use Queueable, SerializesModels;
-    public $pin;
-    public $user;
-    public $email;
+    public $advertisements;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($pin,$email)
+    public function __construct($advertisements)
     {
-        $this->pin=$pin;
-        $this->email=$email;
-
+        $this->advertisements=$advertisements;
     }
 
     /**
@@ -34,6 +29,6 @@ class ResetSendMassage extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.resetEmail');
+        return $this->markdown('emails.sendNewsletter');
     }
 }
