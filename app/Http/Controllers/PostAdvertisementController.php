@@ -42,7 +42,7 @@ class PostAdvertisementController extends Controller
         $user = Auth::user();
 //        dd($user);
         if ($user == null) {
-            return redirect('/show_login');
+            return redirect('/login');
         }
         $email_verified_at=request()->user()->email_verified_at;
 
