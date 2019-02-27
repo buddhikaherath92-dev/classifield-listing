@@ -49,6 +49,7 @@ class SendNewsLetters extends Command
         $all_subscribers = Subscriber::all();
         //news letters Loop
         foreach ($all_news_letters as $news_letter) {
+            $news_letter->status=1;
             //subscribers Loop
             foreach ($all_subscribers as $subscriber) {
                 $this->advertisements = NewsLetterDetail::where('newsletter_id', $news_letter->id)

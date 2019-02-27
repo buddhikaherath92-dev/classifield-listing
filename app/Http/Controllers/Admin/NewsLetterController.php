@@ -16,9 +16,9 @@ class NewsLetterController extends Controller
 {
     public function show(Request $request)
     {
-        $advertisement = Advertisement::get();
         return view('admin.pages.newsletter', [
-            'advertisements' => $advertisement
+            'newsletters' => NewsLetter::get(),
+            'advertisements' => Advertisement::get()
         ]);
     }
 
@@ -33,18 +33,28 @@ class NewsLetterController extends Controller
             ]);
 
             //Set Newsletter Data Hit Query
-            $incoming_data['status']=1;
+            $incoming_data['status']=0;
             $newsletter = NewsLetter::create($incoming_data);
 
             //Split String Array
             $splitted_array = explode(',', $incoming_data['array_data']);
             foreach ($splitted_array as $split){
-               NewsLetterDetail::create([
-                   'newsletter_id' => $newsletter->id,
-                   'advertisement_id' => $split
-               ]);
+                NewsLetterDetail::create([
+                    'newsletter_id' => $newsletter->id,
+                    'advertisement_id' => $split
+                ]);
             }
             return redirect()->back();
         }
+    }
+
+    public function preview(Request $request)
+    {
+        $advertisement_data=[];
+        $advertisements=NewsLetterDetail::where('newsletter_id',$request->id)->get();
+        foreach ($advertisements as $index=>$advertisement){
+            array_push($advertisement_data,Advertisement::where('id',$advertisement->advertisement_id)->get()[0]);
+        }
+        return new SendNewsLetterMailable($advertisement_data);
     }
 }
