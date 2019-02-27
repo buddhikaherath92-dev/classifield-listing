@@ -424,7 +424,7 @@
                                                 <td width="600" valign="top" align="center" style="padding:0;Margin:0;">
                                                     <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
                                                         <tr style="border-collapse:collapse;">
-                                                            <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:30px;padding-right:30px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;">This is your verification code for aluthads registration. Please login entering this code.</p> </td>
+                                                            <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:30px;padding-right:30px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;">We've sent a verification code to  {{$email}}. Please type the verification code in the following.</p> </td>
                                                         </tr>
                                                     </table> </td>
                                             </tr>
@@ -436,8 +436,14 @@
                                             <tr style="border-collapse:collapse;">
                                                 <td width="540" valign="top" align="center" style="padding:0;Margin:0;">
                                                     <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
-                                                        <tr style="border-collapse:collapse;">
-                                                            <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:40px;padding-bottom:40px;"> <span class="es-button-border" style="border-style:solid;border-color:#7C72DC;background:#468E24;border-width:1px;display:inline-block;border-radius:2px;width:auto;"> <a href="{{env('APP_URL')}}show_verification" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:20px;color:#FFFFFF;border-style:solid;border-color:#468E24;border-width:15px 25px 15px 25px;display:inline-block;background:#468E24;border-radius:2px;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center;">{{ $pin }}</a> </span> </td>
+                                                        <tr style="border-collapse:collapse; width: 200px">
+                                                            <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:40px;padding-bottom:40px;">
+                                                                <div class="text-nowrap" style="width: 8rem; background-color: seagreen; color: whitesmoke;height: 50px;font-size: 20px">
+                                                                    {{ $pin }}.
+                                                                </div>
+                                                                {{--<span class="es-button-border" style="border-style:solid;border-color:#7C72DC;background:#468E24;border-width:1px;display:inline-block;border-radius:2px;width:auto;">--}}
+                                                                    {{--<h1 href="{{env('APP_URL')}}show_verification" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:20px;color:#FFFFFF;border-style:solid;border-color:#468E24;border-width:15px 25px 15px 25px;display:inline-block;background:#468E24;border-radius:2px;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center;"></h1>--}}
+                                                                {{--</span> </td>--}}
                                                         </tr>
                                                     </table> </td>
                                             </tr>
