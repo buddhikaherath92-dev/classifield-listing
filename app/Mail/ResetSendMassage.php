@@ -6,7 +6,7 @@ use http\Client\Curl\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
+
 
 class ResetSendMassage extends Mailable
 {
@@ -23,10 +23,8 @@ class ResetSendMassage extends Mailable
     public function __construct($pin,$email)
     {
         $this->pin=$pin;
-//        $email1=User::join('users', 'advertisements.user_id', 'users.id')->where('advertisements.id',request('id'))->get();
-
         $this->email=$email;
-//        $this->user= Auth::user()->name;
+
     }
 
     /**

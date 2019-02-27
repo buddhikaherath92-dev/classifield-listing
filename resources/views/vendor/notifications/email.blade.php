@@ -9,6 +9,7 @@
     <title>New Template</title>
     <!--[if (mso 16)]>
     <style type="text/css">
+
         a {text-decoration: none;}
     </style>
     <![endif]-->
@@ -206,10 +207,7 @@
                                                                 @endisset
                                                             <br>
                                                                 <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;">If you did not request a password reset , no further action is required.</p>
-                                                                {{--{{$email}},--}}
-                                                            {{--<span class="es-button-border" style="border-style:solid;border-color:#7C72DC;background:#468E24;border-width:1px;display:inline-block;border-radius:2px;width:auto;">--}}
 
-                                                            {{--<a href="{{env('APP_URL')}}show_verification" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:20px;color:#FFFFFF;border-style:solid;border-color:#468E24;border-width:15px 25px 15px 25px;display:inline-block;background:#468E24;border-radius:2px;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center;">{{$email }}</a> </span> </td>--}}
                                                         </tr>
                                                     </table> </td>
                                             </tr>
