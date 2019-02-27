@@ -92,16 +92,15 @@
                                             </h3>
                                             <h3 class="long-title"><a href="#">{{$advertisement->title}}</a></h3>
 
-                                            <ul class="upload-info">
+
+                                            <p>{{$advertisement->description}}</p>
+                                            <br>
+                                            <div class="price" style="width: 45%;margin-right: 140px;margin-top: 20px">{{$advertisement->price ? 'Rs '.number_format($advertisement->price) : "N/A"}}</div>
+                                            <ul class="upload-info" style="margin-top: 20px">
                                                 <li class="date">
                                                     <i class="fa fa-clock-o" aria-hidden="true"></i>{{$advertisement->created_at}}
                                                 </li>
                                             </ul>
-
-                                            <p>{{$advertisement->description}}</p>
-
-                                            <div class="price" style="width: 45%">{{$advertisement->price ? 'Rs '.number_format($advertisement->price) : "N/A"}}</div>
-
                                             <a href="#" class="product-details-btn">Details</a>
                                         </div>
                                     </div>

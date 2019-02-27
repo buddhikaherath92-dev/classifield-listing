@@ -114,7 +114,7 @@
                                         @foreach($category['sub_cat'] as $subCatIndex => $subCategory)
                                             <li class="list-group-item ellipsis">
                                                 <a href="{{url('/list/'.$category['sub_cat'][$subCatIndex]['slug'])}}">
-                                                    <img src="{{$subCategory['image']}}" alt="category" class="img-fluid" style="width: 10px">
+                                                    <img src="{{$subCategory['image']}}" alt="category" class="img-fluid" style="width: 20px">
                                                     {{ $subCategory['name'] === 'All' ? '('.$category['count'].')' : '('.$subCategory['sub_count'].')'}}  {{$subCategory['name']}}
                                                 </a>
                                             </li>
