@@ -30,6 +30,7 @@ class CreateAdvertisementsTable extends Migration
             $table->boolean('is_inactive');
             $table->date('expire_date')->nullable();
             $table->string('district')->nullable();
+            $table->integer('views')->default(0);
             $table->timestamps();
         });
     }

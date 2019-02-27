@@ -14,7 +14,9 @@ class SingleAdvertisementController extends Controller
      * -----------------------------------------------------------------------------------------------------------------
      */
     public function show(Request $request){
+
         $advertisement = Advertisement::where('slug', $request->slug)->first();
+        $advertisement->increment('views');
         return view('web.pages.single_advertisement', [
             'advertisement' => $advertisement,
             'price_type'=>$advertisement->is_negotiable,
