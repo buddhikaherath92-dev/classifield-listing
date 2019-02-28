@@ -22,10 +22,10 @@ class ResendCodeController extends Controller
     public  function resendCode(Request $request)
     {
         $pin=mt_rand(1000, 9999);
-        $user=Auth::user();
-        $user->update([
+        Auth::user()->update([
             'email_code'=>$pin
-        ]);
+        ]);;
+
         Mail::to(Auth::user('email'))->send(new SendMaillable($pin));
         return redirect('/show_verification');
     }
