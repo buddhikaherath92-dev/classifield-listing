@@ -30,7 +30,6 @@ Route::get('/login','LoginBladeController@show')->name('login');
 
 // admin panel routes
 Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'admin' ], function () {
-
     Route::get('/dashboard', 'Admin\DashboardController@show')->name('admin_dashboard');
     Route::get('/advertisements', 'Admin\AdvertisementController@show')->name('admin_advertisements');
     Route::post('/advertisements', 'Admin\AdvertisementController@update')->name('admin_advertisements_update');
@@ -42,7 +41,6 @@ Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'admin' ], function () {
 
 // public user dashboard routes
 Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'my_dashboard' ], function () {
-
     Route::get('/profile',   'MyProfileController@index')->name('my_profile');
     Route::post('/profile',   'MyProfileController@store')->name('update_my_profile');
 

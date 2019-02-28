@@ -46,13 +46,15 @@ class NewsLetterController extends Controller
         return redirect()->back();
     }
 
-    public function preview(Request $request)
+    public function preview(Request $news_letter)
     {
         $advertisement_data = [];
-        $advertisements = NewsLetterDetail::where('newsletter_id', $request->id)->get();
+        $news_letter_data=[];
+        $advertisements = NewsLetterDetail::where('newsletter_id', $news_letter->id)->get();
         foreach ($advertisements as $index => $advertisement) {
             array_push($advertisement_data, Advertisement::where('id', $advertisement->advertisement_id)->get()[0]);
+            array_push($news_letter_data, NewsLetter::where('id',$news_letter->id)->get()[0]);
         }
-        return new SendNewsLetterMailable($advertisement_data);
+        return new SendNewsLetterMailable($advertisement_data,$news_letter_data[0]);
     }
 }
