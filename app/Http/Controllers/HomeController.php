@@ -9,6 +9,7 @@ use App\Subscriber;
 use App\User;
 use Illuminate\Http\Request;
 use Alert;
+use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Mail;
 use Intervention\Image\ImageManager;
 
@@ -34,7 +35,6 @@ class HomeController extends Controller
      * Show home page with relevant data
      */
     public function index(){
-
         return view('web.pages.home', [
             'categories' => Advertisement::CountByCategories(),
             'featured_advertisements' => Advertisement::where('is_featured', (int)1)->WhereActive()->get(),
