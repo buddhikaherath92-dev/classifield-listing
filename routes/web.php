@@ -34,7 +34,7 @@ Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'admin' ], function () {
     Route::get('/dashboard', 'Admin\DashboardController@show')->name('admin_dashboard');
     Route::get('/advertisements', 'Admin\AdvertisementController@show')->name('admin_advertisements');
     Route::post('/advertisements', 'Admin\AdvertisementController@update')->name('admin_advertisements_update');
-    Route::post('/newsletter', 'Admin\NewsLetterController@store')->name('admin_newsletters_store');
+    Route::post('/newsletter_store', 'Admin\NewsLetterController@store')->name('admin_newsletters_store')->middleware('auth');
     Route::get('/newsletter', 'Admin\NewsLetterController@show')->name('admin_newsletters');
     Route::get('/preview_newsletter/{id}', 'Admin\NewsLetterController@preview')->name('preview');
 });

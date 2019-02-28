@@ -13,7 +13,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <br><br>
-                        <form action="{{ route('admin_newsletters_store') }}" method="post" id="newsletter_form">
+                        <form href="{{ route('admin_newsletters_store') }}" method="post" id="newsletter_form">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label class="control-label col-sm-2" for="title">Title :</label>

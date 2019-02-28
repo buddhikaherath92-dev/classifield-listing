@@ -11,15 +11,17 @@ class SendNewsLetterMailable extends Mailable
 {
     use Queueable, SerializesModels;
     public $advertisements;
+    public $news_letter;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($advertisements)
+    public function __construct($advertisements,$news_letter)
     {
         $this->advertisements=$advertisements;
+        $this->news_letter=$news_letter;
     }
 
     /**

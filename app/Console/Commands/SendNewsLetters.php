@@ -26,6 +26,8 @@ class SendNewsLetters extends Command
      */
     protected $description = 'Add NewsLetters To All Customers In AluthAds System Mention About the Newly Added Advertisements in the System';
 
+    protected $advertisements;
+
     /**
      * Create a new command instance.
      *
@@ -35,7 +37,6 @@ class SendNewsLetters extends Command
     {
         parent::__construct();
     }
-    private $advertisements;
 
     /**
      * Execute the console command.
@@ -49,16 +50,17 @@ class SendNewsLetters extends Command
         $all_subscribers = Subscriber::all();
         //news letters Loop
         foreach ($all_news_letters as $news_letter) {
-            $news_letter->status=1;
+            NewsLetter::where('id', $news_letter->id)->update(['status'=>1]);
             //subscribers Loop
             foreach ($all_subscribers as $subscriber) {
                 $this->advertisements = NewsLetterDetail::where('newsletter_id', $news_letter->id)
                     ->join('advertisements', 'news_letter_details.advertisement_id', 'advertisements.id')
                     ->select('advertisements.*')
                     ->get();
+
+                Mail::to($subscriber->subscriber_email)->send(new SendNewsLetterMailable($this->advertisements,$news_letter));
             }
         }
-        Mail::to($subscriber->subscriber_email)->send(new SendNewsLetterMailable($this->advertisements));
         return redirect()->back();
     }
 }

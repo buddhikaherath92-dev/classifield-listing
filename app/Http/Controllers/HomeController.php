@@ -47,8 +47,7 @@ class HomeController extends Controller
     public function subscribe()
     {
         $incomingData = request()->validate(['email_subscribe' => 'required|string|min:6']);
-        $is_sxists=(array)Subscriber::where('subscriber_email',$incomingData['email_subscribe'])->get();
-        if(empty(array_filter($is_sxists))){
+        if(Subscriber::where('subscriber_email',$incomingData['email_subscribe'])->count() == 0){
             Subscriber::create([
                 'subscriber_email' => $incomingData['email_subscribe']
             ]);

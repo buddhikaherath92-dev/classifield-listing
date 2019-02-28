@@ -361,7 +361,9 @@
                                                             <td align="center" style="padding:0;Margin:0;">
                                                                 <h2
                                                                         style="Margin:0;line-height:29px;mso-line-height-rule:exactly;font-family:'playfair display', georgia, 'times new roman', serif;font-size:24px;font-style:normal;font-weight:normal;color:#F1DB03;">
-                                                                    Latest Advertisements On AluthAds
+                                                                    <center>
+                                                                        {{ $news_letter->title }}
+                                                                    </center>
                                                                 </h2>
                                                             </td>
                                                         </tr>
@@ -382,6 +384,11 @@
                             <table class="es-content-body" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff"
                                    align="center"
                                    style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;">
+                                <div class="card-header" style="font-size: 20px; color:black; font-family: 'Arial Black'; font-style: italic">
+                                    <center>
+                                        {{ $news_letter->description }}
+                                    </center>
+                                </div>
                                 @if(isset($advertisements))
                                     @foreach($advertisements as $index => $advertisement)
                                         <tr style="border-collapse:collapse;">
