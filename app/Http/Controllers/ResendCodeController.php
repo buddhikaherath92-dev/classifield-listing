@@ -13,25 +13,6 @@ use Illuminate\Support\Facades\Mail;
 class ResendCodeController extends Controller
 {
 
-    /**
-     * generate a pin
-     *
-     *
-     *
-     * @param $digits
-     * @return $pin
-     */
-    function generatePIN($digits = 4){
-        $i = 0; //counter
-        $pin = ""; //our default pin is blank.
-        while($i < $digits){
-            //generate a random number between 0 and 9.
-            $pin .= mt_rand(0, 9);
-            $i++;
-        }
-        return $pin;
-    }
-
 
     /**
      * resent a verification code
@@ -40,23 +21,13 @@ class ResendCodeController extends Controller
      */
     public  function resendCode(Request $request)
     {
-
-        $email=(request()->user()->email);
-        $user_emailCode=Auth::user();
-
-        $inputData=  $this->generatePIN();
-        if($user_emailCode->email_code!= $inputData){
-            $user_emailCode->update([
-              'email_code' == $inputData
-            ]);
-            Mail::to($email)->send(new SendMaillable($inputData));
-            return redirect('/show_verification');
-        }else{
-            return redirect('/show_verification');
-        }
-
-
-
+        $pin=mt_rand(1000, 9999);
+        $user=Auth::user();
+        $user->update([
+            'email_code'=>$pin
+        ]);
+        Mail::to(Auth::user('email'))->send(new SendMaillable($pin));
+        return redirect('/show_verification');
     }
 
 

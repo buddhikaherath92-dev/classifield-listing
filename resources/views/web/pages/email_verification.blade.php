@@ -20,8 +20,8 @@
                             </div>
                         @endif
 
-                        {{ __('Before proceeding, please check your email for a verification code.') }}
-                        {{ __('If you did not receive the email') }},
+                        {{ __("We've sent a verification code to ")}}{{\Illuminate\Support\Facades\Auth::user()->email}}
+                        {{ __('Please type the verification code in the following.') }},
 
                     </div>
                     <form action="{{ route('verify_user') }}" method="post">

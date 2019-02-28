@@ -77,24 +77,6 @@ class RegisterController extends Controller
         ]);
     }
 
-    /**
-     * generate a pin
-     *
-     *
-     *
-     * @param $digits
-     * @return $pin
-     */
-    function generatePIN($digits = 4){
-        $i = 0; //counter
-        $pin = ""; //our default pin is blank.
-        while($i < $digits){
-            //generate a random number between 0 and 9.
-            $pin .= mt_rand(0, 9);
-            $i++;
-        }
-        return $pin;
-    }
 
     /**
      * Handle a registration request for the application.
@@ -107,7 +89,7 @@ class RegisterController extends Controller
         $this->validator($request->all())->validate();
 
         $inputData = $request->all();
-        $inputData['email_code'] =  $this->generatePIN();
+        $inputData['email_code'] =  mt_rand(1000, 9999);
 
         event(new Registered($user = $this->create($inputData)));
 
