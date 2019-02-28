@@ -6,14 +6,11 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Facades\Auth;
 
-class SendMaillable extends Mailable
+class ResendCodeMailable extends Mailable
 {
-    use Queueable, SerializesModels;
     public $pin;
-    public $user;
-    public $email;
+    use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
@@ -23,9 +20,6 @@ class SendMaillable extends Mailable
     public function __construct($pin)
     {
         $this->pin=$pin;
-        $this->user= Auth::user()->name;
-        $email=(request()->user()->email);
-        $this->email=$email;
 
     }
 
@@ -36,6 +30,6 @@ class SendMaillable extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.verify');
+        return $this->view('emails.verify');
     }
 }

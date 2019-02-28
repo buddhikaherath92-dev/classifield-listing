@@ -32,6 +32,7 @@ class SingleAdvertisementController extends Controller
      * -----------------------------------------------------------------------------------------------------------------
      */
     public function show(Request $request){
+
         $advertisement = Advertisement::where('slug', $request->slug)->first();
         if($advertisement->is_inactive === 0){
             return view('web.pages.single_advertisement', [
