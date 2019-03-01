@@ -38,6 +38,7 @@ Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'admin' ], function () {
     Route::post('/advertisements', 'Admin\AdvertisementController@update')->name('admin_advertisements_update');
     Route::post('/newsletter', 'Admin\NewsLetterController@store')->name('admin_newsletters_store');
     Route::get('/newsletter', 'Admin\NewsLetterController@show')->name('admin_newsletters');
+    Route::get('/view_url', 'Admin\ViewUrlController@show')->name('view');
 });
 
 
