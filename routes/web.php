@@ -38,21 +38,19 @@ Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'admin' ], function () {
     Route::post('/advertisements', 'Admin\AdvertisementController@update')->name('admin_advertisements_update');
     Route::post('/newsletter', 'Admin\NewsLetterController@store')->name('admin_newsletters_store');
     Route::get('/newsletter', 'Admin\NewsLetterController@show')->name('admin_newsletters');
+<<<<<<< HEAD
     Route::get('/view_url', 'Admin\ViewUrlController@show')->name('view');
+=======
+    Route::get('/newsletter_preview/{id}', 'Admin\NewsLetterController@preview')->name('newsletter_preview');
+>>>>>>> 43b080ecd43bf579fc5533ba3fce9eb08e9c1789
 });
 
 
 // public user dashboard routes
 Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'my_dashboard' ], function () {
-
     Route::get('/profile',   'MyProfileController@index')->name('my_profile');
     Route::post('/profile',   'MyProfileController@store')->name('update_my_profile');
-
     Route::get('/settings',   'MySettingsController@index')->name('my_settings');
     Route::post('/settings',   'MySettingsController@store')->name('update_my_settings');
-
     Route::get('/ads',   'MyAdsController@index')->name('my_ads');
-
-
 });
-
