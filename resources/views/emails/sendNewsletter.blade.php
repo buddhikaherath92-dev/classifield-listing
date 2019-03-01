@@ -415,7 +415,7 @@
                                                                     <td style="padding:0;Margin:0;position:relative;"
                                                                         align="center">
                                                                         <img class="adapt-img"
-                                                                             src="{{env('APP_URL')."/images/advertisements/".$advertisement->img_1}}"
+                                                                             src="{{ env('APP_URL')."images/advertisements/".$advertisement->img_1 }}"
                                                                              alt="" title=""
                                                                              style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
                                                                              width="100%">

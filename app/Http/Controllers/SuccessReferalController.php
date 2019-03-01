@@ -11,7 +11,6 @@ namespace App\Http\Controllers;
 
 use App\Invitaion;
 use App\SuccessReferal;
-use Illuminate\Support\Facades\Auth;
 
 class SuccessReferalController extends Controller
 {
