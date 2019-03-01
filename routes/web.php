@@ -29,6 +29,7 @@ Route::get('/show_contact','ContactController@show');
 Route::get('/login','LoginBladeController@show')->name('login');
 Route::get('/add','MyAdsController@click')->name('addShow');
 Route::get('/resendCode','ResendCodeController@resendCode')->name('resendCode');
+Route::get('/invitation/redirect/{token}','SuccessReferalController@redirect')->name('success_referals');
 
 // admin panel routes
 Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'admin' ], function () {
