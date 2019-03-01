@@ -21,7 +21,6 @@
     <!-- Styles end -->
 
 </head>
-
 <body class="bg-dark">
 
     <script src="{{asset('admin/vendor/jquery/jquery.min.js')}}"></script>

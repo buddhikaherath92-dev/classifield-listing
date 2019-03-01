@@ -33,7 +33,9 @@
 
         @include('web.templates.header')
 
+
         @yield('content')
+
         @include('sweet::alert')
         @include('web.templates.footer')
 
@@ -58,7 +60,7 @@
 
     @yield('script')
     <script type="text/javascript">
-        $('#myModal').modal({ 'show' : {{ count($errors->login) > 0 ? 'true' : 'false' }}  });
+        $('#myModal').modal({ 'show' : {{ count($errors->login) > 0  && !Request::is('login')? 'true' : 'false' }}  });
         var input = document.querySelector("#phone"),
             errorMsg = document.querySelector("#error-msg"),
             validMsg = document.querySelector("#valid-msg");
