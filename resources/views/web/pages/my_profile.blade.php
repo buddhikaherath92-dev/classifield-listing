@@ -131,13 +131,83 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-sm-3 col-12">
+                            <a class="control-label" style="width: 150px;margin-left: 20px "type="submit" href={{route('create_url')}}>Generate URL</a>
+                        </div>
+                        <div class="col-sm-9 col-12">
+                            <div class="form-group">
+                                <input type="text" id="seller-name" name="name"
+                                       class="form-control"
+{{--{{ $errors->has('name') ? ' is-invalid' : '' }}"--}}
+                                       {{--value="{{  old('name') ? old('name') : Auth::user()->name }}"--}}
+                                       placeholder="Url" value="{{session('status')}}">
+                            </div>
+                        </div>
+                    </div>
+                    {{--<style>.page-title{--}}
+                            {{--background: #e7e7e7 none repeat scroll 0 0;--}}
+                            {{--border: 1px solid #c1c1c1;--}}
+                            {{--font-weight: 100;--}}
+                            {{--margin: 0;--}}
+                            {{--padding: 15px 0;--}}
+                            {{--text-transform: uppercase;--}}
+                        {{--}--}}
+
+                        {{--.widget {--}}
+                            {{--background: #ececec none repeat scroll 0 0;--}}
+                            {{--border: 1px solid #adadad;--}}
+                            {{--border-radius: 5px 5px 0 0;--}}
+                            {{--margin: 20px 0;--}}
+                            {{--padding: 0;--}}
+                        {{--}--}}
+                        {{--.widget-title {--}}
+                            {{--background: #e4e4e4 none repeat scroll 0 0;--}}
+                            {{--border-radius: 5px 5px 0 0;--}}
+                            {{--font-size: 22px;--}}
+                            {{--font-weight: 100;--}}
+                            {{--margin: 0;--}}
+                            {{--padding: 15px 0;--}}
+                            {{--text-transform: uppercase;--}}
+                        {{--}--}}
+                        {{--.add-remove-class{--}}
+                            {{--margin:15px 0px;--}}
+                        {{--}--}}
+
+                        {{--.show-more-snippet {--}}
+                            {{--height:35px;--}}
+                            {{--width:100%;--}}
+                            {{--overflow:hidden;--}}
+                        {{--}--}}
+
+                        {{--#div-id{--}}
+                            {{--display:none;--}}
+                        {{--}--}}
+
+                        {{--.content_wrapper_text{--}}
+                            {{--margin: 30px 0;--}}
+                            {{--background: #dfdfdf;--}}
+                            {{--padding: 30px;--}}
+                        {{--}--}}
+                        {{--.content_wrapper_text p{--}}
+                            {{--margin: 15px 0 0 0 ;--}}
+
+                        {{--}</style>--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="col-md-12">--}}
+                            {{--<div class="content_wrapper_text">--}}
+                                {{--<button id="myShowHidebtn" class="btn btn-primary">Hide</button>--}}
+                                {{--<p style="display: none;">Paragraph Containt..Paragraph Containt..Paragraph Containt..Paragraph Containt..Paragraph Containt..</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
 
                     <div class="row">
                         <div class="col-sm-3 col-12">
                         </div>
                         <div class="col-sm-9 col-12">
                             <div class="form-group">
-                                <button type="submit" class="cp-default-btn-sm">Update Now!</button>
+                                <button type="submit" class="cp-default-btn-sm" >Update Now!</button>
                             </div>
                         </div>
                     </div>

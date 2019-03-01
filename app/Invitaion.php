@@ -12,11 +12,12 @@ class Invitaion extends Model
      * @var array
      */
     protected $fillable = [
+        'id',
         'user_id',
         'token',
-
     ];
 
-    
+
+
 
 }

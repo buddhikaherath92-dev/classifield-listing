@@ -71,8 +71,8 @@
                                     <li><a href="/">Home</a></li>
                                     <li><a href="{{url('/list/corporate_ads')}}">Corporate Ads</a></li>
                                     <li><a href="{{url('/list/individual_ads')}}">Individual Ads</a></li>
-                                    <li><a href="{{'/show_aboutAs'}}">About Us</a></li>
-                                    <li><a href="{{'/show_contact'}}">Contact Us</a></li>
+                                    <li><a href="{{'/aboutAs'}}">About Us</a></li>
+                                    <li><a href="{{'/contact'}}">Contact Us</a></li>
                                 </ul>
                             </nav>
                         </div>
