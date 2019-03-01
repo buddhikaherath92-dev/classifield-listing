@@ -7,7 +7,7 @@
     <meta name="x-apple-disable-message-reformatting">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="telephone=no" name="format-detection">
-    <title>New email 2</title>
+    <title>AluthAds</title>
     <!--[if (mso 16)]>
     <style type="text/css">
         a {
@@ -361,7 +361,11 @@
                                                             <td align="center" style="padding:0;Margin:0;">
                                                                 <h2
                                                                         style="Margin:0;line-height:29px;mso-line-height-rule:exactly;font-family:'playfair display', georgia, 'times new roman', serif;font-size:24px;font-style:normal;font-weight:normal;color:#F1DB03;">
-                                                                    Latest Advertisements On AluthAds
+                                                                    <center>
+                                                                        @if(isset($newsletters))
+                                                                            {{ $newsletters->title }}
+                                                                        @endif
+                                                                    </center>
                                                                 </h2>
                                                             </td>
                                                         </tr>
@@ -375,6 +379,13 @@
                         </td>
                     </tr>
                 </table>
+                <div class="card-header" style="font-style: italic; font-family: 'Arial Black'; font-size: 20px">
+                    <center>
+                        @if(isset($newsletters))
+                            {{ $newsletters->description }}
+                        @endif
+                    </center>
+                </div>
                 <table class="es-content" cellspacing="0" cellpadding="0" align="center"
                        style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;">
                     <tr style="border-collapse:collapse;">
@@ -404,7 +415,7 @@
                                                                     <td style="padding:0;Margin:0;position:relative;"
                                                                         align="center">
                                                                         <img class="adapt-img"
-                                                                             src="{{env('APP_URL').$advertisement->img_1}}"
+                                                                             src="{{env('APP_URL')."/images/advertisements/".$advertisement->img_1}}"
                                                                              alt="" title=""
                                                                              style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
                                                                              width="100%">
