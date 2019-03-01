@@ -271,38 +271,39 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="sidebar-item-box">
-                        <div class="gradient-wrapper">
-                            <div class="gradient-title">
-                                <h3>Quick Login</h3>
-                            </div>
-                            <div class="container">
-                                <form  method="POST" action="{{ route('login') }}">
-                                    {{ csrf_field() }}
-                                    @if ($errors->login->has('email'))
-                                        <div class="alert alert-danger">
-                                            <strong>Error!</strong> {{ $errors->login->first('email') }}
-                                        </div>
-                                    @endif
-                                    <br>
-                                    <label>Email</label>
-                                    <input type="email" placeholder="E-mail" class="{{ $errors->login->has('email') ? ' is-invalid' : '' }} form-control"
-                                           required name="email" value="{{ old('email') }}" >
-                                    <br>
-                                    <label>Password</label>
-                                    <input type="password" placeholder="Password"
-                                           class="{{ $errors->login->has('password') ? ' is-invalid' : '' }} form-control"
-                                           name="password" required>
-                                    <input type="text" hidden value="quick" name="login_type">
-                                    <br>
-                                    <div class="">
-                                        <button type="submit" class="cp-default-btn-sm">Login</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    {{--<div class="sidebar-item-box">--}}
+                        {{--<div class="gradient-wrapper">--}}
+                            {{--<div class="gradient-title">--}}
+                                {{--<h3>Quick Login</h3>--}}
+                            {{--</div>--}}
+                            {{--<div class="container">--}}
+                                {{--<form  method="POST" action="{{ route('login') }}">--}}
+                                    {{--{{ csrf_field() }}--}}
+                                    {{--@if ($errors->login->has('email'))--}}
+                                        {{--<div class="alert alert-danger">--}}
+                                            {{--<strong>Error!</strong> {{ $errors->login->first('email') }}--}}
+                                        {{--</div>--}}
+                                    {{--@endif--}}
+                                    {{--<br>--}}
+                                    {{--<label>Email</label>--}}
+                                    {{--<input type="email" placeholder="E-mail" class="{{ $errors->login->has('email') ? ' is-invalid' : '' }} form-control"--}}
+                                           {{--required name="email" value="{{ old('email') }}" >--}}
+                                    {{--<br>--}}
+                                    {{--<label>Password</label>--}}
+                                    {{--<input type="password" placeholder="Password"--}}
+                                           {{--class="{{ $errors->login->has('password') ? ' is-invalid' : '' }} form-control"--}}
+                                           {{--name="password" required>--}}
+                                    {{--<input type="text" hidden value="quick" name="login_type">--}}
+                                    {{--<br>--}}
+                                    {{--<div class="">--}}
+                                        {{--<button type="submit" class="cp-default-btn-sm">Login</button>--}}
+                                    {{--</div>--}}
+                                {{--</form>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            </div>
             </div>
         </div>
     </section>

@@ -112,7 +112,6 @@ class ResetPasswordController extends Controller
         // redirect them back to where they came from with their error message.
         return $response == Password::PASSWORD_RESET
 
-//        ? Mail::to($email)->send(new SendMaillable($pin))
             ? Redirect::route('index')
             : $this->sendResetFailedResponse($request, $response);
     }

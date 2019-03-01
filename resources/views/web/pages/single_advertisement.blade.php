@@ -155,6 +155,15 @@
                                         </div>
                                     </div>
                                 </li>
+                                <li>
+                                    <div class="media">
+                                        <img src="{{asset('web/img/user/eye.png')}}" alt="user" class="img-fluid pull-left">
+                                        <div class="media-body">
+                                            <span>Views</span>
+                                            <h4>{{$advertisement->views}}</h4>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>

@@ -13,6 +13,7 @@ class SendMaillable extends Mailable
     use Queueable, SerializesModels;
     public $pin;
     public $user;
+    public $email;
 
     /**
      * Create a new message instance.
@@ -23,6 +24,8 @@ class SendMaillable extends Mailable
     {
         $this->pin=$pin;
         $this->user= Auth::user()->name;
+        $email=(request()->user()->email);
+        $this->email=$email;
 
     }
 

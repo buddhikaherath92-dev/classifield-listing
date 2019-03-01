@@ -70,7 +70,8 @@
 
                             <div class="price">{{'Rs '.number_format($advertisement->price)}}</div>
 
-                            <a href="#" class="product-details-btn">Details</a>
+                            <a href="{{url('/ad/'.config('constance.categories')[$advertisement
+                                        ->category_id]['slug']).'/'.$advertisement->slug}}" class="product-details-btn">Details</a>
                         </div>
                     </div>
                 </div>
