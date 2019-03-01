@@ -46,16 +46,24 @@ class HomeController extends Controller
 
     public function subscribe()
     {
+        $connection=null;
         $incomingData = request()->validate(['email_subscribe' => 'required|string|min:6']);
-        if(Subscriber::where('subscriber_email',$incomingData['email_subscribe'])->count() == 0){
-            Subscriber::create([
-                'subscriber_email' => $incomingData['email_subscribe']
-            ]);
-            Mail::to($incomingData['email_subscribe'])->send(new SubscribeMailable($incomingData['email_subscribe']));
-            $this->common->showAlerts('You Are Successfully Subscribed To AluthAds','success',"You Will Send Our Subscribe E-Mail Shortly");
-            return redirect()->back();
+        $is_sxists=(array)Subscriber::where('subscriber_email',$incomingData['email_subscribe'])->get();
+        system("ping -c 1 google.com", $connection);
+        if($connection==0){
+            if(empty(array_filter($is_sxists))){
+                Subscriber::create([
+                    'subscriber_email' => $incomingData['email_subscribe']
+                ]);
+                Mail::to($incomingData['email_subscribe'])->send(new SubscribeMailable($incomingData['email_subscribe']));
+                $this->common->showAlerts('You Are Successfully Subscribed To AluthAds','success',"You Will Send Our Subscribe E-Mail Shortly");
+                return redirect()->back();
+            }else{
+                $this->common->showAlerts('You Are Already Subscribed To AluthAds','error',"No Need To Subscribe Again");
+                return redirect()->back();
+            }
         }else{
-            $this->common->showAlerts('You Are Already Subscribed To AluthAds','error',"No Need To Subscribe Again");
+            $this->common->showAlerts('Please Check Your Internet Connection','error',"Can't Reach Server");
             return redirect()->back();
         }
     }

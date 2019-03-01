@@ -14,11 +14,18 @@ use Illuminate\Support\Facades\Auth;
 
 class NewsLetterController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function show(Request $request)
     {
+        $advertisement = Advertisement::get();
+        $newsletters = NewsLetter::get();
         return view('admin.pages.newsletter', [
-            'newsletters' => NewsLetter::get(),
-            'advertisements' => Advertisement::get()
+            'advertisements' => $advertisement,
+            'newsletters' => $newsletters
         ]);
     }
 
@@ -46,15 +53,13 @@ class NewsLetterController extends Controller
         return redirect()->back();
     }
 
-    public function preview(Request $news_letter)
+    public function preview(Request $newsletter)
     {
         $advertisement_data = [];
-        $news_letter_data=[];
-        $advertisements = NewsLetterDetail::where('newsletter_id', $news_letter->id)->get();
-        foreach ($advertisements as $index => $advertisement) {
-            array_push($advertisement_data, Advertisement::where('id', $advertisement->advertisement_id)->get()[0]);
-            array_push($news_letter_data, NewsLetter::where('id',$news_letter->id)->get()[0]);
+        $newsleter_details = NewsLetterDetail::where('newsletter_id', $newsletter->id)->get();
+        foreach ($newsleter_details as $newsleter_detail) {
+            array_push($advertisement_data, Advertisement::where('id', $newsleter_detail->advertisement_id)->get()[0]);
         }
-        return new SendNewsLetterMailable($advertisement_data,$news_letter_data[0]);
+        return new SendNewsLetterMailable($advertisement_data, NewsLetter::where('id', $newsletter->id)->get()[0]);
     }
 }
