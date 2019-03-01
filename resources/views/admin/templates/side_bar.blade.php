@@ -17,4 +17,10 @@
             <span>News Letters</span>
         </a>
     </li>
+    <li class="nav-item @if(Route::currentRouteName() === 'view_referals') active @endif">
+        <a class="nav-link" href="{{route('view_referals')}}">
+            <i class="fas fa-fw fa-audio-description"></i>
+            <span>Referals</span>
+        </a>
+    </li>
 </ul>

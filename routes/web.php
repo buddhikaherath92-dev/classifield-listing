@@ -38,11 +38,10 @@ Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'admin' ], function () {
     Route::post('/advertisements', 'Admin\AdvertisementController@update')->name('admin_advertisements_update');
     Route::post('/newsletter', 'Admin\NewsLetterController@store')->name('admin_newsletters_store');
     Route::get('/newsletter', 'Admin\NewsLetterController@show')->name('admin_newsletters');
-<<<<<<< HEAD
-    Route::get('/view_url', 'Admin\ViewUrlController@show')->name('view');
-=======
+
+    Route::get('/view_referals', 'Admin\ViewReferalsController@show')->name('view_referals');
+
     Route::get('/newsletter_preview/{id}', 'Admin\NewsLetterController@preview')->name('newsletter_preview');
->>>>>>> 43b080ecd43bf579fc5533ba3fce9eb08e9c1789
 });
 
 
