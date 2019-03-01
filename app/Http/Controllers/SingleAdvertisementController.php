@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Advertisement;
+use App\Rating;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -23,7 +24,8 @@ class SingleAdvertisementController extends Controller
             'category' => config('constance.categories')[$advertisement->category_id]['name'],
             'seller' => User::where('id', $advertisement->user_id)->first(),
             'seller_ads' => Advertisement::where('user_id', $advertisement->user_id)->where('is_inactive', 0)
-                ->limit(4)->orderBy('created_at', 'desc')->get()
+                ->limit(4)->orderBy('created_at', 'desc')->get(),
+            'rating'=>Rating::where('slug',$request->slug)->average('rating')
         ]);
     }
 }
