@@ -24,11 +24,12 @@ Route::get('/list/{slug}', 'ListingController@show');
 Route::get('/search', 'SearchController@show')->name('search_ads');
 Route::get('/show_verification', 'VerificationController@show')->name('show_verification');
 Route::post('/verify_user', 'VerificationController@checkVerifyCode')->name('verify_user');
-Route::get('/show_aboutAs','AboutAsController@show');
-Route::get('/show_contact','ContactController@show');
-Route::get('/login','LoginBladeController@show')->name('login');
-Route::get('/add','MyAdsController@click')->name('addShow');
+Route::get('/show_aboutAs','AboutAsController@show')->name('aboutAs');
+Route::get('/show_contact','ContactController@show')->name('contact');
+Route::get('/login','NewLoginController@show')->name('login');
 Route::get('/resendCode','ResendCodeController@resendCode')->name('resendCode');
+Route::get('/add','MyAdsController@click')->name('addShow');
+Route::get('/create_url','InvitationController@createToken')->name('create_url');
 
 // admin panel routes
 Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'admin' ], function () {
