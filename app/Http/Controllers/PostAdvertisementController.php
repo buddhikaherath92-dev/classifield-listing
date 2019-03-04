@@ -79,7 +79,7 @@ class PostAdvertisementController extends Controller
                 'img_2' => 'image|mimes:jpeg,jpg,png|max:2000',
                 'img_3' => 'image|mimes:jpeg,jpg,png|max:2000',
                 'is_negotiable' => 'integer',
-                'price' => 'string'
+                'price' => 'required|regex:/^\d*(\.\d{1,2})?$/'
             ]);
 
             $img_1   = null;

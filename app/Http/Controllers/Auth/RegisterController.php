@@ -71,7 +71,7 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-            'tel_no' => 'required',
+            'tel_no' => 'required|regex:/(0)[0-9]{9}/',
             'account_type' => 'required',
             'email_code'=>'nullable',
         ]);
