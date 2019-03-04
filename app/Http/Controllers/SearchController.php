@@ -21,7 +21,7 @@ class SearchController extends Controller
         if (request('ad_type') === 'corporate' || request('ad_type') === 'individual') {
             $advertisements = $advertisements->where('users.type',
                 config('constance.user_types')[request('ad_type')]);
-            request('district')!==null ?
+                request('district')!==null ?
                 $heading = 'Search results for All '.request('ad_type').' Advertisements In '.request('district').' District.':
                 $heading = 'Search results for All '.request('ad_type').' Advertisements';
         }

@@ -116,7 +116,7 @@ class RegisterController extends Controller
             'tel_no' => $data['tel_no'],
             'type' => (int)$data['account_type'],
             'email_code'=>$data['email_code'],
-        ]);
+        9]);
     }
 
     /**
