@@ -22,9 +22,12 @@ class ListingController extends Controller
      * -----------------------------------------------------------------------------------------------------------------
      */
     public function show(Request $request){
+
         $query = $request->slug;
+
         $advertisements = [];
         $heading = 'All Ads';
+
 
         switch ($query){
             case $query == 'corporate_ads' :

@@ -85,8 +85,10 @@ class PostAdvertisementController extends Controller
             $img_1   = null;
             $img_2   = null;
             $img_3   = null;
-            $slug    = $this->common->slugify($incomingData['title']);
 
+            $count=Advertisement::count()+1;
+
+            $slug  = $this->common->slugify($incomingData['title']).$count;
             if(request()->has('img_1')){
 
 

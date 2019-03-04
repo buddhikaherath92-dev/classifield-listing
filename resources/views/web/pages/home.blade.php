@@ -168,6 +168,7 @@
                 @endif
 
             @foreach($recent_advertisements as $recentAdsIndex => $recent_advertisement)
+
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-box item-mb zoom-gallery">
                             <div class="item-mask-wrapper">
