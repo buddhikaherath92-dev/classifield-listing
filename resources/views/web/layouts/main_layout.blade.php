@@ -107,5 +107,9 @@
         input.addEventListener('keyup', reset);
 
     </script>
-
+    <script type="text/javascript">
+        @if (count($errors) > 0)
+        $('#modelRate').modal('show');
+        @endif
+    </script>
 </body>

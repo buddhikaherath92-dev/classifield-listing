@@ -26,61 +26,70 @@
                                 <ul class="nav tab-nav tab-nav-list">
 
                                     @if($advertisement->img_1 !== null)
-                                    <li class="nav-item">
-                                        <a class="active" href="#related1" data-toggle="tab" aria-expanded="false">
-                                            <img alt="related1" src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_1}}"
-                                                 class="img-fluid">
-                                        </a>
-                                    </li>
+                                        <li class="nav-item">
+                                            <a class="active" href="#related1" data-toggle="tab" aria-expanded="false">
+                                                <img alt="related1"
+                                                     src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_1}}"
+                                                     class="img-fluid">
+                                            </a>
+                                        </li>
                                     @endif
 
                                     @if($advertisement->img_2 !== null)
-                                    <li class="nav-item">
-                                        <a href="#related2" data-toggle="tab" aria-expanded="false">
-                                            <img alt="related2" src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_2}}"
-                                                 class="img-fluid">
-                                        </a>
-                                    </li>
+                                        <li class="nav-item">
+                                            <a href="#related2" data-toggle="tab" aria-expanded="false">
+                                                <img alt="related2"
+                                                     src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_2}}"
+                                                     class="img-fluid">
+                                            </a>
+                                        </li>
                                     @endif
 
                                     @if($advertisement->img_2 !== null)
-                                    <li class="nav-item">
-                                        <a href="#related3" data-toggle="tab" aria-expanded="false">
-                                            <img alt="related3" src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_3}}"
-                                                 class="img-fluid">
-                                        </a>
-                                    </li>
+                                        <li class="nav-item">
+                                            <a href="#related3" data-toggle="tab" aria-expanded="false">
+                                                <img alt="related3"
+                                                     src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_3}}"
+                                                     class="img-fluid">
+                                            </a>
+                                        </li>
                                     @endif
 
                                 </ul>
                                 <div class="tab-content">
 
                                     @if($advertisement->price !== null)
-                                    <span class="price">{{'Rs '.number_format($advertisement->price)}}</span>
+                                        <span class="price">{{'Rs '.number_format($advertisement->price)}}</span>
                                     @endif
 
                                     @if($advertisement->img_1 !== null)
-                                    <div class="tab-pane fade active show" id="related1">
-                                        <a href="#" class="zoom ex1">
-                                            <img alt="single" src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_1}}" class="img-fluid">
-                                        </a>
-                                    </div>
+                                        <div class="tab-pane fade active show" id="related1">
+                                            <a href="#" class="zoom ex1">
+                                                <img alt="single"
+                                                     src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_1}}"
+                                                     class="img-fluid">
+                                            </a>
+                                        </div>
                                     @endif
 
                                     @if($advertisement->img_2 !== null)
-                                    <div class="tab-pane fade" id="related2">
-                                        <a href="#" class="zoom ex1">
-                                            <img alt="single" src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_2}}" class="img-fluid">
-                                        </a>
-                                    </div>
+                                        <div class="tab-pane fade" id="related2">
+                                            <a href="#" class="zoom ex1">
+                                                <img alt="single"
+                                                     src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_2}}"
+                                                     class="img-fluid">
+                                            </a>
+                                        </div>
                                     @endif
 
                                     @if($advertisement->img_3 !== null)
-                                    <div class="tab-pane fade" id="related3">
-                                        <a href="#" class="zoom ex1">
-                                            <img alt="single" src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_3}}" class="img-fluid">
-                                        </a>
-                                    </div>
+                                        <div class="tab-pane fade" id="related3">
+                                            <a href="#" class="zoom ex1">
+                                                <img alt="single"
+                                                     src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_3}}"
+                                                     class="img-fluid">
+                                            </a>
+                                        </div>
                                     @endif
 
                                 </div>
@@ -92,10 +101,15 @@
                             <ul class="item-actions border-top">
                                 <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i>Save Ad</a></li>
                                 <li><a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>Share ad</a></li>
-                                <li><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Report abuse</a></li>
+                                <li><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Report
+                                        abuse</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#modelRate"><i class="fa fa-star"
+                                                                                                aria-hidden="true"></i>Rate</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
+
                     <div class="row no-gutters">
                         <div class="col-lg-7 col-md-7 col-sm-12 col-12">
                             <div class="add-layout2-left d-flex align-items-center">
@@ -107,7 +121,8 @@
                         </div>
                         <div class="col-lg-5 col-md-5 col-sm-12 col-12">
                             <div class="add-layout2-right d-flex align-items-center justify-content-end mb--sm">
-                                <a href="{{route('view_post_ad')}}" class="cp-default-btn-sm-primary">Post Your Ad Now!</a>
+                                <a href="{{route('view_post_ad')}}" class="cp-default-btn-sm-primary">Post Your Ad
+                                    Now!</a>
                             </div>
                         </div>
                     </div>
@@ -121,7 +136,8 @@
                             <ul class="sidebar-seller-information">
                                 <li>
                                     <div class="media">
-                                        <img src="{{asset('web/img/user/user1.png')}}" alt="user" class="img-fluid pull-left">
+                                        <img src="{{asset('web/img/user/user1.png')}}" alt="user"
+                                             class="img-fluid pull-left">
                                         <div class="media-body">
                                             <span>Posted By</span>
                                             <h4>{{$seller->name}}</h4>
@@ -130,7 +146,8 @@
                                 </li>
                                 <li>
                                     <div class="media">
-                                        <img src="{{asset('web/img/user/user3.png')}}" alt="user" class="img-fluid pull-left">
+                                        <img src="{{asset('web/img/user/user3.png')}}" alt="user"
+                                             class="img-fluid pull-left">
                                         <div class="media-body">
                                             <span>Contact Number</span>
                                             <h4>{{$seller->tel_no}}</h4>
@@ -139,7 +156,8 @@
                                 </li>
                                 <li>
                                     <div class="media">
-                                        <img src="{{asset('web/img/user/user5.png')}}" alt="user" class="img-fluid pull-left">
+                                        <img src="{{asset('web/img/user/user5.png')}}" alt="user"
+                                             class="img-fluid pull-left">
                                         <div class="media-body">
                                             <span>User Type</span>
                                             <h4>{{$seller->type == 1 ? 'Individual' : 'Corporate'}}</h4>
@@ -148,7 +166,8 @@
                                 </li>
                                 <li>
                                     <div class="media">
-                                        <img src="{{asset('web/img/user/bank.png')}}" alt="user" class="img-fluid pull-left">
+                                        <img src="{{asset('web/img/user/bank.png')}}" alt="user"
+                                             class="img-fluid pull-left">
                                         <div class="media-body">
                                             <span>Price</span>
                                             <h4>{{$price_type == 1 ? 'Negotiable':'Fixed'}}</h4>
@@ -157,10 +176,27 @@
                                 </li>
                                 <li>
                                     <div class="media">
-                                        <img src="{{asset('web/img/user/eye.png')}}" alt="user" class="img-fluid pull-left">
+                                        <img src="{{asset('web/img/user/eye.png')}}" alt="user"
+                                             class="img-fluid pull-left">
                                         <div class="media-body">
                                             <span>Views</span>
                                             <h4>{{$advertisement->views}}</h4>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="media">
+                                        <img src="{{asset('web/img/user/star.png')}}" alt="user"
+                                             class="img-fluid pull-left">
+                                        <div class="media-body">
+                                            <span>Ratings</span>
+                                            <br>
+                                            @for($i=0; $i<5; ++$i)
+                                                <h4 class="starRating"><i
+                                                            class="fa fa-star{{($rating<=$i ? '-o' : '')}}"
+                                                            aria-hidden="true"></i></h4>
+                                            @endfor
+                                            <h4>{{number_format((float)$rating, 1, '.', '')}}</h4>
                                         </div>
                                     </div>
                                 </li>
@@ -179,7 +215,8 @@
                                             <a href="{{url('/ad/'.config('constance.categories')[$seller_ad
                                         ->category_id]['slug']).'/'.$seller_ad->slug}}" class="pull-left">
                                                 <img src="{{env('APP_URL').'images/advertisements/'.$seller_ad->img_1}}"
-                                                     alt="categories" class="img-fluid" style="width: 75px; height: 75px">
+                                                     alt="categories" class="img-fluid"
+                                                     style="width: 75px; height: 75px">
                                             </a>
                                             <div class="media-body" style="width: 30px">
                                                 <h4 class="ellipsis"><a href="{{url('/ad/'.config('constance.categories')[$seller_ad
@@ -187,7 +224,8 @@
                                                         {{$seller_ad->title}}</a></h4>
                                                 <div class="place">
                                                     <img src="{{config('constance.categories')[$seller_ad->category_id]['sub_cat'][$seller_ad->subcategory_id]['image']}}"
-                                                         alt="category" class="img-fluid" style="width: 15px;height: 15px">
+                                                         alt="category" class="img-fluid"
+                                                         style="width: 15px;height: 15px">
                                                     {{config('constance.categories')[$seller_ad->category_id]['sub_cat'][$seller_ad->subcategory_id]['name']}}
                                                 </div>
                                                 <div class="price">{{$seller_ad->price ? 'Rs '.number_format($seller_ad->price) :  'N/A'}}</div>
@@ -213,6 +251,73 @@
                 </div>
             </div>
         </div>
-
+        <!-- Modal -->
+        <div class="modal fade" id="modelRate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" id="dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Rate Advertisement</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    @if ($errors->any())
+                        <div class="alert alert-danger" id="">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <div class="modal-body">
+                        <form action="{{route('rate_ad')}}" method="post" class="rating">
+                            {{csrf_field()}}
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="formGroupExampleInput" name="email"
+                                       placeholder="Enter Your Email">
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label>
+                                    <input class="star" type="radio" name="rating" value="1"/>
+                                    <span class="icon">★</span>
+                                </label>
+                                <label>
+                                    <input class="star" type="radio" name="rating" value="2"/>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                </label>
+                                <label>
+                                    <input class="star" type="radio" name="rating" value="3"/>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                </label>
+                                <label>
+                                    <input class="star" type="radio" name="rating" value="4"/>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                </label>
+                                <label>
+                                    <input class="star" type="radio" name="rating" value="5"/>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                </label>
+                            </div>
+                            <input type="hidden" name="slug" value="{{$advertisement->slug}}">
+                            <button type="submit" class="btn btn-success form-control" name="ad_id"
+                                    value="{{$advertisement->id}}">Rate
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 @endsection
