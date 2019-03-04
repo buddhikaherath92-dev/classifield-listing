@@ -131,20 +131,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-3 col-12">
-                            <a class="control-label" style="width: 150px;margin-left: 20px "type="submit" href={{route('create_url')}}>Generate URL</a>
-                        </div>
-                        <div class="col-sm-9 col-12">
-                            <div class="form-group">
-                                <input type="text" id="seller-name" name="name"
-                                       class="form-control"
-{{--{{ $errors->has('name') ? ' is-invalid' : '' }}"--}}
-                                       {{--value="{{  old('name') ? old('name') : Auth::user()->name }}"--}}
-                                       placeholder="Url" value="{{session('status')}}">
-                            </div>
-                        </div>
-                    </div>
+
                     {{--<style>.page-title{--}}
                             {{--background: #e7e7e7 none repeat scroll 0 0;--}}
                             {{--border: 1px solid #c1c1c1;--}}
@@ -211,6 +198,25 @@
                             </div>
                         </div>
                     </div>
+                    <hr>
+                    <h3>Share link for Friends</h3>
+
+                    <div class="row">
+                        <div class="col-3"><a class="btn btn-success" style="width: 150px;margin-left: 20px "type="submit" href={{route('create_url')}}>Generate URL</a>
+                        </div>
+                        <div class="col-9">
+                            <div class="col-sm-9 col-12">
+                                <div class="form-group">
+                                    <input type="text" id="seller-name" name="name"
+                                           class="form-control" placeholder="Url" value="{{session('status')}} ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </form>
 
                 </div>
             </form>

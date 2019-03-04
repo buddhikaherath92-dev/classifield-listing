@@ -16,4 +16,7 @@ class SuccessReferal extends Model
         'user_id',
         'is_registered'
     ];
+
+
+
 }
