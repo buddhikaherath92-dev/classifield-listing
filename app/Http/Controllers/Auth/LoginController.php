@@ -63,13 +63,12 @@ class LoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
         if (request('login_type') !== null && $user->email_verified_at !== null ){
-            $this->common->showAlerts('','success','Quick login Successful !');
-            return Redirect::back();
+            return redirect()->back();
         }
 
         if($user->email_verified_at !== null){
             $this->common->showAlerts('','success','Login Successful !');
-            $this->redirectTo = $user->type == 2 ? '/admin/dashboard' :
+            $this->redirectTo = $user->type == config('constance.user_types')['admin'] ? '/admin/dashboard' :
                 '/my_dashboard/profile';
         }
     }

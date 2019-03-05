@@ -452,8 +452,9 @@ return [
      * -----------------------------------------------------------------------------------------------------------------
      */
     'user_types' => [
-        'corporate' => 2,
-        'individual' => 1
+        'corporate' => 3,
+        'individual' => 1,
+        'admin' => 2
     ],
     /**
      * Available district in SriLanka

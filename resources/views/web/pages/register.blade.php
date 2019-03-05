@@ -39,13 +39,13 @@
                                             <div class="form-group">
                                                 <div class="radio radio-primary radio-inline">
                                                     <input type="radio"  value="1" name="account_type" id="r_two"
-                                                           @if(old('account_type') ==  1) checked="checked" @endif
+                                                           @if(old('account_type') ==  config('constance.user_types')['individual']) checked="checked" @endif
                                                            class="{{ $errors->has('account_type') ? ' is-invalid' : '' }}" />
                                                     <label for="r_two"> Individual</label>
                                                 </div>
                                                 <div class="radio radio-primary radio-inline">
-                                                    <input type="radio" value="2" id="r_one"
-                                                           @if(old('account_type') ==  2) checked="checked" @endif
+                                                    <input type="radio" value="3" id="r_one"
+                                                           @if(old('account_type') ==  config('constance.user_types')['corporate']) checked="checked" @endif
                                                            name="account_type" class="{{ $errors->has('account_type') ? ' is-invalid' : '' }}" />
                                                     <label for="r_one"> Corporate </label>
                                                 </div>

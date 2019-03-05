@@ -71,7 +71,11 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+<<<<<<< HEAD
             'tel_no' => 'required ',
+=======
+            'tel_no' => 'required|regex:/(0)[0-9]{9}/',
+>>>>>>> 2cc0f5802a09b583d6eead31e8c88a9f05ac58b7
             'account_type' => 'required',
             'email_code'=>'nullable',
         ]);
@@ -116,7 +120,7 @@ class RegisterController extends Controller
             'tel_no' => $data['tel_no'],
             'type' => (int)$data['account_type'],
             'email_code'=>$data['email_code'],
-        ]);
+        9]);
     }
 
     /**

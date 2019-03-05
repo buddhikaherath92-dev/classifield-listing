@@ -14,7 +14,10 @@
              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
-                    <br><br>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close" style="color: red; font-size: 35px; right: 5px">
+                        <span aria-hidden="true" style="float: right; right: 0">×</span>
+                    </button>
+                    <br>
                     <form action="{{ route('admin_newsletters_store') }}" method="post" id="newsletter_form">
                         {{ csrf_field() }}
                         <div class="form-group">

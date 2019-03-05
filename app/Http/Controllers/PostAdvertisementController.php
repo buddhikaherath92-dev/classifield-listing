@@ -81,9 +81,13 @@ class PostAdvertisementController extends Controller
                 'img_2' => 'image|mimes:jpeg,jpg,png|max:2000',
                 'img_3' => 'image|mimes:jpeg,jpg,png|max:2000',
                 'is_negotiable' => 'integer',
+<<<<<<< HEAD
                 'price' => 'string'
 
 
+=======
+                'price' => 'required|regex:/^\d*(\.\d{1,2})?$/'
+>>>>>>> 2cc0f5802a09b583d6eead31e8c88a9f05ac58b7
             ]);
 
 
