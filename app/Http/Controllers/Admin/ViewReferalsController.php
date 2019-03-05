@@ -25,14 +25,6 @@ class ViewReferalsController extends Controller
     }
 
     function showStatistics(Request $request){
-//      ;
-//        dd($visted,$register);
-////        $visit=SuccfessReferal::where('is_registered ','=','0')->count();
-//        dd("fdygj");
-//
-//        $user=SuccessReferal::select('user_id')->get();
-////        dd($user);
-
 
     }
 }

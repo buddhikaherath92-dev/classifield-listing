@@ -1,7 +1,6 @@
 @extends('admin.layouts.default')
 
 @section('child-content')
-    {{--<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">--}}
     <table class="table">
         <thead class="thead-dark">
         <tr>
@@ -26,7 +25,4 @@
         </tbody>
     </table>
 
-    {{--</table>--}}
 @endsection
-{{--//\App\Invitaion::where('user_id',$viewreferals->id)->count()--}}
-{{--App\SuccessReferal::count()--}}
