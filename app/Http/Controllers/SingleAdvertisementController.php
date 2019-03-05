@@ -47,7 +47,7 @@ class SingleAdvertisementController extends Controller
                 'rating'=>Rating::where('slug',$request->slug)->average('rating')
             ]);
         }else{
-            $this->common->showAlerts('Your Advertisement is still inactive', 'success', "Your Advertisement is still inactive");
+            $this->common->showAlerts('Your Advertisement is still inactive', 'error', "Your Advertisement is still inactive");
             return redirect()->back();
         }
 
