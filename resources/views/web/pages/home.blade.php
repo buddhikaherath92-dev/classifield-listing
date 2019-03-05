@@ -38,7 +38,7 @@
                     @if(count($featured_advertisements) === 0 )
                         {{---------------------------------}}
 
-                        <div class="alert alert-success" role="alert">There Are No Featured Advertisements At This Movement</div>
+                        <div class="alert alert-success" role="alert">There are no featured advertisements at this movement</div>
 
 
 
@@ -161,7 +161,7 @@
 
                     {{---------------------------------}}
 
-                    <div class="alert alert-success" role="alert">There Are No Recently Advertisement At This Movement.</div>
+                    <div class="alert alert-success" role="alert">There are no recently advertisement at this movement.</div>
 
 
                     {{------------------------------}}

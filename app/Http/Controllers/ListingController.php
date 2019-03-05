@@ -34,13 +34,13 @@ class ListingController extends Controller
                 $advertisements = Advertisement::join('users', 'advertisements.user_id', 'users.id')
                     ->where('users.type', config('constance.user_types')['corporate'])
                     ->select('advertisements.*')->WhereActive()->paginate(9);
-                $heading = 'Corporate Advertisements';
+                $heading = 'corporate advertisements';
                 break;
             case $query == 'individual_ads' :
                 $advertisements = Advertisement::join('users', 'advertisements.user_id', 'users.id')
                     ->where('users.type', config('constance.user_types')['individual'])
                     ->select('advertisements.*')->WhereActive()->paginate(9);
-                $heading = 'Individual Advertisements';
+                $heading = 'individual advertisements';
                 break;
             default :
                 if ($catId = $this->common->getCategoryIdFromSlug($query)){

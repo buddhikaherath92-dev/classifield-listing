@@ -58,7 +58,7 @@
                     <div class="row category-grid-layout2 zoom-gallery">
                         @if(count($advertisements) === 0 )
 
-                            <div class="alert alert-success" role="alert" style="">There Are No  {{$heading}}  At This Movement.</div>
+                            <div class="alert alert-success" role="alert" style="">There are no  {{$heading}}  at this movement.</div>
 
                         @endif
                         @foreach($advertisements as  $featuredAdsIndex => $advertisement)
