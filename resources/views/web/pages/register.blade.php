@@ -45,7 +45,7 @@
                                                 </div>
                                                 <div class="radio radio-primary radio-inline">
                                                     <input type="radio" value="3" id="r_one"
-                                                           @if(old('account_type') ==  config('constance.user_types')['corporate']) checked="checked" @endif
+                                                           @if(old('account_type') ==  config('constance.user_types' )['corporate']) checked="checked" @endif
                                                            name="account_type" class="{{ $errors->has('account_type') ? ' is-invalid' : '' }}" />
                                                     <label for="r_one"> Corporate </label>
                                                 </div>
