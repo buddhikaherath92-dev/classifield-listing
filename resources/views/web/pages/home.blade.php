@@ -38,7 +38,7 @@
                     @if(count($featured_advertisements) === 0 )
                         {{---------------------------------}}
 
-                        <div class="alert alert-success" role="alert">There Are No Featured Advertisements At This Movement</div>
+                        <div class="alert alert-success" role="alert">There are no featured advertisements at this movement</div>
 
 
 
@@ -161,13 +161,14 @@
 
                     {{---------------------------------}}
 
-                    <div class="alert alert-success" role="alert">There Are No Recently Advertisement At This Movement.</div>
+                    <div class="alert alert-success" role="alert">There are no recently advertisement at this movement.</div>
 
 
                     {{------------------------------}}
                 @endif
 
             @foreach($recent_advertisements as $recentAdsIndex => $recent_advertisement)
+
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-box item-mb zoom-gallery">
                             <div class="item-mask-wrapper">

@@ -28,6 +28,7 @@ Route::get('/show_aboutAs','AboutAsController@show')->name('aboutAs');
 Route::get('/show_contact','ContactController@show')->name('contact');
 Route::get('/login','NewLoginController@show')->name('login');
 Route::get('/resendCode','ResendCodeController@resendCode')->name('resendCode');
+Route::post('/rate_advertisement',   'RatingController@update')->name('rate_ad');
 Route::get('/add','MyAdsController@click')->name('addShow');
 Route::get('/create_url','InvitationController@createToken')->name('create_url');
 

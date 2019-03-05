@@ -63,6 +63,7 @@
                                                     </select>
                                                 </div>
 
+
                                                 @if ($errors->has('category_id'))
                                                     <span class="invalid-feedback" style="display: block">
                                                         <small>{{ $errors->first('category_id') }}</small>
@@ -76,14 +77,21 @@
                                             <div class="col-sm-3 col-12">
                                                 <label class="control-label">Sub-Category<span> *</span></label>
                                             </div>
+                                            {{--<input type="text" value="{{session("status")}}" ></div>--}}
                                             <div class="col-sm-9 col-12">
                                                 <div class="form-group{{ $errors->has('subcategory_id') ? ' has-error' : '' }}">
                                                     <div class="custom-select">
                                                         <select id="sub-category-name" class='select2' name="subcategory_id">
                                                             <option value="">Select a Sub-Category</option>
+                                                            {{--@foreach($categories as $catIndex => $category)--}}
+                                                                {{--<option value="{{$catIndex}}" @if(old('category_id') == $catIndex) selected @endif>--}}
+                                                                    {{--{{$category['name']}}--}}
+                                                                {{--</option>--}}
+                                                            {{--@endforeach--}}
 
                                                         </select>
                                                     </div>
+
 
                                                     @if ($errors->has('subcategory_id'))
                                                         <span class="invalid-feedback" style="display: block">
@@ -221,7 +229,7 @@
                                                 @endif
                                             </div>
 
-                                            <div class="form-group">
+                                            <div class="form-group" >
                                                 <input type="file" class="form-control"
                                                        name="img_3" value="{{ old('img_3') }}">
                                                 @if ($errors->has('img_3'))
@@ -326,7 +334,7 @@
                 $('#sub-category-name').empty();
                for(let i in res){
                    let temp=res[i];
-                   $('#sub-category-name').append('<option value="'+i+'">'+temp['name']+'</option>');
+                   $('#sub-category-name').append('<option value="'+i+'" {{ old('subcategory_id') }}>'+temp['name']+'</option>');
                }
            }); 
         });

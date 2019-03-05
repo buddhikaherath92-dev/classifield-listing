@@ -30,9 +30,9 @@ class NewLoginController extends Controller
         }
 
         if($user->email_verified_at !== null){
-            $this->common->showAlerts('','success','Login Successful !');
-            $this->redirectTo = $user->type == 2 ? '/admin/dashboard' :
+            $this->redirectTo = $user->type == config('constance.user_types')['admin'] ? '/admin/dashboard' :
                 '/my_dashboard/profile';
+            $this->common->showAlerts('','success','Login Successful !');
         }
     }
 }
