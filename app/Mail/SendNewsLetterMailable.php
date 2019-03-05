@@ -31,6 +31,6 @@ class SendNewsLetterMailable extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.sendNewsletter');
+        return $this->subject('New Ads on Aluth-Ads')->markdown('emails.sendNewsletter');
     }
 }

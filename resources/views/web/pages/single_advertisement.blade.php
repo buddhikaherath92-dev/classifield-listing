@@ -35,10 +35,6 @@
                                     @endif
                                 </ol>
                                 <div class="carousel-inner" style="height: fit-content">
-                                    {{--@if($advertisement->price !== null)--}}
-                                        {{--<span class="price">{{'Rs '.number_format($advertisement->price)}}</span>--}}
-                                    {{--@endif--}}
-
                                     @if($advertisement->img_1 !==null)
                                         <div class="carousel-item active ">
                                             <center>

@@ -29,6 +29,6 @@ class SubscribeMailable extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.subscribe');
+        return $this->subject('Welcome to Aluth-Ads')->markdown('emails.subscribe');
     }
 }
