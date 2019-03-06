@@ -101,7 +101,7 @@
                                 style="color: green"
                             @elseif($newsletter->status == 0)
                                 style="color: #ff1744"
-                            @endif>{{ $newsletter->status == 1 ? "Send" : "Pending" }}</td>
+                            @endif>{{ $newsletter->status == 1 ? "Sent" : "Pending" }}</td>
                         <td><a type="submit" href="{{ url('/admin/newsletter_preview/'.$newsletter->id) }}" class="btn btn-success">Preview</a></td>
                     </tr>
                 @endforeach
