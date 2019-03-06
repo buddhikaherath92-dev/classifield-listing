@@ -16,7 +16,7 @@
                             </div>
                         @endif
 
-                        <label>Username or email address *</label>
+                        <label>Email address *</label>
                         <input type="email" placeholder="E-mail" class="{{ $errors->login->has('email') ? ' is-invalid' : '' }}"
                         required autofocus name="email" value="{{ old('email') }}" />
 
