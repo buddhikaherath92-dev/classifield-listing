@@ -37,6 +37,7 @@
         @yield('content')
 
         @include('sweet::alert')
+
         @include('web.templates.footer')
 
         @include('web.templates.login_model')
