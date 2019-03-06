@@ -117,7 +117,11 @@
                                                 <td width="580" valign="top" align="center" style="padding:0;Margin:0;">
                                                     <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
                                                         <tr style="border-collapse:collapse;">
-                                                            <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:25px;padding-bottom:25px;"> <img src="http://aluthads.developers-in.com/web/img/logo.png" alt="" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;" width="398"></td>
+                                                            <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:25px;padding-bottom:25px;">
+                                                                <a href="http://aluthads.developers-in.com">
+                                                                    <img src="http://aluthads.developers-in.com/web/img/logo.png" alt="" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;" width="398">
+                                                                </a>
+                                                            </td>
                                                         </tr>
                                                     </table> </td>
                                             </tr>
@@ -208,7 +212,7 @@
                                                             <td class="es-m-txt-l" align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;">Hope That You'll Enjoy Our Service.</p> </td>
                                                         </tr>
                                                         <tr style="border-collapse:collapse;">
-                                                            <td esdev-links-color="#7c72dc" align="left" style="Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;padding-bottom:40px;"> <a target="_blank" href="https://viewstripo.email/" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:18px;text-decoration:underline;color:#468E24;">+9470 311 3217 or info@aluthads.lk</a></td>
+                                                            <td esdev-links-color="#7c72dc" align="left" style="Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;padding-bottom:40px;"> <a href="http://aluthads.developers-in.com" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:18px;text-decoration:underline;color:#468E24;">+9470 311 3217 or info@aluthads.lk</a></td>
                                                         </tr>
                                                     </table> </td>
                                             </tr>
