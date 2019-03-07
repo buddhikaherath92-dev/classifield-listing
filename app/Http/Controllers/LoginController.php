@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class NewLoginController extends Controller
+class LoginController extends Controller
 {
     /**
      * Show My advertisements page

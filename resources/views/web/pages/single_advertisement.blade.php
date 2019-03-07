@@ -86,10 +86,13 @@
                                 <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i>Save Ad</a></li>
                                 <li><a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>Share ad</a></li>
                                 <li><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Report abuse</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#modelRate"><i class="fa fa-star"
+                                                                                                aria-hidden="true"></i>Rate</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
-                    <!--No Gutters DIV-->
+
                     <div class="row no-gutters">
                         <div class="col-lg-7 col-md-7 col-sm-12 col-12">
                             <div class="add-layout2-left d-flex align-items-center">
@@ -150,7 +153,7 @@
                                              class="img-fluid pull-left">
                                         <div class="media-body">
                                             <span>Price</span>
-                                            <h4>{{'Rs '.number_format($advertisement->price)}} | ( {{$price_type == 1 ? 'Negotiable':'Fixed'}} )</h4>
+                                            <h4>{{$price_type == 1 ? 'Negotiable':'Fixed'}}</h4>
                                         </div>
                                     </div>
                                 </li>

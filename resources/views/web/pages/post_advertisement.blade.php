@@ -7,7 +7,7 @@
             <div class="breadcrumbs-area">
                 <ul>
                     <li><a href="#">Home</a> -</li>
-                    <li class="active">Post A Ad</li>
+                    <li class="active">Post a ad</li>
                 </ul>
             </div>
         </div>
