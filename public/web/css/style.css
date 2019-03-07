@@ -3805,6 +3805,52 @@ img.mfp-img {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    background-color: #1D976C;
+}
+.carousel-indicators .active {
+    margin: 10px;
+    background-color: #0b2e13;
+}
+
+.carousel-control-prev{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    background-color: black;
+}
+
+.carousel-control-next{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    background-color: black;
+}
+
+.carousel-inner span.price {
+    position: absolute;
+    background-image: url(../img/product/product-price-back.png);
+    top: 13px;
+    right: -13px;
+    padding: 12px 36px 32px 62px;
+    z-index: 8;
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .single-product-img-layout1 ul.tab-nav-inline {
     margin-top: 10px;
 }

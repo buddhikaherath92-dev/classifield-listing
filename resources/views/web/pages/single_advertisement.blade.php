@@ -22,78 +22,62 @@
                             <h2>{{$advertisement->title}}</h2>
                         </div>
                         <div class="gradient-padding reduce-padding">
-                            <div class="single-product-img-layout1 d-flex mb-50">
-                                <ul class="nav tab-nav tab-nav-list">
-
-                                    @if($advertisement->img_1 !== null)
-                                        <li class="nav-item">
-                                            <a class="active" href="#related1" data-toggle="tab" aria-expanded="false">
-                                                <img alt="related1"
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="background-color: darkgray">
+                                <ol class="carousel-indicators">
+                                    @if($advertisement->img_1 !==null)
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    @endif
+                                    @if($advertisement->img_2 !==null)
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    @endif
+                                    @if($advertisement->img_3 !==null)
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                    @endif
+                                </ol>
+                                <div class="carousel-inner" style="height: fit-content">
+                                    @if($advertisement->img_1 !==null)
+                                        <div class="carousel-item active ">
+                                            <center>
+                                                <img class="d-block mw-100"
                                                      src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_1}}"
-                                                     class="img-fluid">
-                                            </a>
-                                        </li>
+                                                     alt="First slide"
+                                                     style="width: auto; height: fit-content; display: block">
+                                            </center>
+                                        </div>
                                     @endif
-
-                                    @if($advertisement->img_2 !== null)
-                                        <li class="nav-item">
-                                            <a href="#related2" data-toggle="tab" aria-expanded="false">
-                                                <img alt="related2"
+                                    @if($advertisement->img_2 !==null)
+                                        <div class="carousel-item">
+                                            <center>
+                                                <img class="d-block mw-100"
                                                      src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_2}}"
-                                                     class="img-fluid">
-                                            </a>
-                                        </li>
+                                                     alt="Second slide"
+                                                     style="width: auto; height: fit-content; display: block">
+                                            </center>
+                                        </div>
                                     @endif
-
-                                    @if($advertisement->img_2 !== null)
-                                        <li class="nav-item">
-                                            <a href="#related3" data-toggle="tab" aria-expanded="false">
-                                                <img alt="related3"
+                                    @if($advertisement->img_3 !==null)
+                                        <div class="carousel-item">
+                                            <center>
+                                                <img class="d-block mw-100"
                                                      src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_3}}"
-                                                     class="img-fluid">
-                                            </a>
-                                        </li>
-                                    @endif
-
-                                </ul>
-                                <div class="tab-content">
-
-                                    @if($advertisement->price !== null)
-                                        <span class="price">{{'Rs '.number_format($advertisement->price)}}</span>
-                                    @endif
-
-                                    @if($advertisement->img_1 !== null)
-                                        <div class="tab-pane fade active show" id="related1">
-                                            <a href="#" class="zoom ex1">
-                                                <img alt="single"
-                                                     src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_1}}"
-                                                     class="img-fluid">
-                                            </a>
+                                                     alt="Third slide"
+                                                     style="width: auto; height: fit-content; display: block">
+                                            </center>
                                         </div>
                                     @endif
-
-                                    @if($advertisement->img_2 !== null)
-                                        <div class="tab-pane fade" id="related2">
-                                            <a href="#" class="zoom ex1">
-                                                <img alt="single"
-                                                     src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_2}}"
-                                                     class="img-fluid">
-                                            </a>
-                                        </div>
-                                    @endif
-
-                                    @if($advertisement->img_3 !== null)
-                                        <div class="tab-pane fade" id="related3">
-                                            <a href="#" class="zoom ex1">
-                                                <img alt="single"
-                                                     src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_3}}"
-                                                     class="img-fluid">
-                                            </a>
-                                        </div>
-                                    @endif
-
                                 </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                   data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                   data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
+                            <br><br>
                             <div class="section-title-left-dark child-size-xl title-bar item-mb">
                                 <h3>Ad Description:</h3>
                                 <p class="text-medium-dark">{{$advertisement->description}}</p>
@@ -109,7 +93,7 @@
                             </ul>
                         </div>
                     </div>
-
+                    <!--No Gutters DIV-->
                     <div class="row no-gutters">
                         <div class="col-lg-7 col-md-7 col-sm-12 col-12">
                             <div class="add-layout2-left d-flex align-items-center">
@@ -170,7 +154,7 @@
                                              class="img-fluid pull-left">
                                         <div class="media-body">
                                             <span>Price</span>
-                                            <h4>{{$price_type == 1 ? 'Negotiable':'Fixed'}}</h4>
+                                            <h4>{{'Rs '.number_format($advertisement->price)}} | ( {{$price_type == 1 ? 'Negotiable':'Fixed'}} )</h4>
                                         </div>
                                     </div>
                                 </li>

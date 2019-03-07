@@ -350,12 +350,16 @@
                                                     <table width="100%" cellspacing="0" cellpadding="0"
                                                            style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
                                                         <tr style="border-collapse:collapse;">
-                                                            <td align="center" style="padding:0;Margin:0;"><img
-                                                                        class="adapt-img"
-                                                                        src="http://aluthads.developers-in.com/web/img/logo.png"
-                                                                        alt=""
-                                                                        style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
-                                                                        width="398"></td>
+                                                            <td align="center" style="padding:0;Margin:0;">
+                                                                <a href="http://aluthads.developers-in.com">
+                                                                    <img
+                                                                            class="adapt-img"
+                                                                            src="http://aluthads.developers-in.com/web/img/logo.png"
+                                                                            alt=""
+                                                                            style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
+                                                                            width="398">
+                                                                </a>
+                                                            </td>
                                                         </tr>
                                                         <tr style="border-collapse:collapse;">
                                                             <td align="center" style="padding:0;Margin:0;">
@@ -379,13 +383,6 @@
                         </td>
                     </tr>
                 </table>
-                <div class="card-header" style="font-style: italic; font-family: 'Arial Black'; font-size: 20px">
-                    <center>
-                        @if(isset($newsletters))
-                            {{ $newsletters->description }}
-                        @endif
-                    </center>
-                </div>
                 <table class="es-content" cellspacing="0" cellpadding="0" align="center"
                        style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;">
                     <tr style="border-collapse:collapse;">
@@ -393,6 +390,17 @@
                             <table class="es-content-body" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff"
                                    align="center"
                                    style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;">
+                                <tr style="border-collapse:collapse;">
+                                    <td>
+                                        <div style="background-color: sandybrown; font-size: 20px; color: black; font-style: italic;font-family: 'Arial Black'">
+                                            <center>
+                                                @if(isset($newsletters))
+                                                    {{ $newsletters->description }}
+                                                @endif
+                                            </center>
+                                        </div>
+                                    </td>
+                                </tr>
                                 @if(isset($advertisements))
                                     @foreach($advertisements as $index => $advertisement)
                                         <tr style="border-collapse:collapse;">
@@ -415,7 +423,7 @@
                                                                     <td style="padding:0;Margin:0;position:relative;"
                                                                         align="center">
                                                                         <img class="adapt-img"
-                                                                             src="{{env('APP_URL')."/images/advertisements/".$advertisement->img_1}}"
+                                                                             src="{{env('APP_URL')."images/advertisements/".$advertisement->img_1}}"
                                                                              alt="" title=""
                                                                              style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
                                                                              width="100%">
@@ -451,9 +459,11 @@
                                                                                             <td class="es-m-txt-l"
                                                                                                 align="left"
                                                                                                 style="Margin:0;padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:20px;">
-                                                                                                <h3 style="Margin:0;line-height:24px;mso-line-height-rule:exactly;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#3A412F;">
-                                                                                                    {{ $advertisement->title }}
-                                                                                                </h3>
+                                                                                                <a class="btn btn-success" href="{{ env('APP_URL')."ad/".config('constance.categories')[$advertisement->category_id]['slug']."/".$advertisement->slug }}">
+                                                                                                    <h3 style="Margin:0;line-height:24px;mso-line-height-rule:exactly;font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', 'lucida sans', tahoma, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#3A412F;">
+                                                                                                        {{ $advertisement->title }}
+                                                                                                    </h3>
+                                                                                                </a>
                                                                                             </td>
                                                                                         </tr>
                                                                                     </table>
@@ -484,6 +494,13 @@
                                                                         {{ $advertisement->price }}
                                                                     </span>
                                                                         </h3>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="border-collapse:collapse;">
+                                                                    <td esdev-links-color="#ffffff" class="es-m-txt-c"
+                                                                        align="left"
+                                                                        style="padding:0;Margin:0;padding-bottom:5px;padding-left:20px;padding-right:20px;">
+                                                                        <a class="btn btn-success" href="{{ env('APP_URL')."ad/".config('constance.categories')[$advertisement->category_id]['slug']."/".$advertisement->slug }}">Read More</a>
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -518,11 +535,14 @@
                                                            style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
                                                         <tr style="border-collapse:collapse;">
                                                             <td align="center"
-                                                                style="padding:0;Margin:0;padding-bottom:5px;"><img
+                                                                style="padding:0;Margin:0;padding-bottom:5px;">
+                                                                <a href="http://aluthads.developers-in.com">
+                                                                    <img
                                                                         src="http://aluthads.developers-in.com/web/img/logo.png"
                                                                         alt="Tea Shop logo" title="Tea Shop logo"
                                                                         width="90"
                                                                         style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;">
+                                                                </a>
                                                             </td>
                                                         </tr>
                                                         <tr style="border-collapse:collapse;">
