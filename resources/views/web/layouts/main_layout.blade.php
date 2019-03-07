@@ -106,7 +106,6 @@
         // on keyup / change flag: reset
         input.addEventListener('change', reset);
         input.addEventListener('keyup', reset);
-
     </script>
     <script type="text/javascript">
         @if (count($errors) > 0)

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Helpers\Common;
 use App\Rating;
+use Illuminate\Validation\Validator;
 use Illuminate\Http\Request;
 
 class RatingController extends Controller
@@ -21,6 +22,7 @@ class RatingController extends Controller
 
     /**
      * Update the specified resource in storage.
+     *
      *
      * @return \Illuminate\Http\Response
      */

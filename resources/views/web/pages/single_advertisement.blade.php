@@ -85,11 +85,7 @@
                             <ul class="item-actions border-top">
                                 <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i>Save Ad</a></li>
                                 <li><a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>Share ad</a></li>
-                                <li><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Report
-                                        abuse</a></li>
-                                <li><a href="#" data-toggle="modal" data-target="#modelRate"><i class="fa fa-star"
-                                                                                                aria-hidden="true"></i>Rate</a>
-                                </li>
+                                <li><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Report abuse</a></li>
                             </ul>
                         </div>
                     </div>
