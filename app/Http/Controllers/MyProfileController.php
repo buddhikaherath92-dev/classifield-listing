@@ -38,7 +38,7 @@ class MyProfileController extends Controller
 
         $incomingData = request()->validate([
             'name' => 'required|string|max:255',
-            'tel_no' => 'required|regex:/(0)[0-9]{9}/',
+            'tel_no' => 'required|string',
             'account_type' => 'required|integer',
             'logo' => 'image|mimes:jpeg,jpg,png|max:2000',
         ]);
