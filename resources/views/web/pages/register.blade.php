@@ -158,6 +158,9 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <input type="hidden" value="{{session('token')}}"  name="token" hidden>
+
                                     <div class="row">
                                         <div class="col-sm-3 col-12">
                                         </div>

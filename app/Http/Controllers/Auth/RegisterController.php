@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Helpers\Common;
+use App\Http\Controllers\InvitationController;
+use App\Invitaion;
 use App\Mail\SendMaillable;
+use App\SuccessReferal;
 use App\User;
 use Alert;
 use App\Http\Controllers\Controller;
@@ -10,10 +14,12 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Intervention\Image\ImageManager;
 
 class RegisterController extends Controller
 {
@@ -29,6 +35,9 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
+    private $common;
+    private $imgManager;
+
 
     /**
      * Where to redirect users after registration.
@@ -53,8 +62,15 @@ class RegisterController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    /**
+     * MyAdsController constructor.
+     */
+    public function __construct(
+        Common $common)
     {
+
+        $this->common = $common;
+        $this->imgManager = new ImageManager(array('driver' => 'gd'));
         $this->middleware('guest');
 
     }
@@ -62,7 +78,7 @@ class RegisterController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
@@ -81,7 +97,7 @@ class RegisterController extends Controller
     /**
      * Handle a registration request for the application.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function register(Request $request)
@@ -109,29 +125,63 @@ class RegisterController extends Controller
 
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'tel_no' => $data['tel_no'],
-            'type' => (int)$data['account_type'],
-            'email_code'=>$data['email_code'],
-        9]);
+        $type = $data['token'];
+        if ($type != null) {
+            $invitation_data = Invitaion::where('token', $type)->get()[0];
+
+            SuccessReferal::where('user_id', $invitation_data->user_id)->update(['is_registered' => 1]);
+
+            return User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'tel_no' => $data['tel_no'],
+                'type' => (int)$data['account_type'],
+                'email_code' => $data['email_code'],
+
+
+            ]);
+
+        } else {
+
+
+            return User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'tel_no' => $data['tel_no'],
+                'type' => (int)$data['account_type'],
+                'email_code' => $data['email_code'],
+
+
+            ]);
+        }
+
+
     }
 
     /**
-     * The user has been registered.}
+     * The user has been registered.
+     *
      * @param  \Illuminate\Http\Request  $request
      * @param  mixed  $user
      * @return mixed
      */
     protected function registered(Request $request, $user)
     {
+        $connection = null;//create a connection variable
+        system("ping -c 1 google.com", $connection);//check if connection is available
+        if ($connection == 0) {
+            $email = $user->email;
+            $pin = $user->email_code;
+            Mail::to($email)->send(new SendMaillable($pin));
+            $this->common->showAlerts('You Are Successfully Register To AluthAds','success',"You Will Send Our Subscribe E-Mail Shortly");
 
-        $email=$user->email;
-        $pin=$user->email_code;
-        Mail::to($email)->send(new SendMaillable($pin));
-        return redirect('/show_verification');
+            return redirect('/show_verification');
+        } else {
+            $this->common->showAlerts('Please Check Your Internet Connection', 'error', "Can't Reach Server");
+            return view('web.pages.register');
+        }
     }
 
 

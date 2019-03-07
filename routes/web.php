@@ -33,6 +33,7 @@ Route::get('/invitation/redirect/{token}','SuccessReferalController@redirect')->
 Route::post('/rate_advertisement',   'RatingController@update')->name('rate_ad');
 Route::get('/add','MyAdsController@click')->name('addShow');
 Route::get('/create_url','InvitationController@createToken')->name('create_url');
+Route::get('/invitation/redirect/{token}','SuccessReferalController@redirect')->name('success_referals');
 
 // admin panel routes
 Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'admin' ], function () {
@@ -46,6 +47,8 @@ Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'admin' ], function () {
     Route::get('/view_referals', 'Admin\ViewReferalsController@show')->name('view_referals');
 
     Route::get('/newsletter_preview/{id}', 'Admin\NewsLetterController@preview')->name('newsletter_preview');
+    Route::get('/view_referals', 'Admin\ViewReferalsController@show')->name('view_referals');
+    Route::get('/show_referals', 'Admin\ViewReferalsController@showStatistics')->name('show_referals');
 });
 
 

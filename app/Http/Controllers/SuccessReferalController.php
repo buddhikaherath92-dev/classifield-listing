@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: punsara
- * Date: 3/1/19
- * Time: 1:14 PM
- */
 
 namespace App\Http\Controllers;
 
@@ -21,7 +15,8 @@ class SuccessReferalController extends Controller
                 'user_id' => $invitation->user_id,
                 'is_registered' => 0
             ]);
-            return redirect('register')->with($token);
+//            return redirect('register')->with($token);
+            return redirect('register')->with('token', $token);
         }
     }
 }
