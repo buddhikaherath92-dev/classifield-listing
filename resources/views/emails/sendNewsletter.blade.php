@@ -383,6 +383,13 @@
                         </td>
                     </tr>
                 </table>
+                <div class="card-header" style="font-style: italic; font-family: 'Arial Black'; font-size: 20px">
+                    <center>
+                        @if(isset($newsletters))
+                            {{ $newsletters->description }}
+                        @endif
+                    </center>
+                </div>
                 <table class="es-content" cellspacing="0" cellpadding="0" align="center"
                        style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;">
                     <tr style="border-collapse:collapse;">
