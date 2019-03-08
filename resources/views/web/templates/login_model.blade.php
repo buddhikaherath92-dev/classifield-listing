@@ -25,14 +25,8 @@
                         <input type="password" placeholder="Password"
                         class="{{ $errors->login->has('password') ? ' is-invalid' : '' }}"
                                name="password" required />
-
-
-                        <div class="checkbox checkbox-primary">
-                            <input id="checkbox1" type="checkbox">
-                            <label for="checkbox1">Remember Me</label>
-                        </div>
-
-
+                        <br>
+                        <br>
                         <button class="default-big-btn" type="submit" value="Login">Login</button>
                         <button class="default-big-btn form-cancel" type="button" data-dismiss="modal">Cancel</button>
 
