@@ -22,14 +22,14 @@ class InvitationController extends Controller
         $uniqueTokenFound = false;
 
         while ($uniqueTokenFound){
-            Invitaion::where('token', $newToken)->count() == 0 ? $uniqueTokenFound = true : 
+            Invitaion::where('token', $newToken)->count() == 0 ? $uniqueTokenFound = true :
                 $newToken=mt_rand(1000, 9999);
         }
 
                 Invitaion::create(['user_id' => $user , 'created_at' => $time,'token'=>$newToken]);
 
        $url= url("/invitation/redirect/{$newToken}");
-//       dd($url);
+
 
 
         return redirect()->back()->with('status', $url);

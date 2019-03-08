@@ -148,6 +148,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
 
+
         /*
          * Package Service Providers...
          */
@@ -160,7 +161,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        UxWeb\SweetAlert\SweetAlertServiceProvider::class
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        Unisharp\Ckeditor\ServiceProvider::class,
 
     ],
 

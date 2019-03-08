@@ -157,15 +157,18 @@
                                             <label class="control-label">Description<span> *</span></label>
                                         </div>
                                         <div class="col-sm-9 col-12">
-                                            <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
+                                            <div class="form-group{{ $errors->has('summary-ckeditor') ? ' has-error' : '' }}">
                                                 <textarea placeholder="What makes your ad unique"
-                                                          class="textarea form-control"
-                                                          name="description" id="description" rows="4" cols="20"
-                                                          data-error="Description field is required" required>{{ old('description') }}</textarea>
+                                                          class="form-control" id="summary-ckeditor" name="summary-ckeditor" rows="4" cols="20"  data-error="Description field is required" required>{{ old('description') }}</textarea>
 
-                                                @if ($errors->has('description'))
+                                                {{--<textarea placeholder="What makes your ad unique"--}}
+                                                          {{--class="textarea form-control"--}}
+                                                          {{--name="description" id="description" rows="4" cols="20"--}}
+                                                          {{--data-error="Description field is required" required>{{ old('description') }}</textarea>--}}
+
+                                                @if ($errors->has('summary-ckeditor'))
                                                     <span class="invalid-feedback"  style="display: block">
-                                                        <small>{{ $errors->first('description') }}</small>
+                                                        <small>{{ $errors->first('summary-ckeditor') }}</small>
                                                     </span>
                                                 @endif
                                             </div>
@@ -338,6 +341,7 @@
                }
            }); 
         });
+        CKEDITOR.replace( 'summary-ckeditor' );
 
     </script>
 @endsection

@@ -16,7 +16,7 @@ class CreateAdvertisementsTable extends Migration
         Schema::create('advertisements', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->text('description');
+            $table->text('summary-ckeditor');
             $table->float('price')->nullable();
             $table->integer('category_id');
             $table->integer('subcategory_id');

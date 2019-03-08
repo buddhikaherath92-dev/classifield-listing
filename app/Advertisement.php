@@ -15,7 +15,7 @@ class Advertisement extends Model
      */
     protected $fillable = [
         'title',
-        'description',
+        'summary-ckeditor',
         'price',
         'category_id',
         'subcategory_id',
