@@ -7,7 +7,7 @@
             <div class="breadcrumbs-area">
                 <ul>
                     <li><a href="#">Home</a> -</li>
-                    <li class="active">Post a ad</li>
+                    <li class="active">Post an ad</li>
                 </ul>
             </div>
         </div>
@@ -16,7 +16,7 @@
                 <div class="col-lg-9 col-md-12 col-sm-12 col-12 mb--sm">
                     <div class="gradient-wrapper">
                         <div class="gradient-title">
-                            <h2>Post A Free Ad</h2>
+                            <h2>Post a Free Ad</h2>
                         </div>
                         <div class="input-layout1 gradient-padding post-ad-page">
 
