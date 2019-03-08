@@ -73,7 +73,7 @@ class PostAdvertisementController extends Controller
 
             $incomingData = request()->validate([
                 'title' => 'required|string',
-                'description' => 'required|string',
+                'summary-ckeditor' => 'required|string',
                 'category_id' => 'required|integer',
                 'subcategory_id' => 'required|integer',
                 'district' => 'string|nullable',

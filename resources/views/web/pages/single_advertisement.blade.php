@@ -78,9 +78,10 @@
                                 </a>
                             </div>
                             <br><br>
-                            <div class="section-title-left-dark child-size-xl title-bar item-mb">
+                            <div class="section-title-left-dark child-size-xl title-bar item-mb" style=" max-width: 100%;
+    overflow-wrap: break-word;">
                                 <h3>Ad Description:</h3>
-                                <p class="text-medium-dark">{{$advertisement->description}}</p>
+                                <p class="text-medium-dark">{!! $advertisement['summary-ckeditor'] !!}</p>
                             </div>
                             <ul class="item-actions border-top">
                                 {{--<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i>Save Ad</a></li>--}}
