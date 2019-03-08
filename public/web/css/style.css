@@ -3210,7 +3210,8 @@ p.text-bold-primary {
     background-color: #fcaf01;
     padding: 4px 15px;
     color: #ffffff;
-    font-size: 17px;
+    font-size: 13px;
+    overflow: hidden;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
