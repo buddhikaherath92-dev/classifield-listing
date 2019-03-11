@@ -26,6 +26,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('add:news_letters')
             ->dailyAt('10:00');
+        $schedule->command('add:ad_expired')->dailyAt('16.34');
     }
 
     /**
