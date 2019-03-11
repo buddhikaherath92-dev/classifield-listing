@@ -13,7 +13,9 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\SendNewsLetters::class
+        Commands\SendNewsLetters::class,
+        Commands\ExpireDate::class
+
     ];
 
     /**
@@ -27,6 +29,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('add:news_letters')
             ->dailyAt('10:00');
         $schedule->command('add:ad_expired')->dailyAt('16.34');
+        $schedule->command('add:ExpireDate')->dailyAt('16.15');
     }
 
     /**
