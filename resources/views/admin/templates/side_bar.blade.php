@@ -13,13 +13,13 @@
     </li>
     <li class="nav-item @if(Route::currentRouteName() === 'admin_newsletters') active @endif">
         <a class="nav-link" href="{{route('admin_newsletters')}}">
-            <i class="fas fa-fw fa-audio-description"></i>
+            <i class="far fa-address-card"></i>
             <span>News Letters</span>
         </a>
     </li>
     <li class="nav-item @if(Route::currentRouteName() === 'view_referals') active @endif">
         <a class="nav-link" href="{{route('view_referals')}}">
-            <i class="fas fa-fw fa-audio-description"></i>
+            <i class="fas fa-sync-alt"></i>
             <span>Referals</span>
         </a>
     </li>
