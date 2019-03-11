@@ -78,8 +78,8 @@
                                 </a>
                             </div>
                             <br><br>
-                            <div class="section-title-left-dark child-size-xl title-bar item-mb" style=" max-width: 100%;
-    overflow-wrap: break-word;">
+                            <div class="section-title-left-dark child-size-xl title-bar item-mb"
+                                 style=" max-width: 100%;overflow-wrap: break-word;">
                                 <h3>Ad Description:</h3>
                                 <p class="text-medium-dark">{!! $advertisement['summary-ckeditor'] !!}</p>
                             </div>
