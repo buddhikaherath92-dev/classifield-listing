@@ -17,7 +17,7 @@ class Kernel extends ConsoleKernel
         Commands\ExpireDate::class
 
     ];
-  
+
     /**
      * Define the application's command schedule.
      *
@@ -29,6 +29,8 @@ class Kernel extends ConsoleKernel
         $schedule->command('add:news_letters')
             ->dailyAt('10:00');
         $schedule->command('add:ExpireDate')->dailyAt('00.01');
+        $schedule->command('add:ad_expired')->dailyAt('16.34');
+        $schedule->command('add:ExpireDate')->dailyAt('16.15');
     }
 
     /**

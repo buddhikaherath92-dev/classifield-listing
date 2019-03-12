@@ -20,7 +20,7 @@
     <li class="nav-item @if(Route::currentRouteName() === 'view_referals') active @endif">
         <a class="nav-link" href="{{route('view_referals')}}">
             <i class="fas fa-sync-alt"></i>
-            <span>Referals</span>
+            <span>Referrals</span>
         </a>
     </li>
 </ul>

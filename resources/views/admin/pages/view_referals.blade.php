@@ -18,7 +18,7 @@
                 <td>{{ count($view_data) }}</td>
                 <td>{{ count($view_data)}}</td>
                 <td>{{ $register }}</td>
-                <td >{{$view_data[0]->created_at}}</td>
+                <td >{{$date}}</td>
                 <td></td>
             </tr>
 
