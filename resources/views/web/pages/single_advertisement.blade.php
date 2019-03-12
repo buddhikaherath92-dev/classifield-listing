@@ -160,6 +160,16 @@
                                 </li>
                                 <li>
                                     <div class="media">
+                                        <img src="{{asset('web/img/user/bank.png')}}" alt="user"
+                                             class="img-fluid pull-left">
+                                        <div class="media-body">
+                                            <span>Price</span>
+                                            <h4>{{$advertisement->price}}</h4>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="media">
                                         <img src="{{asset('web/img/user/eye.png')}}" alt="user"
                                              class="img-fluid pull-left">
                                         <div class="media-body">

@@ -44,7 +44,7 @@
                             </div>
                             <div class="radio radio-primary radio-inline">
                                 <input type="radio" value="3" id="r_one"
-                                       @if( Auth::user()->type == 2 | old('account_type') ==  config('constance.user_types' )['corporate']) checked="checked"
+                                       @if( Auth::user()->type == 3 | old('account_type') ==  config('constance.user_types' )['corporate']) checked="checked"
                                        @endif
                                        name="account_type"
                                        class="{{ $errors->has('account_type') ? ' is-invalid' : '' }}"/>
@@ -206,18 +206,32 @@
                 <h3>Share link for Friends</h3>
 
                 <div class="row">
-                    <div class="col-3">
-                        <a class="btn btn-success" style="width: 150px;margin-left: 20px " type="submit"
+                    {{--<div class="col-xl-2 col-10"></div>--}}
+                    <div class="col-xl-2 col-2">
+
+                    <a class="btn btn-success" style="margin-left: 20px " type="submit"
                            href={{route('create_url')}}>Generate URL</a>
                     </div>
+                </div>
 
-                    <div class="col-9">
-                        <div class="col-sm-9 col-12">
-                            <div class="form-group">
-                                <input type="text" id="url" name="url"
-                                       class="form-control" placeholder="Url" value="{{session('status')}} ">
-                            </div>
+                    {{--<div class="form-group row mb-0">--}}
+                        {{--<div class="col-md-4 offset-md-6">--}}
+                            {{--<div class="form-group">--}}
+
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    <div class="form-group row mb-0">
+                        {{--<div class="col-xl-7 col-5"></div>--}}
+                        <div class="col-xl-8 col-6" style="margin-left: 155px;">
+                            <input type="text" id="url" name="url"
+                                   class="form-control" placeholder="Url" value="{{session('status')}} ">
+                            {{--<button type="submit" class="btn btn-success">--}}
+                                {{--{{ __('Reset Password') }}--}}
+                            {{--</button>--}}
                         </div>
+                        <div class="col-xl-1"></div>
+
                     </div>
                 </div>
 
