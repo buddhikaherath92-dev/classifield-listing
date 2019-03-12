@@ -85,7 +85,16 @@
                             </div>
                             <ul class="item-actions border-top">
                                 {{--<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i>Save Ad</a></li>--}}
-                                <li><a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>Share ad</a></li>
+                                {{--<li><a href="{{route('share')}}"></i></i></a></li>--}}
+                                {{--<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be" class="social-button my-class" id="my-id"><span class="fa fa-facebook-official"></span></a></li>--}}
+                                {{--<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be" class="social-button " id="">--}}
+                                        {{--<i class="fas fa-share-alt"></i>--}}
+                                        {{--Share ad</a></li>--}}
+                                {{--<i class="fas fa-share-alt"aria-hidden="true">--}}
+
+                                <li><a href= "https://www.facebook.com/sharer/sharer.php?u={{ urlencode(Request::fullUrl()) }}" class="social-button " id=""><span class="fa fa-facebook-official"></span>Share facebook</a></li>
+
+
                                 {{--<li><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Report abuse</a></li>--}}
                                 <li><a href="#" data-toggle="modal" data-target="#modelRate"><i class="fa fa-star"
                                                                                                 aria-hidden="true"></i>Rate</a>
