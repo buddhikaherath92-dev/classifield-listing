@@ -9,6 +9,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Intervention\Image\ImageManager;
+use Jorenvh\Share\Share;
 
 class SingleAdvertisementController extends Controller
 {
@@ -34,8 +35,14 @@ class SingleAdvertisementController extends Controller
      */
     public function show(Request $request){
 
+//        $date=(new \Jorenvh\Share\Share)->currentPage()->currentPage()->facebook();
+//        dd($date);
+//        $url=Request::url();
+//dd($url);
+
         $advertisement = Advertisement::where('slug', $request->slug)->first();
         $advertisement->increment('views');
+
         if($advertisement->is_inactive === 0){
             return view('web.pages.single_advertisement', [
                 'advertisement' => $advertisement,
@@ -44,12 +51,16 @@ class SingleAdvertisementController extends Controller
                 'seller' => User::where('id', $advertisement->user_id)->first(),
                 'seller_ads' => Advertisement::where('user_id', $advertisement->user_id)->where('is_inactive', 0)
                     ->limit(4)->orderBy('created_at', 'desc')->get(),
-                'rating'=>Rating::where('slug',$request->slug)->average('rating')
+                'rating'=>Rating::where('slug',$request->slug)->average('rating'),
+                'share'=> (new \Jorenvh\Share\Share)->currentPage()->currentPage()->facebook(),
+
             ]);
         }else{
+
             $this->common->showAlerts('Your Advertisement is still inactive', 'error', "Your Advertisement is still inactive");
             return redirect()->back();
         }
+
 
     }
 }

@@ -11,10 +11,16 @@
 |
 */
 
+use Chencha\Share\Share;
+
 Auth::routes();
 
 
 Route::get('/',   'HomeController@index')->name('index');
+Route::get('/share', function()
+{
+    return Share::load('http://www.example.com', 'My example')->facebook();
+})->name('share');
 Route::post('/','HomeController@subscribe')->name('subscribe');
 Route::get('/post_advertisement',   'PostAdvertisementController@index')->name('view_post_ad');
 Route::get('/sub','PostAdvertisementController@getSub')->name('sub');

@@ -60,6 +60,9 @@
     <script src="{!!asset("web/js/jquery.magnific-popup.min.js")!!}"></script>
     <script src="{!!asset("web/js/main.js")!!}"></script>
     <script src="{!!asset("web/vendor/intl-tel-input-14.0.0/build/js/intlTelInput.js")!!}"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="{{ asset('js/share.js') }}"></script>
+
 
     @yield('script')
     <script type="text/javascript">

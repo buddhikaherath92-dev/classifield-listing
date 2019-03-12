@@ -163,6 +163,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         Unisharp\Ckeditor\ServiceProvider::class,
+        Jorenvh\Share\Providers\ShareServiceProvider::class,
 
     ],
 
@@ -213,7 +214,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Image' => Intervention\Image\Facades\Image::class,
-        'Alert' =>UxWeb\SweetAlert\SweetAlert::class
+        'Alert' =>UxWeb\SweetAlert\SweetAlert::class,
+        'Share' => Jorenvh\Share\ShareFacade::class,
 
     ],
 
