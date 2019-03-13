@@ -41,7 +41,7 @@ class SendFeaturedRequest extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.featured');
+        return $this->subject('Featured Advertisements on Aluth-Ads')->markdown('emails.featured');
     }
 }
 

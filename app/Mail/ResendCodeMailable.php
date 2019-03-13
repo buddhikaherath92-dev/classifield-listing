@@ -30,6 +30,6 @@ class ResendCodeMailable extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.verify');
+        return $this->subject('New Verification Code on Aluth-Ads')->view('emails.verify');
     }
 }

@@ -36,6 +36,6 @@ class SendMaillable extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.verify');
+        return $this->subject('Verification Code on Aluth-Ads')->markdown('emails.verify');
     }
 }

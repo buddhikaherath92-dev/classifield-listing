@@ -33,6 +33,6 @@ class ExpireEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.expire_email');
+        return $this->subject('Expire Ads on Aluth-Ads')->view('emails.expire_email');
     }
 }
