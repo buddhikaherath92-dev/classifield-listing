@@ -18,7 +18,7 @@
                 <td>{{ count($view_data) }}</td>
                 <td>{{ count($view_data)}}</td>
                 <td>{{ $register }}</td>
-                <td >{{$date}}</td>
+                <td >{{$shared_date}}</td>
                 <td></td>
             </tr>
 

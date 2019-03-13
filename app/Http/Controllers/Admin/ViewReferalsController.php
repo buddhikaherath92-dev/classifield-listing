@@ -16,12 +16,14 @@ class ViewReferalsController extends Controller
         $view_data = SuccessReferal::all();
         $visted=SuccessReferal::where('is_registered','=','0')->count();
         $register=SuccessReferal::where('is_registered','=','1')->count();
-        $date=Carbon::now();
+        $date=Invitaion::all();
+        $shared_date=($date[0]['created_at']);
+
         return view('admin.pages.view_referals',[
             'view_data'=>$view_data,
             'visted'=>$visted,
             'register'=>$register,
-            'date'=>$date,
+            'shared_date'=>$shared_date,
 
         ]);
 

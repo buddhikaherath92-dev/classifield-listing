@@ -130,7 +130,7 @@ class RegisterController extends Controller
         if ($type != null) {
             $invitation_data = Invitaion::where('token', $type)->get()[0];
 
-            SuccessReferal::where('user_id', $invitation_data->user_id)->update(['is_registered' => 1]);
+            SuccessReferal::where('id', $invitation_data->id)->update(['is_registered' => 1]);
 
             return User::create([
                 'name' => $data['name'],

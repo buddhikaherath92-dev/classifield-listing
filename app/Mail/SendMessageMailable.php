@@ -41,7 +41,7 @@ class SendMessageMailable extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.sentMessage');
+        return $this->subject('Live Advertisements on Aluth-Ads')->markdown('emails.sentMessage');
     }
 
 }

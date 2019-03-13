@@ -206,13 +206,13 @@
                 <h3>Share link for Friends</h3>
 
                 <div class="row">
-                    <div class="col-3">
-                        <a class="btn btn-success" style="width: 150px;margin-left: 20px " type="submit"
+                    <div class="col-3 col-mb-3">
+                        <a class="btn btn-success" type="submit"
                            href={{route('create_url')}}>Generate URL</a>
                     </div>
 
                     <div class="col-9">
-                        <div class="col-sm-9 col-12">
+                        <div class="col-sm-9 col-3">
                             <div class="form-group">
                                 <input type="text" id="url" name="url"
                                        class="form-control" placeholder="Url" value="{{session('status')}} ">
@@ -226,6 +226,5 @@
         </form>
 
     </div>
-    </form>
-    </div>
+
 @endsection

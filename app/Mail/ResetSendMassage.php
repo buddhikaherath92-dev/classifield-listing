@@ -34,6 +34,6 @@ class ResetSendMassage extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.resetEmail');
+        return $this->subject('Reset Password on Aluth-Ads')->view('emails.resetEmail');
     }
 }

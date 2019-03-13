@@ -34,6 +34,6 @@ class SentExpireDateUser extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.sendEmail');
+        return $this->subject('Expired Advertisements on Aluth-Ads')->view('emails.sendEmail');
     }
 }

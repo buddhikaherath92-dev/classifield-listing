@@ -83,12 +83,6 @@
                                                     <div class="custom-select">
                                                         <select id="sub-category-name" class='select2' name="subcategory_id">
                                                             <option value="">Select a Sub-Category</option>
-                                                            {{--@foreach($categories as $catIndex => $category)--}}
-                                                                {{--<option value="{{$catIndex}}" @if(old('category_id') == $catIndex) selected @endif>--}}
-                                                                    {{--{{$category['name']}}--}}
-                                                                {{--</option>--}}
-                                                            {{--@endforeach--}}
-
                                                         </select>
                                                     </div>
 
@@ -322,25 +316,26 @@
 @endsection
 
 @section('script')
-    <script>
+    <script >
         /**
          *ajax call for get sub categories
          *
          */
         $('#category-name').change(function () {
-           $.ajax({
-               url:"sub",
-               method:'get',
-               dataType:'json',
-               data:{ id:$(this).find('option:selected').val()}
-           }).done(function (res) {
+            $.ajax({
+                url:"sub",
+                method:'get',
+                dataType:'json',
+                data:{ id:$(this).find('option:selected').val()}
+            }).done(function (res) {
                 $('#sub-category-name').empty();
-               for(let i in res){
-                   let temp=res[i];
-                   $('#sub-category-name').append('<option value="'+i+'" {{ old('subcategory_id') }}>'+temp['name']+'</option>');
-               }
-           }); 
+                for(let i in res){
+                    let temp=res[i];
+                    $('#sub-category-name').append('<option value="'+i+'" {{ old('subcategory_id') }}>'+temp['name']+'</option>');
+                }
+            });
         });
+
         CKEDITOR.replace( 'summary-ckeditor' );
 
     </script>
