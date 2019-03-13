@@ -77,9 +77,9 @@ class PostAdvertisementController extends Controller
                 'category_id' => 'required|integer',
                 'subcategory_id' => 'required|integer',
                 'district' => 'string|nullable',
-                'img_1' => 'image|mimes:jpeg,jpg,png|max:2000|dimensions:min_width=500,max_width=3000,min_height=300,max_height=600|required',
-                'img_2' => 'image|mimes:jpeg,jpg,png|max:2000|dimensions:min_width=500,max_width=3000,min_height=300,max_height=600',
-                'img_3' => 'image|mimes:jpeg,jpg,png|max:2000|dimensions:min_width=500,max_width=3000,min_height=300,max_height=600',
+                'img_1' => 'image|mimes:jpeg,jpg,png|max:2000|required',
+                'img_2' => 'image|mimes:jpeg,jpg,png|max:2000',
+                'img_3' => 'image|mimes:jpeg,jpg,png|max:2000',
                 'is_negotiable' => 'integer',
                 'price' => 'required|min:2|regex:/^\d*(\.\d{1,2})?$/'
             ]);
