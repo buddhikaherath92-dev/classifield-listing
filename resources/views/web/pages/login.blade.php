@@ -45,7 +45,7 @@
                             @endif
 
                             <div class="form-group row">
-                                <label for="email" class="col-sm-4 col-form-label text-md-right">Username or email address *</label>
+                                <label for="email" class="col-sm-4 col-form-label text-md-right"> Email address *</label>
 
                                     <input id="email" type="email" placeholder="E-mail" class="form-control {{ $errors->login->has('email') ? ' is-invalid' : '' }}" required autofocus  name="email" value="{{ old('email') }}"style="width: 330px;height: 38px" >
 

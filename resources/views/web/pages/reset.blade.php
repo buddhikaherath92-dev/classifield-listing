@@ -55,12 +55,15 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-success" style="margin-left: 165px">
-                                    {{ __('Reset Password') }}
-                                </button>
-                            </div>
+                        <div class="form-group row mb-0">                     
+                            <div class="col-xl-7 col-5"></div>                
+                            <div class="col-xl-3 col-3">                      
+                                <button type="submit" class="btn btn-success">
+                                    {{ __('Reset Password') }}                
+                                </button>                                     
+                            </div>                                            
+                            <div class="col-xl-1"></div>
+                            
                         </div>
                     </form>
 
