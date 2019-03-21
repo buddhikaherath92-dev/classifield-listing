@@ -70,7 +70,7 @@ class LoginController extends Controller
 
         if ($user->email_verified_at !== null) {
             $this->redirectTo = $user->type == config('constance.user_types')['admin'] ? '/admin/dashboard' :
-                '/my_dashboard/profile';
+               '/post_advertisement';
             return $this->common->showAlerts('', 'success', 'Login Successful !');
         }
     }

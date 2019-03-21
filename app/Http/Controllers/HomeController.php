@@ -40,7 +40,8 @@ class HomeController extends Controller
             'featured_advertisements' => Advertisement::where('is_featured', (int)1)->WhereActive()->get(),
             'recent_advertisements' => Advertisement::orderBy('created_at', 'desc')->take(8)->WhereActive()->get(),
             'advertisement_count' => Advertisement::where('is_inactive',0)->count(),
-            'users_count' => User::where('type',1)->count()
+            'users_count' => User::where('type',1)->count(),
+             'district' => request('district')
         ]);
     }
 

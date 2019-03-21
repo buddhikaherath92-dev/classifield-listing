@@ -6,29 +6,43 @@
         <div class="container">
             <div class="row featured-product-inner-area zoom-gallery">
                 <div class="order-xl-2 order-lg-2 col-xl-9 col-lg-8 col-md-12 col-sm-12 col-12 mb--sm">
-
                     <div class="container search-padding">
                         <form id="cp-search-form" method="GET" action="{{route('search_ads')}}">
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-3 div-padding-search">
-                                    <div class="form-group search-input-area input-icon-category">
-                                        <select id="categories" class="select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" name="ad_type">
-                                            <option class="first" value="all">All</option>
-                                            <option value="corporate">Corporate</option>
-                                            <option value="individual">Individual</option>
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                                    <div class="form-group search-input-area input-icon-location">
+                                        <select id="location" class="select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" name="district">
+                                            <option class="first" value="">Select Location</option>
+                                            @foreach(config('constance.districts') as $districts)
+                                                <option class="" value="{{ $districts }}" {{ $district === $districts ? 'selected' :'' }}>{{ $districts }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-lg-7 col-md-7 col-sm-7 col-7 div-padding-search">
-                                    <div class="form-group search-input-area input-icon-keywords">
-                                        <input placeholder="Enter Keywords here ..." value="" name="keyword" type="text">
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-12 div-padding-search">
+                                    <div class="form-group search-input-area input-icon-category">
+                                        <div class="form-group search-input-area input-icon-category">
+                                            <select id="categories" class="select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" name="ad_type">
+                                                <option class="first" value="all">All</option>
+                                                <option value="corporate">Corporate</option>
+                                                <option value="individual">Individual</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-right text-left-mb">
+
+
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                                    <div class="form-group search-input-area input-icon-keywords" style="width: 210px">
+                                        <input placeholder="Enter Keywords here ..." value="" name="keyword" type="text">                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-right text-left-mb" >
                                     <button type="submit" class="cp-search-btn">
                                         <i class="fa fa-search " aria-hidden="true"></i>
                                     </button>
                                 </div>
+
+
                             </div>
                         </form>
                     </div>
@@ -47,7 +61,7 @@
                     @endif
                     <div class="cp-carousel nav-control-top category-grid-layout2" data-loop="true" data-items="3" data-margin="30" data-autoplay="true" data-autoplay-timeout="10000" data-smart-speed="2000" data-dots="false" data-nav="true" data-nav-speed="false" data-r-x-small="1" data-r-x-small-nav="true" data-r-x-small-dots="false" data-r-x-medium="2" data-r-x-medium-nav="true" data-r-x-medium-dots="false" data-r-small="2" data-r-small-nav="true" data-r-small-dots="false" data-r-medium="2" data-r-medium-nav="true" data-r-medium-dots="false" data-r-large="3" data-r-large-nav="true" data-r-large-dots="false">
                         {{--@if(count($featured_advertisements) === 0 )--}}
-                            {{--<h4>There are no advertisements at this movement</h4>--}}
+                        {{--<h4>There are no advertisements at this movement</h4>--}}
                         {{--@endif--}}
 
                         @foreach($featured_advertisements as  $featuredAdsIndex => $featured_advertisement)
@@ -56,13 +70,13 @@
                                     <div id="ad-box-img-wrapper" class="item-mask bg-body">
 
                                         <img src="{{env('APP_URL').'images/advertisements/'.$featured_advertisement->img_1}}" alt="categories"
-                                                                        class="img-thumbnail ad-image">
+                                             class="img-thumbnail ad-image">
                                         <div class="trending-sign" data-tips="Featured"> <i class="fa fa-bolt" aria-hidden="true"></i> </div>
                                         <div class="title-ctg">{{config('constance.categories')[$featured_advertisement->category_id]['name']}}</div>
                                         <div class="middle" style="cursor: pointer">
                                             <a href="{{url('/ad/'.config('constance.categories')[$featured_advertisement
                                         ->category_id]['slug']).'/'.$featured_advertisement->slug}}">
-                                            <img class="img-thumbnail" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ4OC43MjcsMEgzMDIuNTQ1Yy0xMi44NTMsMC0yMy4yNzMsMTAuNDItMjMuMjczLDIzLjI3M2MwLDEyLjg1MywxMC40MiwyMy4yNzMsMjMuMjczLDIzLjI3M2gxMjkuOTk3TDE5Mi45OTksMjg2LjA5ICAgIGMtOS4wODksOS4wODktOS4wODksMjMuODIzLDAsMzIuOTEyYzQuNTQzLDQuNTQ0LDEwLjQ5OSw2LjgxNiwxNi40NTUsNi44MTZjNS45NTYsMCwxMS45MTMtMi4yNzEsMTYuNDU3LTYuODE3TDQ2NS40NTUsNzkuNDU4ICAgIHYxMjkuOTk3YzAsMTIuODUzLDEwLjQyLDIzLjI3MywyMy4yNzMsMjMuMjczYzEyLjg1MywwLDIzLjI3My0xMC40MiwyMy4yNzMtMjMuMjczVjIzLjI3M0M1MTIsMTAuNDIsNTAxLjU4LDAsNDg4LjcyNywweiIgZmlsbD0iIzc3YzczMiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTM5NS42MzYsMjMyLjcyN2MtMTIuODUzLDAtMjMuMjczLDEwLjQyLTIzLjI3MywyMy4yNzN2MjA5LjQ1NUg0Ni41NDVWMTM5LjYzNkgyNTZjMTIuODUzLDAsMjMuMjczLTEwLjQyLDIzLjI3My0yMy4yNzMgICAgUzI2OC44NTMsOTMuMDkxLDI1Niw5My4wOTFIMjMuMjczQzEwLjQyLDkzLjA5MSwwLDEwMy41MTEsMCwxMTYuMzY0djM3Mi4zNjRDMCw1MDEuNTgsMTAuNDIsNTEyLDIzLjI3Myw1MTJoMzcyLjM2NCAgICBjMTIuODUzLDAsMjMuMjczLTEwLjQyLDIzLjI3My0yMy4yNzNWMjU2QzQxOC45MDksMjQzLjE0Nyw0MDguNDg5LDIzMi43MjcsMzk1LjYzNiwyMzIuNzI3eiIgZmlsbD0iIzc3YzczMiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+                                                <img class="img-thumbnail" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ4OC43MjcsMEgzMDIuNTQ1Yy0xMi44NTMsMC0yMy4yNzMsMTAuNDItMjMuMjczLDIzLjI3M2MwLDEyLjg1MywxMC40MiwyMy4yNzMsMjMuMjczLDIzLjI3M2gxMjkuOTk3TDE5Mi45OTksMjg2LjA5ICAgIGMtOS4wODksOS4wODktOS4wODksMjMuODIzLDAsMzIuOTEyYzQuNTQzLDQuNTQ0LDEwLjQ5OSw2LjgxNiwxNi40NTUsNi44MTZjNS45NTYsMCwxMS45MTMtMi4yNzEsMTYuNDU3LTYuODE3TDQ2NS40NTUsNzkuNDU4ICAgIHYxMjkuOTk3YzAsMTIuODUzLDEwLjQyLDIzLjI3MywyMy4yNzMsMjMuMjczYzEyLjg1MywwLDIzLjI3My0xMC40MiwyMy4yNzMtMjMuMjczVjIzLjI3M0M1MTIsMTAuNDIsNTAxLjU4LDAsNDg4LjcyNywweiIgZmlsbD0iIzc3YzczMiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTM5NS42MzYsMjMyLjcyN2MtMTIuODUzLDAtMjMuMjczLDEwLjQyLTIzLjI3MywyMy4yNzN2MjA5LjQ1NUg0Ni41NDVWMTM5LjYzNkgyNTZjMTIuODUzLDAsMjMuMjczLTEwLjQyLDIzLjI3My0yMy4yNzMgICAgUzI2OC44NTMsOTMuMDkxLDI1Niw5My4wOTFIMjMuMjczQzEwLjQyLDkzLjA5MSwwLDEwMy41MTEsMCwxMTYuMzY0djM3Mi4zNjRDMCw1MDEuNTgsMTAuNDIsNTEyLDIzLjI3Myw1MTJoMzcyLjM2NCAgICBjMTIuODUzLDAsMjMuMjczLTEwLjQyLDIzLjI3My0yMy4yNzNWMjU2QzQxOC45MDksMjQzLjE0Nyw0MDguNDg5LDIzMi43MjcsMzk1LjYzNiwyMzIuNzI3eiIgZmlsbD0iIzc3YzczMiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
                                             </a>
                                         </div>
                                     </div>
@@ -167,7 +181,7 @@
                     {{------------------------------}}
                 @endif
 
-            @foreach($recent_advertisements as $recentAdsIndex => $recent_advertisement)
+                @foreach($recent_advertisements as $recentAdsIndex => $recent_advertisement)
 
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-box item-mb zoom-gallery">
@@ -181,7 +195,7 @@
                                     <div class="middle" style="cursor: pointer">
                                         <a href="{{url('/ad/'.config('constance.categories')[$recent_advertisement
                                         ->category_id]['slug']).'/'.$recent_advertisement->slug}}">
-                                        <img class="img-thumbnail" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ4OC43MjcsMEgzMDIuNTQ1Yy0xMi44NTMsMC0yMy4yNzMsMTAuNDItMjMuMjczLDIzLjI3M2MwLDEyLjg1MywxMC40MiwyMy4yNzMsMjMuMjczLDIzLjI3M2gxMjkuOTk3TDE5Mi45OTksMjg2LjA5ICAgIGMtOS4wODksOS4wODktOS4wODksMjMuODIzLDAsMzIuOTEyYzQuNTQzLDQuNTQ0LDEwLjQ5OSw2LjgxNiwxNi40NTUsNi44MTZjNS45NTYsMCwxMS45MTMtMi4yNzEsMTYuNDU3LTYuODE3TDQ2NS40NTUsNzkuNDU4ICAgIHYxMjkuOTk3YzAsMTIuODUzLDEwLjQyLDIzLjI3MywyMy4yNzMsMjMuMjczYzEyLjg1MywwLDIzLjI3My0xMC40MiwyMy4yNzMtMjMuMjczVjIzLjI3M0M1MTIsMTAuNDIsNTAxLjU4LDAsNDg4LjcyNywweiIgZmlsbD0iIzc3YzczMiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTM5NS42MzYsMjMyLjcyN2MtMTIuODUzLDAtMjMuMjczLDEwLjQyLTIzLjI3MywyMy4yNzN2MjA5LjQ1NUg0Ni41NDVWMTM5LjYzNkgyNTZjMTIuODUzLDAsMjMuMjczLTEwLjQyLDIzLjI3My0yMy4yNzMgICAgUzI2OC44NTMsOTMuMDkxLDI1Niw5My4wOTFIMjMuMjczQzEwLjQyLDkzLjA5MSwwLDEwMy41MTEsMCwxMTYuMzY0djM3Mi4zNjRDMCw1MDEuNTgsMTAuNDIsNTEyLDIzLjI3Myw1MTJoMzcyLjM2NCAgICBjMTIuODUzLDAsMjMuMjczLTEwLjQyLDIzLjI3My0yMy4yNzNWMjU2QzQxOC45MDksMjQzLjE0Nyw0MDguNDg5LDIzMi43MjcsMzk1LjYzNiwyMzIuNzI3eiIgZmlsbD0iIzc3YzczMiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+                                            <img class="img-thumbnail" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ4OC43MjcsMEgzMDIuNTQ1Yy0xMi44NTMsMC0yMy4yNzMsMTAuNDItMjMuMjczLDIzLjI3M2MwLDEyLjg1MywxMC40MiwyMy4yNzMsMjMuMjczLDIzLjI3M2gxMjkuOTk3TDE5Mi45OTksMjg2LjA5ICAgIGMtOS4wODksOS4wODktOS4wODksMjMuODIzLDAsMzIuOTEyYzQuNTQzLDQuNTQ0LDEwLjQ5OSw2LjgxNiwxNi40NTUsNi44MTZjNS45NTYsMCwxMS45MTMtMi4yNzEsMTYuNDU3LTYuODE3TDQ2NS40NTUsNzkuNDU4ICAgIHYxMjkuOTk3YzAsMTIuODUzLDEwLjQyLDIzLjI3MywyMy4yNzMsMjMuMjczYzEyLjg1MywwLDIzLjI3My0xMC40MiwyMy4yNzMtMjMuMjczVjIzLjI3M0M1MTIsMTAuNDIsNTAxLjU4LDAsNDg4LjcyNywweiIgZmlsbD0iIzc3YzczMiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTM5NS42MzYsMjMyLjcyN2MtMTIuODUzLDAtMjMuMjczLDEwLjQyLTIzLjI3MywyMy4yNzN2MjA5LjQ1NUg0Ni41NDVWMTM5LjYzNkgyNTZjMTIuODUzLDAsMjMuMjczLTEwLjQyLDIzLjI3My0yMy4yNzMgICAgUzI2OC44NTMsOTMuMDkxLDI1Niw5My4wOTFIMjMuMjczQzEwLjQyLDkzLjA5MSwwLDEwMy41MTEsMCwxMTYuMzY0djM3Mi4zNjRDMCw1MDEuNTgsMTAuNDIsNTEyLDIzLjI3Myw1MTJoMzcyLjM2NCAgICBjMTIuODUzLDAsMjMuMjczLTEwLjQyLDIzLjI3My0yMy4yNzNWMjU2QzQxOC45MDksMjQzLjE0Nyw0MDguNDg5LDIzMi43MjcsMzk1LjYzNiwyMzIuNzI3eiIgZmlsbD0iIzc3YzczMiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
                                         </a>
                                     </div>
                                 </div>
@@ -240,7 +254,7 @@
                         </div>
                         <h3 class="title-bold-dark size-xl">Featured Ad Posting</h3>
                         <p>Post as many ads as you like for 30 days without limitations and keep it on the top of our
-                        index</p>
+                            index</p>
                         <a href="{{route('view_post_ad',['ad'=>'Premium'])}}" >
                             <button class="cp-default-btn-lg" type="submit">Submit Ad</button>
                         </a>
