@@ -97,8 +97,8 @@
                                 <li><a href="/">Home</a></li>
                                 <li><a href="{{url('/list/corporate_ads')}}">Corporate Ads</a></li>
                                 <li><a href="{{url('/list/individual_ads')}}">Individual Ads</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="{{url('/aboutAs')}}">About Us</a></li>
+                                <li><a href="{{url('/contact')}}">Contact Us</a></li>
                             </ul>
                         </nav>
                     </div>

@@ -6294,3 +6294,45 @@ ul.sidebar-ads-from-user li .price {
         margin-top: 36px;
     }
 }
+
+
+@media screen and (max-width: 991px) {
+    #proButton {
+        width: 50px;
+        height: 40px;
+        font-size: 12px;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #protxt {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #proButton {
+        width: 40px;
+        height: 30px;
+        font-size: 10px;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #url {
+        width: 200px;
+        height: 30px;
+
+    }
+}
+
+
+
+@media screen and (max-width: 375px) {
+    #email_subscribe {
+       font-size: 12px;
+
+    }
+}

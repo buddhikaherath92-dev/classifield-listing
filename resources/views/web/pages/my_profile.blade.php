@@ -207,13 +207,13 @@
 
                 <div class="row">
                     <div class="col-3">
-                        <a class="btn btn-success" style="width: 150px;margin-left: 20px " type="submit"
+                        <a id="proButton" class="btn btn-success" style="width: 150px;margin-left: 20px " type="submit"
                            href={{route('create_url')}}>Generate URL</a>
                     </div>
 
                     <div class="col-9">
                         <div class="col-sm-9 col-12">
-                            <div class="form-group">
+                            <div id="protxt" class="form-group">
                                 <input type="text" id="url" name="url"
                                        class="form-control" placeholder="Url" value="{{session('status')}} ">
                             </div>
