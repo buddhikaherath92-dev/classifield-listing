@@ -53,7 +53,7 @@
             <div class="row">
                 <div class="order-xl-2 order-lg-2 col-xl-9 col-lg-8 col-md-12 col-sm-12 col-12 mb--sm">
                     <div class="section-title-left-dark title-bar mt-20 mb-40">
-                        <h2>{{$heading}}</h2>
+                        <h5 id="headlineStyle"><b>{{$heading}}</b></h5>
                     </div>
                     <div class="row category-grid-layout2 zoom-gallery">
                         @if(count($advertisements) === 0 )
