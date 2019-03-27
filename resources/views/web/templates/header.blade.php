@@ -9,7 +9,7 @@
                         <div class="top-bar-left">
                             <a href="{{route('view_post_ad')}}" class="cp-default-btn d-lg-none">Post Your Ad</a>
                             <p class="d-none d-lg-block">
-                                <i class="fa fa-life-ring" aria-hidden="true"></i>Have any questions? +9470 311 3217 or info@aluthads.lk
+                                <i class="fa fa-life-ring" aria-hidden="true"></i>Have any questions? info@aluthads.lk
                             </p>
                         </div>
                     </div>

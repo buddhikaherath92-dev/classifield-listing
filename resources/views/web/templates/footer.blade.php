@@ -28,11 +28,6 @@
                                     <i class="fa fa-wechat" aria-hidden="true"> info@aluthads.lk</i>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-phone" aria-hidden="true">  +9470 311 3217</i>
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </div>

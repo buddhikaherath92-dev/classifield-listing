@@ -6248,6 +6248,10 @@ ul.sidebar-ads-from-user li .price {
     padding-right: 0px;
 }
 
+.headlineStyle{
+    color: black;
+}
+
 @media all and (max-width: 640px) and (min-width: 200px){
 
     .cp-search-btn {
@@ -6294,3 +6298,4 @@ ul.sidebar-ads-from-user li .price {
         margin-top: 36px;
     }
 }
+
