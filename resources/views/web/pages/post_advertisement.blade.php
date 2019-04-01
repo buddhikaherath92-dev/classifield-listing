@@ -13,7 +13,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-9 col-md-12 col-sm-12 col-12 mb--sm">
+                <div class="col-lg-9 col-md-12 col-sm-12 col-12F mb--sm">
                     <div class="gradient-wrapper">
                         <div class="gradient-title">
                             <h2>Post a Free Ad</h2>
@@ -199,6 +199,21 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-3 col-12">
+                                                <label class="control-label" for="add-title">Ad Key Words <span> *</span></label>
+                                            </div>
+                                            <div class="col-sm-9 col-12">
+                                                <div class="form-group">
+                                                    <input type="text" id="" name=""
+                                                           value=""
+                                                           required maxlength="250"
+                                                           class="form-control"
+                                                           placeholder="Enter your key words">
+                                                </div>
+                                            </div>
+                                        </div>
 
                                     <div class="row">
                                         <div class="col-sm-3 col-12">
