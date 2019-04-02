@@ -31,6 +31,7 @@ class CreateAdvertisementsTable extends Migration
             $table->date('expire_date')->nullable();
             $table->string('district')->nullable();
             $table->integer('views')->default(0);
+            $table->string('key_words');
             $table->timestamps();
         });
     }

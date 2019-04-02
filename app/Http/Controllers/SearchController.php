@@ -32,13 +32,17 @@ class SearchController extends Controller
         }
 
         if (request('keyword') !== null) {
-            $advertisements = $advertisements->where('title', 'like', '%' . request('keyword') . '%');
+            $advertisements = $advertisements->where('title', 'like', '%' . request('keyword') . '%')
+                ->orWhere('key_words', 'like', '%' . request('keyword') . '%');
             $heading = 'Search results for ' . request('keyword');
         }
+
+
 
         if(request('keyword') === null && request('district') === null && request('ad_type') === 'all'){
             $heading = 'Search results for All Advertisements';
         }
+
 
         return view('web.pages.listing', [
             'advertisements' => $advertisements->WhereActive()->paginate(9),
