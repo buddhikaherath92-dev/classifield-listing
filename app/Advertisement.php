@@ -29,6 +29,7 @@ class Advertisement extends Model
         'is_inactive',
         'expire_date',
         'district',
+        'key_words'
     ];
 
     /**
