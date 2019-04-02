@@ -171,7 +171,7 @@
 
                                     <div class="row">
                                         <div class="col-sm-3 col-12">
-                                            <label class="control-label" for="first-name">Set Price</label>
+                                            <label class="control-label" id="lblPrice" for="first-name">Set Price <span id="span"> *</span></label>
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
@@ -371,10 +371,21 @@
                 });
 
             });
+
+            $('input[type="radio"]').click(function () {
+                if ($(this).attr("value") == "1") {
+                    $("#span").hide('slow');
+                }
+                if ($(this).attr("value") == "0") {
+                    $("#span").show('slow');
+
+                }
+            });
         });
 
-
         CKEDITOR.replace( 'summary-ckeditor' );
+
+
 
     </script>
 @endsection

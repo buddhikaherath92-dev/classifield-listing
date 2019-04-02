@@ -70,7 +70,7 @@
                                 {{--<br>--}}
                                 {{--<br>--}}
 
-                                <div class="price ellipsis">{{'Rs '.number_format($advertisement->price)}}</div>
+                                <div class="price ellipsis">{{$advertisement->price != null ? 'Rs '.number_format($advertisement->price):'N/A'}}</div>
 
                                 <a href="{{url('/ad/'.config('constance.categories')[$advertisement
                                         ->category_id]['slug']).'/'.$advertisement->slug}}" class="product-details-btn">Details</a>
