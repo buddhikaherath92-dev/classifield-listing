@@ -336,20 +336,43 @@
          *ajax call for get sub categories
          *
          */
-        $('#category-name').change(function () {
+        $(document).ready(function(){
             $.ajax({
                 url:"sub",
                 method:'get',
                 dataType:'json',
                 data:{ id:$(this).find('option:selected').val()}
             }).done(function (res) {
+
+                $(this).find('option:selected').val()
                 $('#sub-category-name').empty();
                 for(let i in res){
                     let temp=res[i];
-                    $('#sub-category-name').append('<option value="'+i+'" {{ old('subcategory_id') }}>'+temp['name']+'</option>');
+                    $('#sub-category-name').append('<option value="'+i+'">'+temp['name']+'</option>');
                 }
+
+            });
+
+            $('#category-name').change(function () {
+                $.ajax({
+                    url:"sub",
+                    method:'get',
+                    dataType:'json',
+                    data:{ id:$(this).find('option:selected').val()}
+                }).done(function (res) {
+
+                    $(this).find('option:selected').val()
+                    $('#sub-category-name').empty();
+                    for(let i in res){
+                        let temp=res[i];
+                        $('#sub-category-name').append('<option value="'+i+'">'+temp['name']+'</option>');
+                    }
+
+                });
+
             });
         });
+
 
         CKEDITOR.replace( 'summary-ckeditor' );
 
