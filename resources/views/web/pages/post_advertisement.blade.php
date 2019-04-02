@@ -206,7 +206,7 @@
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group">
-                                                <input type="text" id="tag-input1" name=""
+                                                <input type="text" id="tag-input1" name="key_words"
                                                        value=""
                                                        required maxlength="250"
                                                        class="form-control"

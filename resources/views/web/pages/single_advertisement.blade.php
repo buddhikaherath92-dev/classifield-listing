@@ -92,8 +92,9 @@
                                         {{--Share ad</a></li>--}}
                                 {{--<i class="fas fa-share-alt"aria-hidden="true">--}}
 
-                                <li><a href= "https://www.facebook.com/sharer/sharer.php?u={{ urlencode(Request::fullUrl()) }}" class="social-button " id=""><span class="fa fa-facebook-official"></span>Share facebook</a></li>
-
+                                {{--<li><a href= "https://www.facebook.com/sharer/sharer.php?u={{ urlencode(Request::fullUrl()) }}" class="social-button " id=""><span class="fa fa-facebook-official"></span>&nbsp;&nbsp;&nbsp;Share On facebook</a></li>--}}
+                                <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(Request::fullUrl()) }}" class="social-button " id=""><span class="fa fa-facebook-official"></span>&nbsp;&nbsp;&nbsp;Share On facebook</a></li>
+                                </li>
 
                                 {{--<li><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Report abuse</a></li>--}}
                                 <li><a href="#" data-toggle="modal" data-target="#modelRate"><i class="fa fa-star"
