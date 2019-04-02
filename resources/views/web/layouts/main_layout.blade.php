@@ -116,4 +116,5 @@
         $('#modelRate').modal('show');
         @endif
     </script>
+
 </body>

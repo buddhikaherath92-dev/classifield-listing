@@ -200,20 +200,20 @@
                                         </div>
                                     </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-3 col-12">
-                                                <label class="control-label" for="add-title">Ad Key Words <span> *</span></label>
-                                            </div>
-                                            <div class="col-sm-9 col-12">
-                                                <div class="form-group">
-                                                    <input type="text" id="" name=""
-                                                           value=""
-                                                           required maxlength="250"
-                                                           class="form-control"
-                                                           placeholder="Enter your key words">
-                                                </div>
+                                    <div class="row">
+                                        <div class="col-sm-3 col-12">
+                                            <label class="control-label" for="add-title">Ad Key Words <span> *</span></label>
+                                        </div>
+                                        <div class="col-sm-9 col-12">
+                                            <div class="form-group">
+                                                <input type="text" id="tag-input1" name=""
+                                                       value=""
+                                                       required maxlength="250"
+                                                       class="form-control"
+                                                       placeholder="Enter your key words">
                                             </div>
                                         </div>
+                                    </div>
 
                                     <div class="row">
                                         <div class="col-sm-3 col-12">
@@ -277,20 +277,20 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 col-12">
-                    <div class="sidebar-item-box">
-                        <div class="gradient-wrapper">
-                            <div class="gradient-title">
-                                <h3>How To Sell Quickly?</h3>
-                            </div>
-                            <ul class="sidebar-sell-quickly">
-                                <li><a >Use a brief title and description of the item.</a></li>
-                                <li><a>Make sure you post in the correct category</a></li>
-                                <li><a >Add nice photos to your ad</a></li>
-                                <li><a >Put a reasonable price</a></li>
-                                <li><a>Check the item before publish</a></li>
-                            </ul>
-                        </div>
-                    </div>
+{{--                    <div class="sidebar-item-box">--}}
+{{--                        <div class="gradient-wrapper">--}}
+{{--                            <div class="gradient-title">--}}
+{{--                                <h3>How To Sell Quickly?</h3>--}}
+{{--                            </div>--}}
+{{--                            <ul class="sidebar-sell-quickly">--}}
+{{--                                <li><a >Use a brief title and description of the item.</a></li>--}}
+{{--                                <li><a>Make sure you post in the correct category</a></li>--}}
+{{--                                <li><a >Add nice photos to your ad</a></li>--}}
+{{--                                <li><a >Put a reasonable price</a></li>--}}
+{{--                                <li><a>Check the item before publish</a></li>--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                     {{--<div class="sidebar-item-box">--}}
                         {{--<div class="gradient-wrapper">--}}
                             {{--<div class="gradient-title">--}}
