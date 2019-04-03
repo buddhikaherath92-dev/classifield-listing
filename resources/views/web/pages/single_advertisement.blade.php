@@ -41,7 +41,7 @@
                                                 <img class="d-block mw-100"
                                                      src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_1}}"
                                                      alt="First slide"
-                                                     style="width: auto; height: fit-content; display: block">
+                                                     style="width: auto; height: auto; display: block">
                                             </center>
                                         </div>
                                     @endif
@@ -51,7 +51,7 @@
                                                 <img class="d-block mw-100"
                                                      src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_2}}"
                                                      alt="Second slide"
-                                                     style="width: auto; height: fit-content; display: block">
+                                                     style="width: auto; height: auto; display: block">
                                             </center>
                                         </div>
                                     @endif
@@ -61,7 +61,7 @@
                                                 <img class="d-block mw-100"
                                                      src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_3}}"
                                                      alt="Third slide"
-                                                     style="width: auto; height: fit-content; display: block">
+                                                     style="width: auto; height: auto; display: block">
                                             </center>
                                         </div>
                                     @endif
