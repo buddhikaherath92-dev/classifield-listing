@@ -92,8 +92,9 @@
                                         {{--Share ad</a></li>--}}
                                 {{--<i class="fas fa-share-alt"aria-hidden="true">--}}
 
-                                <li><a href= "https://www.facebook.com/sharer/sharer.php?u={{ urlencode(Request::fullUrl()) }}" class="social-button " id=""><span class="fa fa-facebook-official"></span>Share facebook</a></li>
-
+                                {{--<li><a href= "https://www.facebook.com/sharer/sharer.php?u={{ urlencode(Request::fullUrl()) }}" class="social-button " id=""><span class="fa fa-facebook-official"></span>&nbsp;&nbsp;&nbsp;Share On facebook</a></li>--}}
+                                <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(Request::fullUrl()) }}" class="social-button " id=""><span class="fa fa-facebook-official"></span>&nbsp;&nbsp;&nbsp;Share On facebook</a></li>
+                                </li>
 
                                 {{--<li><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Report abuse</a></li>--}}
                                 <li><a href="#" data-toggle="modal" data-target="#modelRate"><i class="fa fa-star"
@@ -173,7 +174,7 @@
                                              class="img-fluid pull-left">
                                         <div class="media-body">
                                             <span>Price</span>
-                                            <h4>{{$advertisement->price}}</h4>
+                                            <h4>{{$advertisement->price != null ? $advertisement->price : 'N/A'}}</h4>
                                         </div>
                                     </div>
                                 </li>
@@ -231,7 +232,7 @@
                                                          style="width: 15px;height: 15px">
                                                     {{config('constance.categories')[$seller_ad->category_id]['sub_cat'][$seller_ad->subcategory_id]['name']}}
                                                 </div>
-                                                <div class="price">{{$seller_ad->price ? 'Rs '.number_format($seller_ad->price) :  'N/A'}}</div>
+                                                <div class="price">{{$seller_ad->price != null ? 'Rs '.number_format($seller_ad->price) :  'N/A'}}</div>
                                             </div>
                                         </div>
                                     </li>

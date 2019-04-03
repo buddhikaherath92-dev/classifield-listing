@@ -171,7 +171,7 @@
 
                                     <div class="row">
                                         <div class="col-sm-3 col-12">
-                                            <label class="control-label" for="first-name">Set Price</label>
+                                            <label class="control-label" id="lblPrice" for="first-name">Set Price <span id="span"> *</span></label>
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
@@ -206,7 +206,7 @@
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group">
-                                                <input type="text" id="tag-input1" name=""
+                                                <input type="text" id="" name="key_words"
                                                        value=""
                                                        required maxlength="250"
                                                        class="form-control"
@@ -277,20 +277,20 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 col-12">
-{{--                    <div class="sidebar-item-box">--}}
-{{--                        <div class="gradient-wrapper">--}}
-{{--                            <div class="gradient-title">--}}
-{{--                                <h3>How To Sell Quickly?</h3>--}}
-{{--                            </div>--}}
-{{--                            <ul class="sidebar-sell-quickly">--}}
-{{--                                <li><a >Use a brief title and description of the item.</a></li>--}}
-{{--                                <li><a>Make sure you post in the correct category</a></li>--}}
-{{--                                <li><a >Add nice photos to your ad</a></li>--}}
-{{--                                <li><a >Put a reasonable price</a></li>--}}
-{{--                                <li><a>Check the item before publish</a></li>--}}
-{{--                            </ul>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+                    <div class="sidebar-item-box">
+                        <div class="gradient-wrapper">
+                            <div class="gradient-title">
+                                <h3>How To Sell Quickly?</h3>
+                            </div>
+                            <ul class="sidebar-sell-quickly">
+                                <li><a >Use a brief title and description of the item.</a></li>
+                                <li><a>Make sure you post in the correct category</a></li>
+                                <li><a >Add nice photos to your ad</a></li>
+                                <li><a >Put a reasonable price</a></li>
+                                <li><a>Check the item before publish</a></li>
+                            </ul>
+                        </div>
+                    </div>
                     {{--<div class="sidebar-item-box">--}}
                         {{--<div class="gradient-wrapper">--}}
                             {{--<div class="gradient-title">--}}
@@ -371,9 +371,21 @@
                 });
 
             });
+
+            $('input[type="radio"]').click(function () {
+                if ($(this).attr("value") == "1") {
+                    $("#span").hide('slow');
+                }
+                if ($(this).attr("value") == "0") {
+                    $("#span").show('slow');
+
+                }
+            });
         });
 
         CKEDITOR.replace( 'summary-ckeditor' );
+
+
 
     </script>
 @endsection
