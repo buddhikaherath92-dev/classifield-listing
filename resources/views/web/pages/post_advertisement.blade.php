@@ -206,11 +206,18 @@
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group">
-                                                <input type="text" id="" name="key_words"
-                                                       value=""
-                                                       required maxlength="250"
-                                                       class="form-control"
-                                                       placeholder="Enter your key words">
+{{--                                                <input type="text" id="" name="key_words"--}}
+{{--                                                       value=""--}}
+{{--                                                       required maxlength="250"--}}
+{{--                                                       class="form-control"--}}
+{{--                                                       placeholder="Enter your key words">--}}
+                                                <style>
+                                                    body{
+                                                        font-family:'Segoe UI', Roboto, Oxygen, Ubuntu,   Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+                                                    }
+                                                </style>
+                                                <input type="text" id="tag-input1" name="key_words">
+
                                             </div>
                                         </div>
                                     </div>

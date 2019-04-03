@@ -597,7 +597,7 @@
         });
         tags.input.addEventListener('keydown' , function(e){
             var str = tags.input.value.trim();
-            if( !!(~[9 , 13 ,32 ].indexOf( e.keyCode ))  )
+            if( !!(~[9 , 32 , 188 ].indexOf( e.keyCode ))  )
             {
                 tags.input.value = "";
                 if(str != "")
