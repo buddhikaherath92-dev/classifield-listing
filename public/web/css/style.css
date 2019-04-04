@@ -6376,3 +6376,75 @@ ul.sidebar-ads-from-user li .price {
 body{
     font-family:'Segoe UI', Roboto, Oxygen, Ubuntu,   Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
+
+
+/*media query for contact us page image*/
+@media screen and (max-width: 823px) {
+    #shoppinImg{
+        width: 100%;
+    }
+}
+
+
+/*media query for corporate ads page*/
+@media screen and (max-width: 411px) {
+    #corporate{
+        margin-left: 3px;
+    }
+}
+
+
+@media screen and (max-width: 568px) {
+    #corporate{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #corporate{
+        margin-right: 10px;
+    }
+}
+
+
+@media screen and (max-width: 667px) {
+    #corporate{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #corporate{
+        margin-right: 8px;
+    }
+}
+
+
+@media screen and (max-width: 731px) {
+    #corporate{
+        margin-left: 10px;
+    }
+}
+
+
+@media screen and (max-width: 823px) {
+    #corporate{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #corporate{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    #corporate{
+        margin-left: 10px;
+    }
+}
+
+
+
+

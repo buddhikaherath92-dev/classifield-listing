@@ -78,7 +78,7 @@
                     </div>
                     <div class="sidebar-item-box">
                         {{--<img src="img/banner/sidebar-banner1.jpg" alt="banner" class="img-fluid m-auto">--}}
-                        <img src="{{asset('web/img/contact/online_shopping_concept_male_and_various_goods_illustration_6826369.jpg')}}"alt="banner" class="img-fluid m-auto">
+                        <img src="{{asset('web/img/contact/online_shopping_concept_male_and_various_goods_illustration_6826369.jpg')}}"alt="banner" class="img-fluid m-auto" id="shoppinImg">
                     </div>
                 </div>
             </div>

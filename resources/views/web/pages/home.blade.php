@@ -174,7 +174,7 @@
 
                     {{---------------------------------}}
 
-                    <div class="alert alert-success" role="alert">There are no recently advertisement at this movement.</div>
+                    <div class="alert alert-success" role="alert" style="margin-left: 15px">There are no recently advertisement at this movement.</div>
 
 
                     {{------------------------------}}

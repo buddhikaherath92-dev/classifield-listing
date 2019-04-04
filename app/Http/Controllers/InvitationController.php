@@ -26,14 +26,13 @@ class InvitationController extends Controller
                 $newToken=mt_rand(1000, 9999);
         }
 
-                Invitaion::create(['user_id' => $user , 'created_at' => $time,'token'=>$newToken]);
+        Invitaion::create(['user_id' => $user , 'created_at' => $time,'token'=>$newToken]);
 
-       $url= url("/invitation/redirect/{$newToken}");
+        $url= url("/invitation/redirect/{$newToken}");
 
 
 
         return redirect()->back()->with('status', $url);
-
         }
 
 
