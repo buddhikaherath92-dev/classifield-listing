@@ -11,7 +11,7 @@
                             <div class="row">
                                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                                         <div class="form-group search-input-area input-icon-location">
-                                            <div class="form-group search-input-area input-icon-location" style="width: 255px">
+                                            <div class="form-group search-input-area input-icon-location" style="">
                                                 <select id="location" class="select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" name="district">
                                                     <option class="first" value="">Select Location</option>
                                                     @foreach(config('constance.districts') as $districts)
@@ -23,7 +23,7 @@
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-sm-6 col-12 div-padding-search">
                                         <div class="form-group search-input-area input-icon-category">
-                                            <div class="form-group search-input-area input-icon-category" style="background-color: white; width: 255px">
+                                            <div class="form-group search-input-area input-icon-category" style="background-color: white">
                                                 <select id="categories" class="select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" name="ad_type">
                                                     <option class="first" value="all">All</option>
                                                     <option value="corporate">Corporate</option>
@@ -34,7 +34,7 @@
                                     </div>
 
                                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                                        <div class="form-group search-input-area input-icon-keywords" style="width: 255px">
+                                        <div class="form-group search-input-area input-icon-keywords">
                                             <input placeholder="Enter Keywords here ..." value="" name="keyword" type="text">                                    </div>
                                     </div>
                                     <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-right text-left-mb" >
