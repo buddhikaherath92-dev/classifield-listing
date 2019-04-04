@@ -338,27 +338,34 @@
 @endsection
 
 @section('script')
-    <script >
+    <script type="text/javascript">
         /**
          *ajax call for get sub categories
          *
          */
-        $(document).ready(function(){
-            $.ajax({
-                url:"sub",
-                method:'get',
-                dataType:'json',
-                data:{ id:$(this).find('option:selected').val()}
-            }).done(function (res) {
+        $(document).ready(function() {
 
+            $.ajax({
+                url: "sub",
+                method: 'get',
+                dataType: 'json',
+                data: {id: $(this).find('option:selected').val()}
+
+            }).done(function (res) {
                 $(this).find('option:selected').val()
                 $('#sub-category-name').empty();
-                for(let i in res){
-                    let temp=res[i];
-                    $('#sub-category-name').append('<option value="'+i+'">'+temp['name']+'</option>');
+                for (let i in res) {
+                    let temp = res[i];
+                    if (i === localStorage['subCategory']) {
+                        $('#sub-category-name').append('<option value="' + i + '">' + temp['name'] + '</option>');
+                    }
                 }
-
             });
+
+            $('#sub-category-name').change(function () {
+                localStorage.setItem('subCategory', document.getElementById("sub-category-name").value)
+            });
+
 
             $('#category-name').change(function () {
                 $.ajax({
@@ -376,7 +383,6 @@
                     }
 
                 });
-
             });
 
             $('input[type="radio"]').click(function () {
@@ -388,6 +394,8 @@
 
                 }
             });
+
+
         });
 
         CKEDITOR.replace( 'summary-ckeditor' );
