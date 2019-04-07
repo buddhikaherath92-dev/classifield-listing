@@ -58,7 +58,7 @@
                                             <i class="fa fa-times-circle" aria-hidden="true" style="color: red"></i><span style="color: red">Inactive</span>
                                         @endif
                                     </li>
-                                    <li class="date">
+                                    <li class="date" id="createDate">
                                         <i class="fa fa-clock-o" aria-hidden="true"></i>{{$advertisement->created_at}}
                                     </li>
                                     <li class="tag-ctg">
@@ -67,13 +67,11 @@
                                 </ul>
 
                                 <p class="ellipsis">{{$advertisement->description}}</p>
-                                {{--<br>--}}
-                                {{--<br>--}}
 
-                                <div class="price ellipsis">{{$advertisement->price != null ? 'Rs '.number_format($advertisement->price):'N/A'}}</div>
+                                <div id="price" class="price ellipsis">{{$advertisement->price != null ? 'Rs '.number_format($advertisement->price):'N/A'}}</div>
 
                                 <a href="{{url('/ad/'.config('constance.categories')[$advertisement
-                                        ->category_id]['slug']).'/'.$advertisement->slug}}" class="product-details-btn">Details</a>
+                                        ->category_id]['slug']).'/'.$advertisement->slug}}" class="product-details-btn" id="product-btn">Details</a>
                             </div>
                         </div>
                     </div>

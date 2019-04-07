@@ -6176,10 +6176,10 @@ ul.sidebar-ads-from-user li .price {
         position: inherit;
     }
     .category-list-layout3 .product-box .item-content a.product-details-btn {
-        display: none;
+        display: block;
     }
     .category-list-layout2 .product-box .item-content a.product-details-btn {
-        display: none;
+        display: block;
     }
     .category-list-layout2 .product-box .item-mask-wrapper,
     .category-list-layout3 .product-box .item-mask-wrapper {
@@ -6444,6 +6444,70 @@ body{
         margin-left: 10px;
     }
 }
+
+/*media query for my adds starts*/
+
+@media screen and (max-width: 360px) {
+    #price{
+        margin-bottom: 25px;
+        font-size: 10px;
+    }
+    #product-btn{
+
+        width: 80px;
+        height: 25px;
+        font-size: 10px;
+        /*margin-bottom: 20%;*/
+    }
+    #createDate{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 411px) {
+    #price{
+        margin-bottom: 25px;
+        font-size: 10px;
+    }
+    #product-btn{
+
+        width: 80px;
+        height: 25px;
+        font-size: 10px;
+        /*margin-bottom: 20%;*/
+    }
+    #createDate{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #price{
+        margin-bottom: 25px;
+        font-size: 10px;
+    }
+    #product-btn{
+
+        width: 80px;
+        height: 25px;
+        font-size: 10px;
+        /*margin-bottom: 20%;*/
+    }
+    #createDate{
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    #price {
+        margin-bottom: 25px;
+        font-size: 10px;
+    }
+}
+
+/*media query for my adds ends*/
+
 
 
 
