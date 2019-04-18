@@ -32,8 +32,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="SelectLocation" class="col-lg-3 col-md-6 col-sm-6 col-12">
-                                        <div class="form-group search-input-area input-icon-keywords">
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                                        <div id="SelectLocation" class="form-group search-input-area input-icon-keywords">
                                             <input placeholder="Enter Keywords here ..." value="" name="keyword" type="text">
                                         </div>
                                     </div>
