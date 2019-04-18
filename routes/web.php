@@ -40,6 +40,7 @@ Route::post('/rate_advertisement',   'RatingController@update')->name('rate_ad')
 Route::get('/add','MyAdsController@click')->name('addShow');
 Route::get('/create_url','InvitationController@createToken')->name('create_url');
 Route::get('/invitation/redirect/{token}','SuccessReferalController@redirect')->name('success_referals');
+Route::post('/adminMessage','AdminMessageController@index');
 
 // admin panel routes
 Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'admin' ], function () {
