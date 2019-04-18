@@ -4116,7 +4116,7 @@ ul.specification-layout2 > li:before {
     position: relative;
 }
 .featured-product-area:before {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     content: "";
     position: absolute;
     top: 0;
