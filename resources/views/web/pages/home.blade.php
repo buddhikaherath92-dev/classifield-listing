@@ -11,7 +11,7 @@
                             <div class="row">
                                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                                         <div class="form-group search-input-area input-icon-location">
-                                            <div class="form-group search-input-area input-icon-location" style="">
+                                            <div id="SelectLocation" class="form-group search-input-area input-icon-location">
                                                 <select id="location" class="select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" name="district">
                                                     <option class="first" value="">Select Location</option>
                                                     @foreach(config('constance.districts') as $districts)
@@ -21,9 +21,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 div-padding-search">
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                                         <div class="form-group search-input-area input-icon-category">
-                                            <div class="form-group search-input-area input-icon-category" style="background-color: white">
+                                            <div id="SelectLocation" class="form-group search-input-area input-icon-category">
                                                 <select id="categories" class="select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" name="ad_type">
                                                     <option class="first" value="all">All</option>
                                                     <option value="corporate">Corporate</option>
@@ -32,10 +32,10 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                                    <div id="SelectLocation" class="col-lg-3 col-md-6 col-sm-6 col-12">
                                         <div class="form-group search-input-area input-icon-keywords">
-                                            <input placeholder="Enter Keywords here ..." value="" name="keyword" type="text">                                    </div>
+                                            <input placeholder="Enter Keywords here ..." value="" name="keyword" type="text">
+                                        </div>
                                     </div>
                                     <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-right text-left-mb" >
                                         <button type="submit" class="cp-search-btn">
