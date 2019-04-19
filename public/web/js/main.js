@@ -631,4 +631,10 @@ function setFocusToTextBox() {
     document.getElementById("tag-input1").focus();
 
 }
+function copyFunction() {
+    var copyText = document.getElementById("url");
+    copyText.select();
+    document.execCommand("copy");
+
+}
 
