@@ -167,7 +167,15 @@
                                                 <td width="600" valign="top" align="center" style="padding:0;Margin:0;">
                                                     <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
                                                         <tr style="border-collapse:collapse;">
-                                                            <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:30px;padding-right:30px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;"> I'm  {{$name}} &nbsp; {{$email}} Send This Message</p> </td>
+                                                            <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:30px;padding-right:30px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;"> I'm  {{$name}}  Send This Message</p> </td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse;">
+                                                            <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:30px;padding-right:30px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;"> Email: {{$email}}</p> </td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse;">
+                                                            <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:30px;padding-right:30px;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666;"> Subject: {{$subject1}}</p> </td>
+                                                        </tr>
+
                                                         </tr>
                                                     </table> </td>
                                             </tr>
@@ -181,8 +189,8 @@
                                                     <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
                                                         <tr style="border-collapse:collapse; width: 200px">
                                                             <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:40px;padding-bottom:40px;">
-                                                                <div class="text-nowrap" style="width: 8rem; background-color: seagreen; color: whitesmoke;height: 50px;font-size: 20px">
-                                                                    {{ $subject1 }}
+                                                                <div class="text-nowrap" style="width: 300px; background-color: seagreen; color: whitesmoke;height: 150px;font-size: 20px">
+                                                                    {{ $problems }}
                                                                     <hr>
                                                                 </div>
 

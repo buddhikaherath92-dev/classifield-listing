@@ -19,10 +19,11 @@ class AdminMessageController extends Controller{
      */
       function index(Request $request){
 
-          $emailAddress="oshadhichamodya1998@gmail.com";
-//        $emailAddress =env('ADMIN_EMAIL',"oshadhichamodya1998@gmail.com");
+          $emailAddress="gamagethilini82@gmail.com";
+//        $emailAddress =env('ADMIN_EMAIL',"gamagethilini82@gmail.com);
           $name=request()->all()['name'];
           Mail::to($emailAddress)->send(new sendAdminMessage($name));
+          Return redirect('/contact');
 
     }
 
