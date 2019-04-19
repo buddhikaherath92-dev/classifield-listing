@@ -18,12 +18,11 @@ class AdminMessageController extends Controller{
      * @return mixed
      */
       function index(Request $request){
+
           $emailAddress="oshadhichamodya1998@gmail.com";
 //        $emailAddress =env('ADMIN_EMAIL',"oshadhichamodya1998@gmail.com");
           $name=request()->all()['name'];
           Mail::to($emailAddress)->send(new sendAdminMessage($name));
-          return view('web.pages.contact_us');
-
 
     }
 

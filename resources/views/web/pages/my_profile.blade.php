@@ -206,18 +206,21 @@
                 <h3>Share link for Friends</h3>
 
                 <div class="row">
-                    <div class="col-3">
-                        <a id="proButton" class="btn btn-success" style="width: 150px;margin-left: 20px " type="submit"
+                    <div class="col-2">
+                        <a id="proButton" class="btn btn-success" style="width: 120px;margin-left: 20px " type="submit"
                            href={{route('create_url')}}>Generate URL</a>
                     </div>
 
-                    <div class="col-9">
-                        <div class="col-sm-9 col-12">
+                    <div class="col-8">
+                        <div class="col-sm-12 col-12">
                             <div id="protxt" class="form-group">
                                 <input type="text" id="url" name="url"
                                        class="form-control" placeholder="Url" value="{{session('status')}} ">
                             </div>
                         </div>
+                    </div>
+                    <div class="col-2">
+                        <a id="copyButton" style="width: 75%;height: 5%;margin-right: 40%" class="btn btn-success"  onclick="copyFunction()">Copy Url</a>
                     </div>
                 </div>
 

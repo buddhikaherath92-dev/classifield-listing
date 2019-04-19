@@ -196,10 +196,7 @@
                                                             {{--<h1 href="{{env('APP_URL')}}show_verification" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:20px;color:#FFFFFF;border-style:solid;border-color:#468E24;border-width:15px 25px 15px 25px;display:inline-block;background:#468E24;border-radius:2px;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center;"></h1>--}}
                                                             {{--</span> </td>--}}
                                                         </tr>
-                                                        <div class="text-nowrap" style="width: 8rem; background-color: seagreen; color: whitesmoke;height: 50px;font-size: 20px">
-                                                            {{ $problems }}
-                                                        </div>
-                                                    </table> </td>
+                      </table> </td>
                                             </tr>
                                         </table> </td>
                                 </tr>
