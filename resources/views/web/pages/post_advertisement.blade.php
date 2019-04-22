@@ -366,8 +366,7 @@
             $('#sub-category-name').change(function () {
                 localStorage.setItem('subCategory', document.getElementById("sub-category-name").value)
             });
-
-
+            
             $('#category-name').change(function () {
                 $.ajax({
                     url:"sub",
@@ -400,8 +399,6 @@
         });
 
         CKEDITOR.replace( 'summary-ckeditor' );
-
-
 
     </script>
 @endsection
