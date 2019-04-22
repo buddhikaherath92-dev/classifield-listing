@@ -359,14 +359,17 @@
                     if (i === localStorage['subCategory']) {
                         $('#sub-category-name').append('<option selected value="' + i + '">' + temp['name'] + '</option>');
                     }
-                    $('#sub-category-name').append('<option value="' + i + '">' + temp['name'] + '</option>')
+                    else {
+                        $('#sub-category-name').append('<option value="' + i + '">' + temp['name'] + '</option>')
+                    }
+
                 }
             });
 
             $('#sub-category-name').change(function () {
                 localStorage.setItem('subCategory', document.getElementById("sub-category-name").value)
             });
-            
+
             $('#category-name').change(function () {
                 $.ajax({
                     url:"sub",
