@@ -6309,6 +6309,33 @@ ul.sidebar-ads-from-user li .price {
     }
 }
 
+@media screen and (max-width: 360px) {
+    #proButton {
+        width: 50px;
+        height: 40px;
+        font-size: 12px;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #copyButton {
+        width: 40px;
+        height: 30px;
+        font-size: 12px;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #copyButton {
+        width: 10%;
+        height: 30px;
+        font-size: 12px;
+        text-align: left;
+    }
+}
+
 @media screen and (max-width: 991px) {
     #protxt {
         width: 250px;
@@ -6319,6 +6346,15 @@ ul.sidebar-ads-from-user li .price {
     #proButton {
         width: 40px;
         height: 30px;
+        font-size: 10px;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #copyButton {
+        width: 30px;
+        height: 20px;
         font-size: 10px;
         text-align: left;
     }
