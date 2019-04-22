@@ -357,8 +357,9 @@
                 for (let i in res) {
                     let temp = res[i];
                     if (i === localStorage['subCategory']) {
-                        $('#sub-category-name').append('<option value="' + i + '">' + temp['name'] + '</option>');
+                        $('#sub-category-name').append('<option selected value="' + i + '">' + temp['name'] + '</option>');
                     }
+                    $('#sub-category-name').append('<option value="' + i + '">' + temp['name'] + '</option>')
                 }
             });
 
