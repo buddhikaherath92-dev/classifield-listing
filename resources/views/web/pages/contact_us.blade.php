@@ -32,7 +32,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Subject</label>
-                                <input type="text" placeholder="Subjecct" class="form-control" name="subject" id="subject" data-error="Name field is required" required="">
+                                <input type="text" placeholder="Subject" class="form-control" name="subject" id="subject" data-error="Name field is required" required="">
 
                             </div>
                             <div class="form-group">
