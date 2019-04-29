@@ -189,9 +189,9 @@
                                                     <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
                                                         <tr style="border-collapse:collapse; width: 200px">
                                                             <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:40px;padding-bottom:40px;">
-                                                                <div class="text-nowrap" style="width: 300px; background-color: seagreen; color: whitesmoke;height: 150px;font-size: 20px">
+                                                                <div class="text-nowrap" style="width: 600px; background-color: seagreen; color: whitesmoke;height: 150px;font-size: 20px">
                                                                     {{ $problems }}
-                                                                    <hr>
+                                                                    {{--<hr>--}}
                                                                 </div>
 
                                                                 {{--<div class="text-nowrap" style="width: 8rem; background-color: seagreen; color: whitesmoke;height: 50px;font-size: 20px">--}}
