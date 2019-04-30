@@ -220,7 +220,7 @@
                         </div>
                     </div>
                     <div class="col-2">
-                        <a id="copyButton" style="width: 75%;height: 5%;margin-right: 40%" class="btn btn-success"  onclick="copyFunction()">Copy Url</a>
+                        <a id="copyButton" style="width: 50px;height: 25px;margin-right: 40%; font-size: 75%" class="btn btn-success"  onclick="copyFunction()">Copy</a>
                     </div>
                 </div>
 
