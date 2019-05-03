@@ -37,7 +37,7 @@ class AdminMessageController extends Controller{
 //        $emailAddress =env('ADMIN_EMAIL',"gamagethilini82@gmail.com);
           $name=request()->all()['name'];
           Mail::to($emailAddress)->send(new sendAdminMessage($name));
-          $this->common->showAlerts('You Are Successfully send a Message','success',"You Will Receive a Reply");
+          $this->common->showAlerts('You Will Receive a Reply','success',"You Are Successfully send a Message");
 
           Return redirect('/contact');
 
