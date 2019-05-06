@@ -6549,3 +6549,33 @@ body{
 /*media query for my adds ends*/
 
 
+/*start subcribe section*/
+@media screen and (max-width: 320px) {
+    #btn_subscribe{
+        width: 100px;
+        font-size: 10px;
+        margin-left: 10px;
+    }
+}
+/*ends subscribe section*/
+
+/*start settings new password text field*/
+@media (min-width: 320px) {
+    #current_password{
+        font-size: 14px;
+    }
+}
+/*end settings new password text field*/
+
+
+/*start nav bar dashboard icon issue*/
+@media (min-width: 320px) {
+    #dash-btn{
+     margin-left: -20px;
+    }
+}
+
+/*end nav bar dashboard icon issue*/
+
+
+

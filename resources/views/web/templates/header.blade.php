@@ -27,7 +27,7 @@
                                         </form>
                                     </li>
                                     <li>
-                                        <a class="login-btn" href="{{ route('my_profile') }}">
+                                        <a class="login-btn" href="{{ route('my_profile') }}" id="dash-btn">
                                             <i class="fa fa-dashboard" aria-hidden="true"></i>Dashboard
                                         </a>
                                     </li>
