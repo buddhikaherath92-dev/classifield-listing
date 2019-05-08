@@ -203,30 +203,58 @@
                     </div>
                 </div>
                 <hr>
-                <h3>Share link for Friends</h3>
-
                 <div class="row">
-                    <div class="col-2">
-                        <a id="proButton" class="btn btn-success" style="width: 120px;margin-left: 20px " type="submit"
-                           href={{route('create_url')}}>Generate URL</a>
-                    </div>
+                    <div class="col-md-4">
+                        <h3>Share link for Friends</h3>
 
-                    <div class="col-8">
-                        <div class="col-sm-12 col-12">
-                            <div id="protxt" class="form-group">
-                                <input type="text" id="url" name="url"
-                                       class="form-control" placeholder="Url" value="{{session('status')}} ">
+                    </div>
+                    <div class="col-md-8">
+                        <!-- Button trigger modal -->
+                        <button type="button" onclick="onGenerateURLClick()" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter" id="url-btn">
+                            Generate Url
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Share Url</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="text" id="url" name="url"
+                                               class="form-control" placeholder="Url" value="">
+                                        <hr>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a id="copyButton" style="width: 50px;height: 25px;margin-right: 40%; font-size: 75%" class="btn btn-success"  onclick="copyFunction()">Copy</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
-                        <a id="copyButton" style="width: 50px;height: 25px;margin-right: 40%; font-size: 75%" class="btn btn-success"  onclick="copyFunction()">Copy</a>
-                    </div>
                 </div>
-
-{{--        </form>--}}
 
     </div>
     </form>
     </div>
 @endsection
+
+@section('script')
+    <script>
+        function onGenerateURLClick(){
+            $.ajax({
+                url:"{{ url('/create_url') }}",
+                method:"GET",
+                async :true,
+                dataType:"JSON"
+            }).done(function (response) {
+                document.getElementById("url").value=response.data;
+
+            })
+        }
+    </script>
+@endSection

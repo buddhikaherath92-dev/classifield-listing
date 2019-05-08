@@ -32,7 +32,7 @@ class InvitationController extends Controller
 
 
 
-        return redirect()->back()->with('status', $url);
+        return response(['data' => $url], 200);
         }
 
 
