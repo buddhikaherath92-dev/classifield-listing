@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AboutAsController extends Controller
+class AboutUsController extends Controller
 {
 
     public function show()

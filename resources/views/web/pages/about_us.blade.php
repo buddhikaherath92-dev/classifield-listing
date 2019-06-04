@@ -40,17 +40,16 @@
             <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12 col-12 mb--sm">
                 <div class="gradient-wrapper">
                     <div class="gradient-title">
-                        <h2>What Is AluthAdslk?</h2>
+                        <h2>What Is AluthAds.lk?</h2>
                     </div>
                     <div class="about-us gradient-padding">
-                        {{--<img src="img/banner/about.jpg" alt="about" class="img-fluid">--}}
                         <img src="{{asset('images/categories/about_us3.jpg')}}">
-
-                        {{--<h3>Ridolor sit amet, consectetur adipiscing elit. Aliquam consectetur sit amet ante nec vulpute Nullgravida augue.</h3>--}}
-                        <p>AluthAdslk is one of the largest online marketing hub which advertise Electronics , Fashion ,   Events,  Animals ,Jobs, Property and more....... It is a place for everyone, for the people who seek advertise to the marketing team looking for the platform to advertise anything. This website is uniquely designed for the advertise of Sri Lanka.</p>
-                        <p>Consumers can easily browse and view all their advances by categories. They also have access to view the details of the Advertiser under the profile section where who has published the advertisements, events and, jobs.</p>
+                        <p>
+                        AluthAds.lk is a free classified ads website for Electronics, Cars & Vehicles, jobs, Properties , and everything else. Find what you're looking for or create your own ad for free! Unlike many other classified ads websites, AluthAds.lk is 100% free to use. Free to post an ad, free to browse listings, free to contact sellers. We invest a great deal of time and effort in monitoring and filtering the content posted to the website, so you can be confident that you'll find only quality, relevant listings. Our goal at AluthAds.lk is to make it as easy as possible to buy or sell anything.
+                        </p>
+                        <p>Consumers can easily browse and view all the advertisements by categories. They also have access to view the details of the advertiser under the profile section where who has published the advertisements, events and jobs.</p>
                         <h3>How does it work?</h3>
-                        <p>If you are a seeker of advertising: we have different portals for the companies listed under different categories showing their advertisements,  Item, Service and job vacancies.</p>
+                        <p>If you are a seeker of advertising: we have different portals for the companies listed under different categories showing their advertisements, Items, Services and job vacancies.</p>
                         <p>If you want to advertise your things: first you have to register with us as a corporate user or Individual user
                             then you acquire to post your advertisement.</p>
 
@@ -60,7 +59,7 @@
 
                         <br>
                         <h3>Vision</h3>
-                        <p>To become the worlds’ preferred and the finest free classified platform. We continuously innovate to be the best destination for our customers and partners.</p>
+                        <p>To become the world’s preferred and the finest free classified platform. We continuously innovate to be the best destination for our customers and partners.</p>
                     </div>
                 </div>
             </div>
