@@ -9,6 +9,7 @@
                             <li><a href="/">Home</a></li>
                             <li><a href="{{url('/list/corporate_ads')}}">Corporate Ads</a></li>
                             <li><a href="{{url('/list/individual_ads')}}">Individual Ads</a></li>
+                            <li><a href="{{url('/help_and_faq')}}">Help & FAQ</a></li>
                         </ul>
                     </div>
                 </div>

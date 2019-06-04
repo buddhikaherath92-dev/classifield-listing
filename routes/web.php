@@ -31,6 +31,7 @@ Route::get('/search', 'SearchController@show')->name('search_ads');
 Route::get('/show_verification', 'VerificationController@show')->name('show_verification');
 Route::post('/verify_user', 'VerificationController@checkVerifyCode')->name('verify_user');
 Route::get('/about_us','AboutUsController@show');
+Route::get('/help_and_faq','FaqController@show');
 Route::get('/contact','ContactController@show');
 Route::get('/login','LoginController@show')->name('login');
 Route::get('/add','MyAdsController@click')->name('addShow');
