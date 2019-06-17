@@ -167,7 +167,7 @@
                                                           class="form-control" id="summary-ckeditor"
                                                           name="summary-ckeditor" rows="4" cols="20"
                                                           data-error="Description field is required">
-                                                    {{--{{ htmlspecialchars_decode("<h1>Fuck <i>You!</i></h1>") }}--}}
+                                                    {{ htmlspecialchars_decode(old('summary-ckeditor') ? old('summary-ckeditor') : '') }}
                                                 </textarea>
 
                                                 <span class="invalid-feedback" id="ad_description_error">
@@ -224,7 +224,7 @@
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group">
-                                                <input type="text" id="keywords" name="key_words">
+                                                <input type="text" id="keywords" name="key_words" value="{{old('key_words')}}">
                                                 <span class="invalid-feedback" id="keywords_error">
                                                     <small>Please enter at-least one keyword!</small>
                                                 </span>
