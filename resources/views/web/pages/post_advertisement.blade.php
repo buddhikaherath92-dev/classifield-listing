@@ -277,7 +277,7 @@
                                                 @endif
                                             </div>
                                             <div class="checkbox checkbox-primary checkbox-circle">
-                                                <input id="checkbox3" type="checkbox"  name="featured"  @if($checkbox ==  1) checked @endif >
+                                                <input id="checkbox3" type="checkbox"  name="featured"  @if(old('featured') === 'on') checked @endif >
                                                 <label for="checkbox3">Make this advertisement as featured.</label>
                                             </div>
                                             <br>
