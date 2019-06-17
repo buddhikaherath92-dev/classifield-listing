@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{!!asset("web/css/style.css")!!}">
     <link rel="stylesheet" href="{!!asset("web/css/override.css")!!}">
     <link rel="stylesheet" href="{!!asset("web/vendor/intl-tel-input-14.0.0/build/css/intlTelInput.css")!!}">
+    <link rel="stylesheet" href="{!!asset("web/vendor/TagsInput/dist/jquery.tagsinput.min.css")!!}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
@@ -60,6 +61,7 @@
     <script src="{!!asset("web/js/jquery.magnific-popup.min.js")!!}"></script>
     <script src="{!!asset("web/js/main.js")!!}"></script>
     <script src="{!!asset("web/vendor/intl-tel-input-14.0.0/build/js/intlTelInput.js")!!}"></script>
+    <script src="{!!asset("web/vendor/TagsInput/dist/jquery.tagsinput.min.js")!!}"></script>
     <script src="{{ asset('js/share.js') }}"></script>
 
 

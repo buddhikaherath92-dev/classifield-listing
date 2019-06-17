@@ -52,7 +52,7 @@
                                                 <div class="custom-select">
                                                     <select id="category-name" class='select2' name="category_id">
 
-                                                        <option value="">Select a Category</option>
+                                                        <option value="null">Select a Category</option>
 
                                                         @foreach($categories as $catIndex => $category)
                                                             <option value="{{$catIndex}}" @if(old('category_id') == $catIndex) selected @endif>
@@ -63,6 +63,9 @@
                                                     </select>
                                                 </div>
 
+                                                <span class="invalid-feedback" id="p_cat_error">
+                                                        <small>Please select a category!</small>
+                                                </span>
 
                                                 @if ($errors->has('category_id'))
                                                     <span class="invalid-feedback" style="display: block">
@@ -82,10 +85,13 @@
                                                 <div class="form-group{{ $errors->has('subcategory_id') ? ' has-error' : '' }}">
                                                     <div class="custom-select">
                                                         <select id="sub-category-name" class='select2' name="subcategory_id">
-                                                            <option value="">Select a Sub-Category</option>
+                                                            <option value="null">Select a Sub-Category</option>
                                                         </select>
                                                     </div>
 
+                                                    <span class="invalid-feedback" id="sub_cat_error">
+                                                        <small>Please select a sub category!</small>
+                                                    </span>
 
                                                     @if ($errors->has('subcategory_id'))
                                                         <span class="invalid-feedback" style="display: block">
@@ -131,11 +137,16 @@
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
-                                                <input type="text" id="add-title" name="title"
+                                                <input type="text"
+                                                       id="add-title" name="title"
                                                        value="{{ old('title') }}"
-                                                       required maxlength="250"
+                                                       maxlength="250"
                                                        class="form-control"
                                                        placeholder="Enter catchy title for your ad">
+                                                <span class="invalid-feedback" id="ad_title_error" >
+                                                    <small>Please enter an advertisement title!</small>
+                                                </span>
+
 
                                                 @if ($errors->has('title'))
                                                     <span class="invalid-feedback"  style="display: block">
@@ -153,12 +164,15 @@
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group{{ $errors->has('summary-ckeditor') ? ' has-error' : '' }}">
                                                 <textarea placeholder="What makes your ad unique"
-                                                          class="form-control" id="summary-ckeditor" name="summary-ckeditor" rows="4" cols="20"  data-error="Description field is required" required>{{ old('description') }}</textarea>
+                                                          class="form-control" id="summary-ckeditor"
+                                                          name="summary-ckeditor" rows="4" cols="20"
+                                                          data-error="Description field is required">
+                                                    {{--{{ htmlspecialchars_decode("<h1>Fuck <i>You!</i></h1>") }}--}}
+                                                </textarea>
 
-                                                {{--<textarea placeholder="What makes your ad unique"--}}
-                                                          {{--class="textarea form-control"--}}
-                                                          {{--name="description" id="description" rows="4" cols="20"--}}
-                                                          {{--data-error="Description field is required" required>{{ old('description') }}</textarea>--}}
+                                                <span class="invalid-feedback" id="ad_description_error">
+                                                    <small>Please type a descrition for advertisement!</small>
+                                                </span>
 
                                                 @if ($errors->has('summary-ckeditor'))
                                                     <span class="invalid-feedback"  style="display: block">
@@ -175,7 +189,7 @@
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
-                                                <input type="number" id="describe-ad2" name="price"
+                                                <input type="number" id="ad_price" name="price"
                                                        value="{{ old('price') }}"
                                                        class="form-control price-box"
                                                        placeholder="Set your Price Here">
@@ -190,6 +204,10 @@
                                                            @if(old('is_negotiable') ==  1) checked="checked" @endif>
                                                     <label for="inlineRadio4"> Negotiable </label>
                                                 </div>
+
+                                                <span class="invalid-feedback" id="ad_price_error" >
+                                                        <small>Please enter the fixed price!</small>
+                                                </span>
 
                                                 @if ($errors->has('price'))
                                                     <span class="invalid-feedback" style="display: block">
@@ -206,18 +224,15 @@
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group">
-{{--                                                <input type="text" id="" name="key_words"--}}
-{{--                                                       value=""--}}
-{{--                                                       required maxlength="250"--}}
-{{--                                                       class="form-control"--}}
-{{--                                                       placeholder="Enter your key words">--}}
-                                                <style>
-                                                    body{
-                                                        font-family:'Segoe UI', Roboto, Oxygen, Ubuntu,   Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-                                                    }
-                                                </style>
-                                                <input type="text" id="tag-input1" name="key_words">
-
+                                                <input type="text" id="keywords" name="key_words">
+                                                <span class="invalid-feedback" id="keywords_error">
+                                                    <small>Please enter at-least one keyword!</small>
+                                                </span>
+                                                @if ($errors->has('key_words'))
+                                                    <span class="invalid-feedback" style="display: block">
+                                                        <small>{{ $errors->first('key_words') }}</small>
+                                                    </span>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -228,8 +243,12 @@
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group">
-                                                <input type="file" class="form-control"
+                                                <input type="file" class="form-control" id="img_1"
                                                        name="img_1" value="{{ old('img_1') }}">
+
+                                                <span class="invalid-feedback" id="img_error">
+                                                    <small>Please select at-least one image!</small>
+                                                </span>
 
                                                 @if ($errors->has('img_1'))
                                                     <span class="invalid-feedback" style="display: block">
@@ -240,7 +259,7 @@
 
                                             <div class="form-group">
                                                 <input type="file" class="form-control"
-                                                       name="img_2" value="{{ old('img_2') }}">
+                                                       name="img_2" value="{{ old('img_2') }}" id="img_2">
                                                 @if ($errors->has('img_2'))
                                                     <span class="invalid-feedback" style="display: block">
                                                                 <small>{{ $errors->first('img_2') }}</small>
@@ -250,7 +269,7 @@
 
                                             <div class="form-group" >
                                                 <input type="file" class="form-control"
-                                                       name="img_3" value="{{ old('img_3') }}">
+                                                       name="img_3" value="{{ old('img_3') }}"id="img_3">
                                                 @if ($errors->has('img_3'))
                                                     <span class="invalid-feedback" style="display: block">
                                                         <small>{{ $errors->first('img_3') }}</small>
@@ -270,7 +289,7 @@
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group">
-                                                <button type="submit" class="cp-default-btn-sm">Submit For Review!</button>
+                                                <button type="submit" class="cp-default-btn-sm" id="submit_button">Submit For Review!</button>
                                             </div>
                                         </div>
                                     </div>
@@ -298,38 +317,6 @@
                             </ul>
                         </div>
                     </div>
-                    {{--<div class="sidebar-item-box">--}}
-                        {{--<div class="gradient-wrapper">--}}
-                            {{--<div class="gradient-title">--}}
-                                {{--<h3>Quick Login</h3>--}}
-                            {{--</div>--}}
-                            {{--<div class="container">--}}
-                                {{--<form  method="POST" action="{{ route('login') }}">--}}
-                                    {{--{{ csrf_field() }}--}}
-                                    {{--@if ($errors->login->has('email'))--}}
-                                        {{--<div class="alert alert-danger">--}}
-                                            {{--<strong>Error!</strong> {{ $errors->login->first('email') }}--}}
-                                        {{--</div>--}}
-                                    {{--@endif--}}
-                                    {{--<br>--}}
-                                    {{--<label>Email</label>--}}
-                                    {{--<input type="email" placeholder="E-mail" class="{{ $errors->login->has('email') ? ' is-invalid' : '' }} form-control"--}}
-                                           {{--required name="email" value="{{ old('email') }}" >--}}
-                                    {{--<br>--}}
-                                    {{--<label>Password</label>--}}
-                                    {{--<input type="password" placeholder="Password"--}}
-                                           {{--class="{{ $errors->login->has('password') ? ' is-invalid' : '' }} form-control"--}}
-                                           {{--name="password" required>--}}
-                                    {{--<input type="text" hidden value="quick" name="login_type">--}}
-                                    {{--<br>--}}
-                                    {{--<div class="">--}}
-                                        {{--<button type="submit" class="cp-default-btn-sm">Login</button>--}}
-                                    {{--</div>--}}
-                                {{--</form>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
             </div>
             </div>
         </div>
@@ -401,7 +388,82 @@
 
         });
 
+        $('#keywords').tagsInput();
+
         CKEDITOR.replace( 'summary-ckeditor' );
+
+        $("#submit_button").on('click', function (e) {
+            if(!validateForm()) e.preventDefault();
+        })
+
+        function validateForm(){
+
+            //validating category input
+            if($('#category-name').children('option:selected').val() === 'null'){
+                $('#category-name').focus();
+                $('#p_cat_error').css('display', 'block');
+                return false;
+            }else{
+                $('#p_cat_error').css('display', 'none');
+            }
+
+            //validating sub category
+            if($('#sub-category-name').children('option:selected').val() === 'null'){
+                $('#sub-category-name').focus();
+                $('#sub_cat_error').css('display', 'block');
+                return false;
+            }else{
+                $('#sub_cat_error').css('display', 'none');
+            }
+
+            //validating ad title
+            if($('#add-title').val() === ''){
+                $('#add-title').focus();
+                $('#ad_title_error').css('display', 'block');
+                return false;
+            }else{
+                $('#ad_title_error').css('display', 'none');
+            }
+
+            //validating ad description
+            var messageLength = CKEDITOR.instances['summary-ckeditor'].getData().replace(/<[^>]*>/gi, '').length;
+            if( !messageLength ) {
+                CKEDITOR.instances['summary-ckeditor'].focus();
+                $('#ad_description_error').css('display', 'block');
+                return false;
+            }else{
+                $('#ad_description_error').css('display', 'none');
+            }
+
+            if($("input[name='is_negotiable']:checked").val() === '0' && $('#ad_price').val() === ''){
+                $('#ad_price').focus();
+                $('#ad_price_error').css('display', 'block');
+                return false;
+            }else{
+                $('#ad_price_error').css('display', 'none');
+            }
+
+            //validating keywords
+            if($('#keywords').val() === ''){
+                $('#keywords').focus();
+                $('#keywords_error').css('display', 'block');
+                return false;
+            }else{
+                $('#keywords_error').css('display', 'none');
+            }
+
+            //validating images
+            if(!$('#img_1').val() && !$('#img_2').val() && !$('#img_3').val()){
+                $('#img_1').focus();
+                $('#img_error').css('display', 'block');
+                return false;
+            }else{
+                $('#img_error').css('display', 'none');
+            }
+
+            return true;
+
+        }
 
     </script>
 @endsection
