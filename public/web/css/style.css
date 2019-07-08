@@ -3296,8 +3296,7 @@ p.text-bold-primary {
     position: absolute;
     bottom: 20px;
     right: 0;
-    color: #222222;
-    font-size: 24px;
+    font-size: 12px;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
 }
@@ -4621,9 +4620,8 @@ ul.sidebar-ads-from-user li .place i {
     margin-right: 10px;
 }
 ul.sidebar-ads-from-user li .price {
-    font-size: 18px;
-    color: #222222;
-    font-weight: 500;
+    font-size: 10px;
+    font-weight: 200;
     font-family: 'Roboto', sans-serif;
 }
 /*=======================================================================

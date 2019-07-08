@@ -100,7 +100,7 @@
 
                                             <p>{{$advertisement->description}}</p>
                                             <br>
-                                            <div class="price ellipsis" style="width: 45%;margin-right: 140px;margin-top: 20px">{{$advertisement->price ? 'Rs '.number_format($advertisement->price) : "N/A"}}</div>
+                                            <div class="price ellipsis badge-pill badge-success text-center" style="width: 45%;margin-right: 140px;margin-top: 20px">{{$advertisement->price ? 'Rs '.number_format($advertisement->price) : "N/A"}}</div>
                                             <ul class="upload-info" style="margin-top: 20px">
                                                 <li class="date">
                                                     <i class="fa fa-clock-o" aria-hidden="true"></i>{{$advertisement->created_at}}

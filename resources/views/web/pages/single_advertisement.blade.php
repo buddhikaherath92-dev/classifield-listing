@@ -232,7 +232,7 @@
                                                          style="width: 15px;height: 15px">
                                                     {{config('constance.categories')[$seller_ad->category_id]['sub_cat'][$seller_ad->subcategory_id]['name']}}
                                                 </div>
-                                                <div class="price">{{$seller_ad->price != null ? 'Rs '.number_format($seller_ad->price) :  'N/A'}}</div>
+                                                <div class="price ellipsis badge-pill badge-success text-center">{{$seller_ad->price != null ? 'Rs '.number_format($seller_ad->price) :  'N/A'}}</div>
                                             </div>
                                         </div>
                                     </li>

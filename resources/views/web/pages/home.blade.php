@@ -96,7 +96,7 @@
 
                                     <p>{{$featured_advertisement->description}}</p>
                                     <br>
-                                    <div class="price ellipsis" style="width: 45%;margin-right: 140px;margin-top: 20px">{{$featured_advertisement->price ? 'Rs '.number_format($featured_advertisement->price) : "N/A"}}</div>
+                                    <div class="price ellipsis badge-pill badge-success text-center" style="width: 45%;margin-right: 140px;margin-top: 20px">{{$featured_advertisement->price ? 'Rs '.number_format($featured_advertisement->price) : "N/A"}}</div>
                                     <ul class="upload-info" style="margin-top: 20px">
                                         <li class="date">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>{{$featured_advertisement->created_at}}
@@ -207,7 +207,7 @@
 
                                 <p>{{$recent_advertisement->description}}</p>
                                 <br>
-                                <div class="price ellipsis" style="width: 45%;margin-right: 140px;margin-top: 20px">{{$recent_advertisement->price ? 'Rs '.number_format($recent_advertisement->price) :  'N/A'}}</div>
+                                <div class="price ellipsis badge-pill badge-success text-center" style="width: 45%;margin-right: 140px;margin-top: 20px">{{$recent_advertisement->price ? 'Rs '.number_format($recent_advertisement->price) :  'N/A'}}</div>
                                 <ul class="upload-info" style="margin-top: 20px">
                                     <li class="date"><i class="fa fa-clock-o" style="display: inline-block"></i>{{$recent_advertisement->created_at}}</li>
                                 </ul>
