@@ -37,7 +37,7 @@ class HomeController extends Controller
     public function index(){
         return view('web.pages.home', [
             'categories' => Advertisement::CountByCategories(),
-            'featured_advertisements' => Advertisement::where('is_featured', (int)1)->WhereActive()->get(),
+            'featured_advertisements' => Advertisement::where('is_featured', (int)1)->WhereActive()->orderBy('created_at', 'desc')->get(),
             'recent_advertisements' => Advertisement::orderBy('created_at', 'desc')->take(8)->WhereActive()->get(),
             'advertisement_count' => Advertisement::where('is_inactive',0)->count(),
             'users_count' => User::where('type',1)->count(),
