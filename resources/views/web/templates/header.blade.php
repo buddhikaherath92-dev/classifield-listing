@@ -33,9 +33,9 @@
                                     </li>
                                 @else
                                     <li>
-                                        <button type="button" class="login-btn" data-toggle="modal" data-target="#myModal">
+                                        <a class="login-btn" href="/login">
                                             <i class="fa fa-lock" aria-hidden="true"></i>Login
-                                        </button>
+                                        </a>
                                     </li>
                                     <li>
                                         <a class="login-btn" href="{{ route('register') }}">
