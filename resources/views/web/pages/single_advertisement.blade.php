@@ -34,14 +34,14 @@
                                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                                     @endif
                                 </ol>
-                                <div class="carousel-inner" style="height: fit-content">
+                                <div class="carousel-inner" style="max-height: 100%">
                                     @if($advertisement->img_1 !==null)
-                                        <div class="carousel-item active ">
+                                        <div class="carousel-item active" >
                                             <center>
                                                 <img class="d-block mw-100"
                                                      src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_1}}"
                                                      alt="First slide"
-                                                     style="width: auto; height: auto; display: block">
+                                                     style="width: auto; height: auto; display: block; margin:auto">
                                             </center>
                                         </div>
                                     @endif
@@ -51,7 +51,7 @@
                                                 <img class="d-block mw-100"
                                                      src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_2}}"
                                                      alt="Second slide"
-                                                     style="width: auto; height: auto; display: block">
+                                                     style="width: auto; height: auto; display: block;  margin:auto">
                                             </center>
                                         </div>
                                     @endif
@@ -61,7 +61,7 @@
                                                 <img class="d-block mw-100"
                                                      src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_3}}"
                                                      alt="Third slide"
-                                                     style="width: auto; height: auto; display: block">
+                                                     style="width: auto; height: auto; display: block;  margin:auto">
                                             </center>
                                         </div>
                                     @endif
