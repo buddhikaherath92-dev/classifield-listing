@@ -9,6 +9,7 @@ use App\Mail\SendMessageMailable;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Redirect;
 use Intervention\Image\ImageManager;
 
 class AdvertisementController extends Controller
@@ -105,7 +106,7 @@ class AdvertisementController extends Controller
 
             Advertisement::where('id', request('id'))->update($data);
 
-            return redirect('/admin/advertisements');
+            return Redirect::back();
 
 
 
