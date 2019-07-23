@@ -42,7 +42,7 @@
 @section('child-content')
     <div class="card mb-3" id="single-ad-main-wrapper">
         <div class="row">
-            <div class="col-6">
+            <div class="col-6" style="overflow: scroll; height: 690px">
                 <div id="single-ad-title" class="single-ad-box">
                     <h6>{{$data->title}}</h6>
                 </div>
