@@ -22,7 +22,7 @@
                             <h2>{{$advertisement->title}}</h2>
                         </div>
                         <div class="gradient-padding reduce-padding">
-                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="background-color: darkgray">
+                            <div id="carouselExampleIndicators" class="carousel slide custom-carousel" data-ride="carousel">
                                 <ol class="carousel-indicators">
                                     @if($advertisement->img_1 !==null)
                                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -34,14 +34,13 @@
                                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                                     @endif
                                 </ol>
-                                <div class="carousel-inner" style="max-height: 100%">
+                                <div class="carousel-inner">
                                     @if($advertisement->img_1 !==null)
                                         <div class="carousel-item active" >
                                             <center>
                                                 <img class="d-block mw-100"
                                                      src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_1}}"
-                                                     alt="First slide"
-                                                     style="width: auto; height: auto; display: block; margin:auto">
+                                                     alt="First slide">
                                             </center>
                                         </div>
                                     @endif
@@ -50,8 +49,7 @@
                                             <center>
                                                 <img class="d-block mw-100"
                                                      src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_2}}"
-                                                     alt="Second slide"
-                                                     style="width: auto; height: auto; display: block;  margin:auto">
+                                                     alt="Second slide">
                                             </center>
                                         </div>
                                     @endif
@@ -60,8 +58,7 @@
                                             <center>
                                                 <img class="d-block mw-100"
                                                      src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_3}}"
-                                                     alt="Third slide"
-                                                     style="width: auto; height: auto; display: block;  margin:auto">
+                                                     alt="Third slide">
                                             </center>
                                         </div>
                                     @endif

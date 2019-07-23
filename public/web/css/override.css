@@ -182,3 +182,43 @@
 #dialog{
     text-align: center;
 }
+
+.custom-carousel{
+   background-color: grey;
+   height: 500px;
+}
+
+.carousel-item img{
+    width: auto;
+    height: auto;
+    max-height: 500px;
+    display:block;
+    margin:auto;
+}
+
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    .custom-carousel {
+        height: 200px;
+    }
+    .carousel-item img{
+        width: auto;
+        height: auto;
+        max-height: 200px;
+    }
+
+    .carousel-control-next{
+        position: absolute;
+        width: 38px;
+        height: 38px;
+        top: 40%;
+        background-color: black;
+    }
+    .carousel-control-prev{
+        position: absolute;
+        width: 38px;
+        height: 38px;
+        top: 40%;
+        background-color: black;
+    }
+}
