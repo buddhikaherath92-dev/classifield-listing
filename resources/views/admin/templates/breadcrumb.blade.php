@@ -10,5 +10,10 @@
                 <a href="{{route('admin_advertisements')}}">Advertisements</a>
             </li>
         @endif
+    @if(Route::current()->uri === 'admin/view_advertisement')
+            <li class="breadcrumb-item">
+                <a href="#">View Advertisement</a>
+            </li>
+        @endif
 
 </ol>

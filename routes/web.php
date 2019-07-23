@@ -57,6 +57,8 @@ Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'admin' ], function () {
     Route::get('/newsletter_preview/{id}', 'Admin\NewsLetterController@preview')->name('newsletter_preview');
     Route::get('/view_referals', 'Admin\ViewReferalsController@show')->name('view_referals');
     Route::get('/show_referals', 'Admin\ViewReferalsController@showStatistics')->name('show_referals');
+
+    Route::get('/view_advertisement', 'Admin\PreviewAdvertisementController@show');
 });
 
 

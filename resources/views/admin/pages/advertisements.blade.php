@@ -93,7 +93,8 @@
                                         <a class="btn btn-info" data-toggle="tooltip" data-placement="top" title="SET EXPIRE DATE">
                                             <i class="fas fa-fw fa-clock" style="color: white"></i>
                                         </a>
-                                </span>
+                                </span> |
+                                <a class="btn btn-info" href="{{URL('/admin/view_advertisement?id='.$advertisement->id)}}">Preview</a>
                             </td>
                         </tr>
                     @endforeach

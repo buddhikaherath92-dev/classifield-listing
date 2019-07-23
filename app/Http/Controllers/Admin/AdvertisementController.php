@@ -69,7 +69,6 @@ class AdvertisementController extends Controller
      */
     public function update()
     {
-
         $data = request()->all();
         unset($data['_token']);
         unset($data['id']);
@@ -106,11 +105,7 @@ class AdvertisementController extends Controller
 
             Advertisement::where('id', request('id'))->update($data);
 
-            return Redirect::back();
-
-
-
-
+            return redirect()->back();
     }
 
 }
