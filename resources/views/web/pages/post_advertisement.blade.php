@@ -251,6 +251,7 @@
                                             <div class="form-group">
                                                 <input type="file" class="form-control" id="img_1"
                                                        name="img_1" value="{{ old('img_1') }}">
+                                                <img id="img_1_preview" class="img-thumbnail" style="max-height: 50px; max-width: 100px; margin: 5px; display: none" />
 
                                                 <span class="invalid-feedback" id="img_error">
                                                     <small>Please select at-least one image!</small>
@@ -266,7 +267,9 @@
                                             <div class="form-group">
                                                 <input type="file" class="form-control"
                                                        name="img_2" value="{{ old('img_2') }}" id="img_2">
-                                                @if ($errors->has('img_2'))
+                                                <img id="img_2_preview" class="img-thumbnail" style="max-height: 50px; max-width: 100px; margin: 5px; display: none" />
+
+                                            @if ($errors->has('img_2'))
                                                     <span class="invalid-feedback" style="display: block">
                                                                 <small>{{ $errors->first('img_2') }}</small>
                                                             </span>
@@ -276,7 +279,9 @@
                                             <div class="form-group" >
                                                 <input type="file" class="form-control"
                                                        name="img_3" value="{{ old('img_3') }}"id="img_3">
-                                                @if ($errors->has('img_3'))
+                                                <img id="img_3_preview" class="img-thumbnail" style="max-height: 50px; max-width: 100px; margin: 5px; display: none" />
+
+                                            @if ($errors->has('img_3'))
                                                     <span class="invalid-feedback" style="display: block">
                                                         <small>{{ $errors->first('img_3') }}</small>
                                                     </span>
@@ -334,6 +339,29 @@
 
 @section('script')
     <script type="text/javascript">
+        function readURL(input, target) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#'+target).attr('src', e.target.result);
+                    $('#'+target).css('display', 'block');
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#img_1").change(function() {
+            readURL(this, 'img_1_preview');
+        });
+        $("#img_2").change(function() {
+            readURL(this, 'img_2_preview');
+        });
+        $("#img_3").change(function() {
+            readURL(this, 'img_3_preview');
+        });
+
         /**
          *ajax call for get sub categories
          *
