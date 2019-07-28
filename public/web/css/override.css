@@ -196,6 +196,10 @@
     margin:auto;
 }
 
+#login-page-container{
+    margin-top: 150px;
+}
+
 @media only screen and (max-width: 600px) {
     /* For mobile phones: */
     .custom-carousel {
@@ -220,5 +224,8 @@
         height: 38px;
         top: 40%;
         background-color: black;
+    }
+    #login-page-container{
+        margin-top: 35px;
     }
 }
