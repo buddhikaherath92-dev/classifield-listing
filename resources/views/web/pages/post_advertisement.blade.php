@@ -18,6 +18,12 @@
                         <div class="gradient-title">
                             <h2>Post a Free Ad</h2>
                         </div>
+                        <div id="post-ad-form-wrapper">
+                            <p class="text-center" style="color: white"><small>Loading sub categories...</small></p>
+                            <div id="post-ad-loading-wrap"></div>
+
+
+                        </div>
                         <div class="input-layout1 gradient-padding post-ad-page">
 
                             @if(!Auth::check())
@@ -299,6 +305,8 @@
                                 </fieldset>
                             </form>
 
+
+
                         </div>
                     </div>
                 </div>
@@ -358,21 +366,29 @@
             });
 
             $('#category-name').change(function () {
-                $.ajax({
-                    url:"sub",
-                    method:'get',
-                    dataType:'json',
-                    data:{ id:$(this).find('option:selected').val()}
-                }).done(function (res) {
+                if($(this).find('option:selected').val() !== null){
+                    $('#post-ad-form-wrapper').css("display", "block");
+                    $('#post-ad-loading-wrap').css("display", "block");
+                    $.ajax({
+                        url:"sub",
+                        method:'get',
+                        dataType:'json',
+                        data:{ id:$(this).find('option:selected').val()}
+                    }).done(function (res) {
+                        setTimeout(function(){
+                            $('#post-ad-form-wrapper').css('display', 'none');
+                            $('#post-ad-loading-wrap').css('display', 'none');
+                        }, 1000);
+                        $(this).find('option:selected').val()
+                        $('#sub-category-name').empty();
+                        for(let i in res){
+                            let temp=res[i];
+                            $('#sub-category-name').append('<option value="'+i+'">'+temp['name']+'</option>');
+                        }
 
-                    $(this).find('option:selected').val()
-                    $('#sub-category-name').empty();
-                    for(let i in res){
-                        let temp=res[i];
-                        $('#sub-category-name').append('<option value="'+i+'">'+temp['name']+'</option>');
-                    }
+                    });
+                }
 
-                });
             });
 
             $('input[type="radio"]').click(function () {
