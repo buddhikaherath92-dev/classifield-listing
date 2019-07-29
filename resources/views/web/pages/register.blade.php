@@ -2,6 +2,9 @@
 
 @section('content')
 
+
+
+
     <section class="s-space-bottom-full bg-accent-shadow-body">
         <div class="container">
             <div class="breadcrumbs-area">
@@ -19,7 +22,7 @@
                             <h2>Register with us</h2>
                         </div>
                         <div class="input-layout1 gradient-padding post-ad-page">
-                            <form id="post-add-form"  method="POST" action="{{ url('/register') }}">
+                            <form id="user-register-form"  method="POST" action="{{ url('/register') }}">
 
                                 @csrf
 
@@ -37,18 +40,20 @@
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group">
-                                                <div class="radio radio-primary radio-inline">
-                                                    <input type="radio"  value="1" name="account_type" id="r_two"
-                                                           @if(old('account_type') ==  config('constance.user_types')['individual']) checked="checked" @endif
-                                                           class="{{ $errors->has('account_type') ? ' is-invalid' : '' }}" />
-                                                    <label for="r_two"> Individual</label>
-                                                </div>
-                                                <div class="radio radio-primary radio-inline">
-                                                    <input type="radio" value="3" id="r_one"
-                                                           @if(old('account_type') ==  config('constance.user_types' )['corporate']) checked="checked" @endif
-                                                           name="account_type" class="{{ $errors->has('account_type') ? ' is-invalid' : '' }}" />
-                                                    <label for="r_one"> Corporate </label>
-                                                </div>
+
+                                                <fieldset>
+                                                    <label>
+                                                        <input type="radio"  value="1" name="account_type"
+                                                               @if(old('account_type') ==  config('constance.user_types')['individual']) checked="checked" @endif/> Individual
+                                                    </label>
+                                                    <label style="margin-left: 10px">
+                                                        <input type="radio"  value="3"
+                                                               @if(old('account_type') ==  config('constance.user_types' )['corporate']) checked="checked" @endif
+                                                               name="account_type" /> Corporate
+                                                    </label>
+                                                </fieldset>
+                                                <label class="error" for="account_type" id="radio-button-error"></label>
+
 
                                                 @if ($errors->has('account_type'))
                                                     <span class="invalid-feedback" style="display: block">
@@ -65,7 +70,7 @@
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group">
-                                                <input type="email" id="seller-mail" name="email" required
+                                                <input type="email" id="seller-mail" name="email"
                                                        class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
                                                        value="{{ old('email') }}"
                                                        placeholder="Enter Your E-mail Address">
@@ -76,6 +81,7 @@
                                                     </span>
                                                 @endif
                                             </div>
+                                            <label class="error" for="email"></label>
                                         </div>
                                     </div>
 
@@ -85,9 +91,11 @@
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group">
-                                                <input type="password" id="password" name="password" required
+                                                <input type="password" id="password" name="password"
                                                        class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
                                                        placeholder="Enter Your Strong Password">
+                                                <label class="error" for="password"></label>
+
 
                                                 @if ($errors->has('password'))
                                                     <span class="invalid-feedback">
@@ -104,9 +112,11 @@
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group">
-                                                <input type="password" id="password_confirmation"  required name="password_confirmation"
+                                                <input type="password" id="password_confirmation"  name="password_confirmation"
                                                        class="form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}"
                                                        placeholder="Retype the password your choose">
+                                                <label class="error" for="password_confirmation"></label>
+
 
                                                 @if ($errors->has('password_confirmation'))
                                                     <span class="invalid-feedback">
@@ -122,10 +132,11 @@
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group">
-                                                <input type="text" id="seller-name" name="name" required
+                                                <input type="text" id="seller-name" name="name"
                                                        class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
                                                        value="{{ old('name') }}"
                                                        placeholder="Seller / Organization Name">
+                                                <label class="error" for="name"></label>
 
                                                 @if ($errors->has('name'))
                                                     <span class="invalid-feedback">
@@ -142,13 +153,14 @@
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group">
-                                                <input type="tel" id="phone" name="tel_no" required
+                                                <input type="tel" id="phone" name="tel_no"
                                                        class="form-control{{ $errors->has('tel_no') ? ' is-invalid' : '' }}"
                                                        value="{{ old('tel_no') }}"
                                                        placeholder="Enter your Mobile">
 
                                                 <span id="valid-msg" class="hidden-mb"></span>
                                                 <span id="error-msg" class="hidden-mb"></span>
+                                                <span><label class="error" for="tel_no"></label>
 
                                                 @if ($errors->has('tel_no'))
                                                     <span class="invalid-feedback">

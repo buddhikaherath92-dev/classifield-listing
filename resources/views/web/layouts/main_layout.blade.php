@@ -63,6 +63,8 @@
     <script src="{!!asset("web/vendor/intl-tel-input-14.0.0/build/js/intlTelInput.js")!!}"></script>
     <script src="{!!asset("web/vendor/TagsInput/dist/jquery.tagsinput.min.js")!!}"></script>
     <script src="{{ asset('js/share.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 
 
     @yield('script')
@@ -117,6 +119,37 @@
         @if (count($errors) > 0)
         $('#modelRate').modal('show');
         @endif
+    </script>
+    <script>
+
+        $(document).ready(function () {
+
+            $('#user-register-form').validate({ // initialize the plugin
+                rules: {
+                    account_type: {
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength:6
+                    },
+                    password_confirmation: {
+                        required: true,
+                        equalTo: '#password'
+                    },
+                    name: {
+                        required: true
+                    },
+                    tel_no: {
+                        required: true
+                    }
+                }
+            });
+        });
     </script>
 
 
