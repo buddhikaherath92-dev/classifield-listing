@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="{!!asset("web/vendor/TagsInput/dist/jquery.tagsinput.min.css")!!}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-    <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
 
 </head>
 
@@ -65,9 +64,15 @@
     <script src="{{ asset('js/share.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/gylb57rvqcfa3tk2obu995jiz754g9z5sjv3qvg4orinnszw/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
 
     @yield('script')
+    <script>
+        tinymce.init({
+            selector: '#post-ad-desc'
+        });
+    </script>
     <script type="text/javascript">
         $('#myModal').modal({ 'show' : {{ count($errors->login) > 0  && !Request::is('login')? 'true' : 'false' }}  });
         var input = document.querySelector("#phone"),

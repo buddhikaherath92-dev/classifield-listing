@@ -170,7 +170,7 @@
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group{{ $errors->has('summary-ckeditor') ? ' has-error' : '' }}">
                                                 <textarea placeholder="What makes your ad unique"
-                                                          class="form-control" id="summary-ckeditor"
+                                                          class="form-control" id="post-ad-desc"
                                                           name="summary-ckeditor" rows="4" cols="20"
                                                           data-error="Description field is required">
                                                     {{ htmlspecialchars_decode(old('summary-ckeditor') ? old('summary-ckeditor') : '') }}
