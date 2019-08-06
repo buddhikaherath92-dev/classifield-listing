@@ -162,7 +162,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
-        Unisharp\Ckeditor\ServiceProvider::class,
         Jorenvh\Share\Providers\ShareServiceProvider::class,
 
     ],
