@@ -237,6 +237,51 @@
     position: relative;
 }
 
+.item-desc-wrapper{
+}
+
+.item-desc-title{
+    background-image: linear-gradient(#16a085, #0b9876), linear-gradient(#16a085, #0b9876);
+    background-repeat: no-repeat;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.item-pirce{
+    background-color: silver;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: green;
+}
+
+.item-views-date{
+    background-color: gray;
+    padding: 5px;
+    color: white;
+}
+
+.item-date{
+    display: inline-block;
+    width: 58%;
+}
+
+.item-views{
+    display: inline-block;
+    width: 40%;
+}
+
+.product-box{
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.product-box:hover{
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1); /* Safari 3-8 */
+    transform: scale(1.02);
+}
+
 label{
     margin-bottom: 0px;
 }
