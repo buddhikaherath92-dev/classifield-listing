@@ -213,7 +213,7 @@
                                             {{$recent_advertisement->created_at->diffForHumans()}}
                                         </div>
                                         <div class="item-views text-center">
-                                            <span class="fa fa-eye"></span> 1000
+                                            <span class="fa fa-eye"></span> {{$recent_advertisement->views}}
                                         </div>
                                     </div>
                                 </div>
