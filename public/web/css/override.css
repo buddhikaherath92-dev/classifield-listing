@@ -230,6 +230,13 @@
   color: red;
 }
 
+.top-bar-style1 .top-bar-right ul li {
+    padding-right: 0;
+    display: inline-block;
+    margin-left: 8px;
+    position: relative;
+}
+
 label{
     margin-bottom: 0px;
 }
