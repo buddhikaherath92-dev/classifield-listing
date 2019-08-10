@@ -85,7 +85,7 @@
                                         {{config('constance.categories')[$featured_advertisement->category_id]['name']}}
                                     </div>
 
-                                    <h3 class="short-title ellipsis" style="width: 55%">
+                                    <h3 class="short-title ellipsis" style="width: 100%">
                                         <a href="{{url('/ad/'.config('constance.categories')[$featured_advertisement
                                         ->category_id]['slug']).'/'.$featured_advertisement->slug}}">
                                             {{$featured_advertisement->title}}
@@ -201,7 +201,7 @@
                             </div>
                             <div class="item-content">
                                 <div class="title-ctg">{{config('constance.categories')[$recent_advertisement->category_id]['name']}}</div>
-                                <h3 class="short-title ellipsis" style="width: 55%"><a href="{{url('/ad/'.config('constance.categories')[$recent_advertisement
+                                <h3 class="short-title ellipsis" style="width: 100%"><a href="{{url('/ad/'.config('constance.categories')[$recent_advertisement
                                         ->category_id]['slug']).'/'.$recent_advertisement->slug}}">{{$recent_advertisement->title}}</a></h3>
                                 <h3 class="long-title"><a href="https://www.radiustheme.com/demo/html/classipost/classipost/single-product1.html">{{$recent_advertisement->description}}</a></h3>
 
