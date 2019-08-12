@@ -237,9 +237,6 @@
     position: relative;
 }
 
-.item-desc-wrapper{
-}
-
 .item-desc-title{
     background-image: linear-gradient(#16a085, #0b9876), linear-gradient(#16a085, #0b9876);
     background-repeat: no-repeat;
@@ -332,5 +329,9 @@ label{
     }
     #post-ad-loading-wrap{
         top: 10%;
+    }
+    #featured-ad-box{
+        width: 88%;
+        margin: 0 auto;
     }
 }
