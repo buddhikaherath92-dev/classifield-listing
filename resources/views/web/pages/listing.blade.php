@@ -70,43 +70,35 @@
                                 <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-12">
                                     <div class="product-box item-mb zoom-gallery">
                                         <div class="item-mask-wrapper">
-                                            <div id="ad-box-img-wrapper" class="item-mask bg-body">
-
-                                                <img src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_1}}" alt="categories"
-                                                     class="img-thumbnail ad-image">
-                                                <div class="trending-sign" data-tips="Featured"> <i class="fa fa-bolt" aria-hidden="true"></i> </div>
-                                                <div class="title-ctg">{{config('constance.categories')[$advertisement->category_id]['sub_cat'][$advertisement->subcategory_id]['name']}}</div>
-                                                <div class="middle" style="cursor: pointer">
-                                                    <a href="{{url('/ad/'.config('constance.categories')[$advertisement
-                                        ->category_id]['slug']).'/'.$advertisement->slug}}">
-                                                        <img class="img-thumbnail" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ4OC43MjcsMEgzMDIuNTQ1Yy0xMi44NTMsMC0yMy4yNzMsMTAuNDItMjMuMjczLDIzLjI3M2MwLDEyLjg1MywxMC40MiwyMy4yNzMsMjMuMjczLDIzLjI3M2gxMjkuOTk3TDE5Mi45OTksMjg2LjA5ICAgIGMtOS4wODksOS4wODktOS4wODksMjMuODIzLDAsMzIuOTEyYzQuNTQzLDQuNTQ0LDEwLjQ5OSw2LjgxNiwxNi40NTUsNi44MTZjNS45NTYsMCwxMS45MTMtMi4yNzEsMTYuNDU3LTYuODE3TDQ2NS40NTUsNzkuNDU4ICAgIHYxMjkuOTk3YzAsMTIuODUzLDEwLjQyLDIzLjI3MywyMy4yNzMsMjMuMjczYzEyLjg1MywwLDIzLjI3My0xMC40MiwyMy4yNzMtMjMuMjczVjIzLjI3M0M1MTIsMTAuNDIsNTAxLjU4LDAsNDg4LjcyNywweiIgZmlsbD0iIzc3YzczMiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTM5NS42MzYsMjMyLjcyN2MtMTIuODUzLDAtMjMuMjczLDEwLjQyLTIzLjI3MywyMy4yNzN2MjA5LjQ1NUg0Ni41NDVWMTM5LjYzNkgyNTZjMTIuODUzLDAsMjMuMjczLTEwLjQyLDIzLjI3My0yMy4yNzMgICAgUzI2OC44NTMsOTMuMDkxLDI1Niw5My4wOTFIMjMuMjczQzEwLjQyLDkzLjA5MSwwLDEwMy41MTEsMCwxMTYuMzY0djM3Mi4zNjRDMCw1MDEuNTgsMTAuNDIsNTEyLDIzLjI3Myw1MTJoMzcyLjM2NCAgICBjMTIuODUzLDAsMjMuMjczLTEwLjQyLDIzLjI3My0yMy4yNzNWMjU2QzQxOC45MDksMjQzLjE0Nyw0MDguNDg5LDIzMi43MjcsMzk1LjYzNiwyMzIuNzI3eiIgZmlsbD0iIzc3YzczMiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-content">
-                                            <div class="title-ctg">
-                                                {{config('constance.categories')[$advertisement->category_id]['name']}}
-                                            </div>
-
-                                            <h3 class="short-title ellipsis" style="width: 55%">
+                                            <div id="ad-box-img-wrapper" class="item-mask">
                                                 <a href="{{url('/ad/'.config('constance.categories')[$advertisement
                                         ->category_id]['slug']).'/'.$advertisement->slug}}">
-                                                    {{$advertisement->title}}
+                                                    <img src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_1}}"
+                                                         alt="categories" class="img-thumbnail ad-image" >
+                                                    <div class="trending-sign" data-tips="Featured"> <i class="fa fa-bolt" aria-hidden="true"></i> </div>
+                                                    <div class="title-ctg">{{config('constance.categories')[$advertisement->category_id]['sub_cat'][$advertisement->subcategory_id]['name']}}</div>
+                                                    <div class="symbol-featured"><img src="{{asset('web/img/banner/symbol-featured.png')}}" alt="symbol" class="img-fluid"> </div>
+                                                    <div class="middle" style="cursor: pointer">
+                                                        <img class="img-thumbnail" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ4OC43MjcsMEgzMDIuNTQ1Yy0xMi44NTMsMC0yMy4yNzMsMTAuNDItMjMuMjczLDIzLjI3M2MwLDEyLjg1MywxMC40MiwyMy4yNzMsMjMuMjczLDIzLjI3M2gxMjkuOTk3TDE5Mi45OTksMjg2LjA5ICAgIGMtOS4wODksOS4wODktOS4wODksMjMuODIzLDAsMzIuOTEyYzQuNTQzLDQuNTQ0LDEwLjQ5OSw2LjgxNiwxNi40NTUsNi44MTZjNS45NTYsMCwxMS45MTMtMi4yNzEsMTYuNDU3LTYuODE3TDQ2NS40NTUsNzkuNDU4ICAgIHYxMjkuOTk3YzAsMTIuODUzLDEwLjQyLDIzLjI3MywyMy4yNzMsMjMuMjczYzEyLjg1MywwLDIzLjI3My0xMC40MiwyMy4yNzMtMjMuMjczVjIzLjI3M0M1MTIsMTAuNDIsNTAxLjU4LDAsNDg4LjcyNywweiIgZmlsbD0iIzc3YzczMiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTM5NS42MzYsMjMyLjcyN2MtMTIuODUzLDAtMjMuMjczLDEwLjQyLTIzLjI3MywyMy4yNzN2MjA5LjQ1NUg0Ni41NDVWMTM5LjYzNkgyNTZjMTIuODUzLDAsMjMuMjczLTEwLjQyLDIzLjI3My0yMy4yNzMgICAgUzI2OC44NTMsOTMuMDkxLDI1Niw5My4wOTFIMjMuMjczQzEwLjQyLDkzLjA5MSwwLDEwMy41MTEsMCwxMTYuMzY0djM3Mi4zNjRDMCw1MDEuNTgsMTAuNDIsNTEyLDIzLjI3Myw1MTJoMzcyLjM2NCAgICBjMTIuODUzLDAsMjMuMjczLTEwLjQyLDIzLjI3My0yMy4yNzNWMjU2QzQxOC45MDksMjQzLjE0Nyw0MDguNDg5LDIzMi43MjcsMzk1LjYzNiwyMzIuNzI3eiIgZmlsbD0iIzc3YzczMiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+                                                    </div>
                                                 </a>
-                                            </h3>
-                                            <h3 class="long-title"><a href="#">{{$advertisement->title}}</a></h3>
-
-
-                                            <p>{{$advertisement->description}}</p>
-                                            <br>
-                                            <div class="price ellipsis badge-pill badge-success text-center" style="width: 45%;margin-right: 140px;margin-top: 20px">{{$advertisement->price ? 'Rs '.number_format($advertisement->price) : "N/A"}}</div>
-                                            <ul class="upload-info" style="margin-top: 20px">
-                                                <li class="date">
-                                                    <i class="fa fa-clock-o" aria-hidden="true"></i>{{$advertisement->created_at}}
-                                                </li>
-                                            </ul>
-                                            <a href="#" class="product-details-btn">Details</a>
+                                            </div>
+                                            <div class="item-desc-wrapper">
+                                                <div class="item-desc-title text-center ellipsis">
+                                                    {{$advertisement->title}}
+                                                </div>
+                                                <div class="item-pirce text-center">
+                                                    {{$advertisement->price ? 'Rs '.number_format($advertisement->price).' (Fixed)' :  'Negotiable'}}
+                                                </div>
+                                                <div class="item-views-date">
+                                                    <div class="item-date text-center">
+                                                        {{ucwords(trans($advertisement->created_at->diffForHumans()))}}
+                                                    </div>
+                                                    <div class="item-views text-center">
+                                                        <span class="fa fa-eye"></span> {{$advertisement->views}}
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
