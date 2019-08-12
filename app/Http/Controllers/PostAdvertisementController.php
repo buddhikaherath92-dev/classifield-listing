@@ -149,7 +149,9 @@ class PostAdvertisementController extends Controller
             $incomingData['img_1'] = $img_1;
             $incomingData['img_2'] = $img_2;
             $incomingData['img_3'] = $img_3;
-
+            $incomingData['key_words'] = $incomingData['key_words'].','.$this->common
+                    ->getCategoryObjectFromID((int)$incomingData['category_id'])['name'].','.$this->common
+                    ->getCategoryObjectFromID((int)$incomingData['subcategory_id'])['name'];
             $advertisement=Advertisement::create($incomingData);
             $featured=request('featured');
 
