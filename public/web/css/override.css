@@ -338,3 +338,16 @@ label{
         width: auto;
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .cp-default-btn {
+        padding: 6px 6px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 320px) {
+    #dash-btn {
+        margin-left: 0px;
+    }
+}

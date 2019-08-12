@@ -5,7 +5,7 @@
         <div class="header-top-bar top-bar-style1 nav-margin">
             <div class="container">
                 <div class="row no-gutters">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-4">
                         <div class="top-bar-left">
                             <a href="{{route('view_post_ad')}}" class="cp-default-btn d-lg-none">Post Your Ad</a>
                             <p class="d-none d-lg-block">
@@ -13,7 +13,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-8">
                         <div class="top-bar-right">
                             <ul>
                                 @if (Auth::check())
