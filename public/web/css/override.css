@@ -334,4 +334,7 @@ label{
         width: 88%;
         margin: 0 auto;
     }
+    .owl-carousel .owl-item img {
+        width: auto;
+    }
 }
