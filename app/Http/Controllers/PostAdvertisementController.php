@@ -80,6 +80,7 @@ class PostAdvertisementController extends Controller
                 'img_1' => 'image|mimes:jpeg,jpg,png|max:2000|required',
                 'img_2' => 'image|mimes:jpeg,jpg,png|max:2000',
                 'img_3' => 'image|mimes:jpeg,jpg,png|max:2000',
+                'img_4' => 'image|mimes:jpeg,jpg,png|max:2000',
                 'is_negotiable' => 'integer',
                 'price' => request('is_negotiable') == '0' ? 'required|min:2|regex:/^\d*(\.\d{1,2})?$/' :
                     'nullable|regex:/^\d*(\.\d{1,2})?$/',
@@ -89,6 +90,7 @@ class PostAdvertisementController extends Controller
             $img_1   = null;
             $img_2   = null;
             $img_3   = null;
+            $img_4   = null;
 
             $count=Advertisement::count()+1;
 
@@ -142,6 +144,22 @@ class PostAdvertisementController extends Controller
 
             }
 
+            if(request()->has('img_4')){
+
+
+                $imagePath   = 'images/advertisements/';
+                $file        = request()->file('img_4');
+                $img_4    = $slug."_img_4.".$file->getClientOriginalExtension();
+
+                // move the file from tmp to the destination path
+                $file->move($imagePath, $img_4);
+
+                $this->imgManager->make($imagePath.$img_4)->resize(null, 500, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save();
+
+            }
+
             $incomingData['user_id'] = Auth::id();
             $incomingData['is_featured'] = (int)0;
             $incomingData['is_inactive'] = (int)1;
@@ -149,6 +167,7 @@ class PostAdvertisementController extends Controller
             $incomingData['img_1'] = $img_1;
             $incomingData['img_2'] = $img_2;
             $incomingData['img_3'] = $img_3;
+            $incomingData['img_4'] = $img_4;
             $incomingData['key_words'] = $incomingData['key_words'].','.$this->common
                     ->getCategoryObjectFromID((int)$incomingData['category_id'])['name'].','.$this->common
                     ->getCategoryObjectFromID((int)$incomingData['subcategory_id'])['name'];

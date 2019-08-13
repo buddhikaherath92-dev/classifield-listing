@@ -287,6 +287,19 @@
                                                     </span>
                                                 @endif
                                             </div>
+
+                                            <div class="form-group" >
+                                                <input type="file" class="form-control"
+                                                       name="img_4" value="{{ old('img_4') }}"id="img_4">
+                                                <img id="img_4_preview" class="img-thumbnail" style="max-height: 50px; max-width: 100px; margin: 5px; display: none" />
+
+                                                @if ($errors->has('img_4'))
+                                                    <span class="invalid-feedback" style="display: block">
+                                                        <small>{{ $errors->first('img_4') }}</small>
+                                                    </span>
+                                                @endif
+                                            </div>
+
                                             <div class="checkbox checkbox-primary checkbox-circle">
                                                 <input id="checkbox3" type="checkbox"  name="featured"  @if(old('featured') === 'on') checked @endif >
                                                 <label for="checkbox3">Make this advertisement as featured.</label>
@@ -360,6 +373,9 @@
         });
         $("#img_3").change(function() {
             readURL(this, 'img_3_preview');
+        });
+        $("#img_4").change(function() {
+            readURL(this, 'img_4_preview');
         });
 
         /**
@@ -497,7 +513,7 @@
             }
 
             //validating images
-            if(!$('#img_1').val() && !$('#img_2').val() && !$('#img_3').val()){
+            if(!$('#img_1').val() && !$('#img_2').val() && !$('#img_3').val() && !$('#img_4').val()){
                 $('#img_1').focus();
                 $('#img_error').css('display', 'block');
                 return false;

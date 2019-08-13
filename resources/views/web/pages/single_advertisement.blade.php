@@ -33,6 +33,9 @@
                                     @if($advertisement->img_3 !==null)
                                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                                     @endif
+                                        @if($advertisement->img_4 !==null)
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                        @endif
                                 </ol>
                                 <div class="carousel-inner">
                                     @if($advertisement->img_1 !==null)
@@ -62,6 +65,15 @@
                                             </center>
                                         </div>
                                     @endif
+                                        @if($advertisement->img_4 !==null)
+                                            <div class="carousel-item">
+                                                <center>
+                                                    <img class="d-block mw-100"
+                                                         src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_4}}"
+                                                         alt="Fourth slide">
+                                                </center>
+                                            </div>
+                                        @endif
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
                                    data-slide="prev">
