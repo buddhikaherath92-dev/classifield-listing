@@ -24,6 +24,7 @@ class Advertisement extends Model
         'img_1',
         'img_2',
         'img_3',
+        'img_4',
         'is_negotiable',
         'is_featured',
         'is_inactive',
