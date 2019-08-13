@@ -95,16 +95,16 @@ class Common
     public function showAlerts($message,$title,$description){
         switch ($title){
             case "error":
-                Alert::error($message, $description);
+                Alert::error($message, $description)->autoclose(3500);
                 break;
             case "success":
-                Alert::success($message, $description);
+                Alert::success($message, $description)->autoclose(3500);
                 break;
             case "info":
-                Alert::info($message, $description);
+                Alert::info($message, $description)->autoclose(3500);
                 break;
             case "message":
-                Alert::message($message, $description);
+                Alert::message($message, $description)->autoclose(3500);
                 break;
         }
     }
