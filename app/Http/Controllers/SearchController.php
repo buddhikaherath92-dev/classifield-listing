@@ -16,7 +16,7 @@ class SearchController extends Controller
 
         $heading = "Search result for ";//All Advertisements
 
-        $advertisements = Advertisement::join('users', 'advertisements.user_id', 'users.id');
+        $advertisements = Advertisement::join('users', 'advertisements.user_id', 'users.id')->select('users.type', 'advertisements.*');
 
         if (request('ad_type') === 'corporate' || request('ad_type') === 'individual') {
             $advertisements = $advertisements->where('users.type',
