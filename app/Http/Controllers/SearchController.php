@@ -40,7 +40,7 @@ class SearchController extends Controller
                 $heading = 'Search results for All '.request('ad_type').' Advertisements';
         }
 
-        if(request()->has('p_cat')){
+        if(request('p_cat') !== 'all'){
             $advertisements = $advertisements->Where('category_id', request('p_cat'));
             $heading = 'Search results for '.$this->common->getCategoryObjectFromID((int)request('p_cat'))['name'].' Advertisements';
         }
@@ -61,7 +61,6 @@ class SearchController extends Controller
         if(request('keyword') === null && request('district') === null && request('ad_type') === 'all'){
             $heading = 'Search results for All Advertisements';
         }
-
 
         return view('web.pages.listing', [
             'advertisements' => $advertisements->WhereActive()->paginate(9),

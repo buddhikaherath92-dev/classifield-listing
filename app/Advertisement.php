@@ -48,7 +48,7 @@ class Advertisement extends Model
      * @return array
      */
     public function scopeWhereActive($query){
-        return $query->where('is_inactive', (int)0);
+        return $query->where('is_inactive', (int)0)->orderBy('is_featured', 'desc');
     }
 
     /**
