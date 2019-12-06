@@ -27,6 +27,7 @@ class ListingController extends Controller
 
         $advertisements = [];
         $heading = 'All Ads';
+        $p_cat = null;
 
 
         switch ($query){
@@ -46,6 +47,7 @@ class ListingController extends Controller
                 if ($catId = $this->common->getCategoryIdFromSlug($query)){
                     $advertisements = Advertisement::where('category_id', $catId)->WhereActive()->paginate(9);
                     $heading = $this->common->getCategoryObjectFromID($catId)['name'].' Advertisements';
+                    $p_cat = $catId;
                 }else if($subId = $this->common->getSubCategoryIdFromSlug($query)){
                     $advertisements = Advertisement::where('subcategory_id', $subId)->WhereActive()->paginate(9);
                     $heading = $this->common->getCategoryObjectFromSubID($subId)['name'].' Advertisements';
@@ -58,7 +60,8 @@ class ListingController extends Controller
             'heading' => $heading,
             'ad_type'=>request('ad_type'),
             'search_query' => request('keyword'),
-            'district' => request('district')
+            'district' => request('district'),
+            'p_cat' =>  $p_cat
         ]);
 
     }

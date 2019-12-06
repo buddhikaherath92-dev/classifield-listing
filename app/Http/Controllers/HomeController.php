@@ -41,7 +41,8 @@ class HomeController extends Controller
             'recent_advertisements' => Advertisement::orderBy('created_at', 'desc')->take(16)->WhereActive()->get(),
             'advertisement_count' => Advertisement::where('is_inactive',0)->count(),
             'users_count' => User::where('type',1)->count(),
-             'district' => request('district')
+            'district' => request('district'),
+            'p_cat' => request('district')
         ]);
     }
 

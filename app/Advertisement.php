@@ -65,6 +65,7 @@ class Advertisement extends Model
                 $category['sub_cat'][$subIndex]['sub_count'] = self::CountBySubCategories($subIndex);
             }
             array_push($result, [
+               'id'     => $index,
                'name'   => $category['name'],
                'icon'   => $category['image'],
                'slug'   => $category['slug'],

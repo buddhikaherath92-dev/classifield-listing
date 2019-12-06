@@ -19,10 +19,12 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                             <div class="form-group search-input-area input-icon-category">
                                 <div id="SelectLocation" class="form-group search-input-area input-icon-category">
-                                    <select id="categories" class="select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" name="ad_type">
-                                        <option class="first" value="all" {{$ad_type == 'all' ? 'selected' : ''}}>All</option>
-                                        <option value="corporate" {{$ad_type == 'corporate' ? 'selected' : ''}}>Corporate</option>
-                                        <option value="individual" {{$ad_type == 'individual' ? 'selected' : ''}}>Individual</option>
+                                    <select id="categories" class="select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" name="p_cat">
+                                        <option class="first" value="all">Select Category</option>
+                                        @foreach($categories as $catIndex => $category)
+                                            <option class="" value="{{ $category['id'] }}"
+                                                    {{ (int)$p_cat === $category['id'] ? 'selected' :'' }}>{{ $category['name'] }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
