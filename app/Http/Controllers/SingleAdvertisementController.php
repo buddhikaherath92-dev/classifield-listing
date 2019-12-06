@@ -41,6 +41,11 @@ class SingleAdvertisementController extends Controller
 //dd($url);
 
         $advertisement = Advertisement::where('slug', $request->slug)->first();
+        $topKeyWord = explode(',', $advertisement->key_words)[0];
+        $recentAds = Advertisement::where('key_words', 'LIKE', '%'.$topKeyWord)
+            ->orWhere('subcategory_id', $advertisement->subcategory_id)
+            ->orWhere('category_id', $advertisement->category_id )
+            ->limit(4)->whereActive()->get();
         $advertisement->increment('views');
 
         if($advertisement->is_inactive === 0){
@@ -49,8 +54,7 @@ class SingleAdvertisementController extends Controller
                 'price_type'=>$advertisement->is_negotiable,
                 'category' => config('constance.categories')[$advertisement->category_id]['name'],
                 'seller' => User::where('id', $advertisement->user_id)->first(),
-                'seller_ads' => Advertisement::where('user_id', $advertisement->user_id)->where('is_inactive', 0)
-                    ->limit(4)->orderBy('created_at', 'desc')->get(),
+                'seller_ads' => $recentAds,
                 'rating'=>Rating::where('slug',$request->slug)->average('rating'),
                 'share'=> (new \Jorenvh\Share\Share)->currentPage()->currentPage()->facebook(),
 

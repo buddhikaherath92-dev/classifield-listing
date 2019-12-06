@@ -219,7 +219,7 @@
                     <div class="sidebar-item-box">
                         <div class="gradient-wrapper">
                             <div class="gradient-title">
-                                <h3>More Ads From User</h3>
+                                <h3>Related Ads</h3>
                             </div>
                             <ul class="sidebar-ads-from-user">
                                 @foreach($seller_ads as $seller_ad)
