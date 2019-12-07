@@ -111,7 +111,7 @@
                                    <li class="nav-item" data-target="#carouselExampleIndicators" data-slide-to="3">
                                     <a class="nav-link" href="#">
                                       <img class="img-thumbnail"
-                                         src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_3}}"
+                                         src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_4}}"
                                              alt="Second slide">
                                    </a>
                                   </li>
