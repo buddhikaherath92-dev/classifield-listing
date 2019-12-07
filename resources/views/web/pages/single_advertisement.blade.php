@@ -33,48 +33,41 @@
                                     @if($advertisement->img_3 !==null)
                                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                                     @endif
-                                        @if($advertisement->img_4 !==null)
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                                        @endif
+                                    @if($advertisement->img_4 !==null)
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                    @endif
                                 </ol>
                                 <div class="carousel-inner">
                                     @if($advertisement->img_1 !==null)
-                                        <div class="carousel-item active" >
-                                            <center>
-                                                <img class="d-block mw-100"
-                                                     src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_1}}"
-                                                     alt="First slide">
-                                            </center>
+                                        <div class="carousel-item active text-center" >
+                                            <img class="my-auto"
+                                                 src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_1}}"
+                                                 alt="First slide">
                                         </div>
                                     @endif
                                     @if($advertisement->img_2 !==null)
-                                        <div class="carousel-item">
-                                            <center>
-                                                <img class="d-block mw-100"
-                                                     src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_2}}"
-                                                     alt="Second slide">
-                                            </center>
+                                        <div class="carousel-item text-center">
+                                            <img class="my-auto"
+                                                 src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_2}}"
+                                                 alt="Second slide">
                                         </div>
                                     @endif
                                     @if($advertisement->img_3 !==null)
-                                        <div class="carousel-item">
-                                            <center>
-                                                <img class="d-block mw-100"
-                                                     src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_3}}"
-                                                     alt="Third slide">
-                                            </center>
+                                        <div class="carousel-item text-center">
+                                            <img class="my-auto"
+                                                 src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_3}}"
+                                                 alt="Third slide">
                                         </div>
                                     @endif
                                         @if($advertisement->img_4 !==null)
-                                            <div class="carousel-item">
-                                                <center>
-                                                    <img class="d-block mw-100"
-                                                         src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_4}}"
-                                                         alt="Fourth slide">
-                                                </center>
+                                            <div class="carousel-item text-center">
+                                                <img class="my-auto"
+                                                     src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_4}}"
+                                                     alt="Fourth slide">
                                             </div>
                                         @endif
                                 </div>
+
                                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
                                    data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -86,6 +79,44 @@
                                     <span class="sr-only">Next</span>
                                 </a>
                             </div>
+                            <ul class="nav nav-pills justify-content-center bg-dark" id="gallery-nav">
+                                @if($advertisement->img_1 !==null)
+                                <li class="nav-item active" data-target="#carouselExampleIndicators" data-slide-to="0">
+                                    <a class="nav-link" href="#">
+                                        <img class="img-thumbnail"
+                                             src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_1}}"
+                                             alt="First slide">
+                                    </a>
+                                </li>
+                                @endif
+                                @if($advertisement->img_2 !==null)
+                                    <li class="nav-item" data-target="#carouselExampleIndicators" data-slide-to="1">
+                                        <a class="nav-link" href="#">
+                                           <img class="img-fluid img-thumbnail"
+                                                src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_2}}"
+                                                alt="Second slide">
+                                        </a>
+                                    </li>
+                                @endif
+                                @if($advertisement->img_3 !==null)
+                                    <li class="nav-item" data-target="#carouselExampleIndicators" data-slide-to="2">
+                                        <a class="nav-link" href="#">
+                                         <img class="img-thumbnail"
+                                            src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_3}}"
+                                             alt="Second slide">
+                                        </a>
+                                    </li>
+                                @endif
+                                @if($advertisement->img_4 !==null)
+                                   <li class="nav-item" data-target="#carouselExampleIndicators" data-slide-to="3">
+                                    <a class="nav-link" href="#">
+                                ]      <img class="img-thumbnail"
+                                         src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_3}}"
+                                             alt="Second slide">
+                                   </a>
+                                  </li>
+                                @endif
+                            </ul>
                             <br><br>
                             <div class="section-title-left-dark child-size-xl title-bar item-mb"
                                  style=" max-width: 100%;overflow-wrap: break-word;">

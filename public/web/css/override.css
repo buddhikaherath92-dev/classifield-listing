@@ -184,7 +184,7 @@
 }
 
 .custom-carousel{
-   background-color: grey;
+   background-color: #fafafa;
    height: 500px;
 }
 
@@ -192,12 +192,14 @@
     width: auto;
     height: auto;
     max-height: 500px;
-    display:block;
-    margin:auto;
 }
 
 #login-page-container{
     margin-top: 150px;
+}
+
+#gallery-nav li img{
+    height: 80px;
 }
 
 #post-ad-loading-wrap{
@@ -296,6 +298,12 @@ label{
 
 
 @media only screen and (max-width: 600px) {
+    .img-thumbnail {
+        border: 0.2px;
+    }
+    #gallery-nav li img{
+        height: 45px;
+    }
     /* For mobile phones: */
     .custom-carousel {
         height: 200px;
