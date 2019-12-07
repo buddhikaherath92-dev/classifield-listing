@@ -43,7 +43,7 @@
 
                                                 <fieldset>
                                                     <label>
-                                                        <input type="radio"  value="1" name="account_type"
+                                                        <input type="radio"  value="1" name="account_type" checked="checked"
                                                                @if(old('account_type') ==  config('constance.user_types')['individual']) checked="checked" @endif/> Individual
                                                     </label>
                                                     <label style="margin-left: 10px">
