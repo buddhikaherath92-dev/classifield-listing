@@ -110,7 +110,7 @@
                                 @if($advertisement->img_4 !==null)
                                    <li class="nav-item" data-target="#carouselExampleIndicators" data-slide-to="3">
                                     <a class="nav-link" href="#">
-                                ]      <img class="img-thumbnail"
+                                      <img class="img-thumbnail"
                                          src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_3}}"
                                              alt="Second slide">
                                    </a>
