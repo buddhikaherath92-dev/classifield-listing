@@ -37,25 +37,25 @@
                         <h3 class="title-medium-light title-bar-left size-lg">Follow Us On</h3>
                         <ul class="social-link">
                             <li class="fa-classipost">
-                                <a href="#">
+                                <a href="https://www.facebook.com/Aluthads-109329037176012" target="_blank">
                                     <img src="{!! asset("web/img/fb.jpg") !!}" alt="social">
                                 </a>
                             </li>
-                            <li class="tw-classipost">
-                                <a href="#">
-                                    <img src="{!! asset("web/img/twitter.jpg") !!}" alt="social">
-                                </a>
-                            </li>
-                            <li class="yo-classipost">
-                                <a href="#">
-                                    <img src="{!! asset("web/img/youtube.jpg") !!}" alt="social">
-                                </a>
-                            </li>
-                            <li class="li-classipost">
-                                <a href="#">
-                                    <img src="{!! asset("web/img/linkedin.jpg") !!}" alt="social">
-                                </a>
-                            </li>
+{{--                            <li class="tw-classipost">--}}
+{{--                                <a href="#">--}}
+{{--                                    <img src="{!! asset("web/img/twitter.jpg") !!}" alt="social">--}}
+{{--                                </a>--}}
+{{--                            </li>--}}
+{{--                            <li class="yo-classipost">--}}
+{{--                                <a href="#">--}}
+{{--                                    <img src="{!! asset("web/img/youtube.jpg") !!}" alt="social">--}}
+{{--                                </a>--}}
+{{--                            </li>--}}
+{{--                            <li class="li-classipost">--}}
+{{--                                <a href="#">--}}
+{{--                                    <img src="{!! asset("web/img/linkedin.jpg") !!}" alt="social">--}}
+{{--                                </a>--}}
+{{--                            </li>--}}
                         </ul>
                     </div>
                 </div>
