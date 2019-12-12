@@ -59,8 +59,8 @@ class AdvertisementController extends Controller
             [
                 'advertisements' => $advertisements
                     ->select('advertisements.id','advertisements.title', 'advertisements.category_id', 'advertisements.is_featured',
-            'advertisements.is_inactive', 'advertisements.expire_date', 'users.name as username', 'advertisements.created_at')
-                    ->orderBy('created_at', 'desc')->get()
+            'advertisements.is_inactive', 'advertisements.expire_date', 'users.name as username', 'advertisements.updated_at')
+                    ->orderBy('updated_at', 'desc')->get()
         ]);
     }
 
