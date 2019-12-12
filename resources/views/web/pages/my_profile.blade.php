@@ -230,7 +230,9 @@
                                         <hr>
                                     </div>
                                     <div class="modal-footer">
-                                        <a id="copyButton" style="width: 50px;height: 25px;margin-right: 40%; font-size: 75%" class="btn btn-success"  onclick="copyFunction()">Copy</a>
+                                        <a id="copyButton" class="btn btn-success"  onclick="copyFunction()">Copy</a>
+                                        <br>
+                                        <a href="" class="btn btn-info " id="fb_share"><span class="fa fa-facebook-official"></span>&nbsp;&nbsp;&nbsp;Share On facebook</a>
                                     </div>
                                 </div>
                             </div>
@@ -253,6 +255,7 @@
                 dataType:"JSON"
             }).done(function (response) {
                 document.getElementById("url").value=response.data;
+                document.getElementById("fb_share").href='https://www.facebook.com/sharer/sharer.php?u='+response.data;
 
             })
         }
