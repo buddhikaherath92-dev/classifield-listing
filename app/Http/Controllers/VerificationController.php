@@ -46,12 +46,17 @@ class VerificationController extends Controller
         $this->middleware('throttle:6,1')->only('verify', 'resend');
         $this->common=$common;
     }
+
     /**
      * Show verification view
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show(){
-        return view('web.pages.email_verification');
+        $code = null;
+        if(request()->has('verification_code')){
+            $code = request('verification_code');
+        }
+        return view('web.pages.email_verification', ['code' => $code]);
     }
 
     /**

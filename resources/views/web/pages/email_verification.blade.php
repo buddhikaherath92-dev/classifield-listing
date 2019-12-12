@@ -28,7 +28,7 @@
                         @csrf
                       <div class="container">
                           <input type="number" id="email_code"  required name="email_code"
-                                 class="form-control"
+                                 class="form-control" value="{{$code !== null ? $code : ''}}"
                                  placeholder="Retype the pin Code">
                       </div>
                         <div class="form-group" style="margin-top: 10px;margin-left: 20px">
