@@ -5,23 +5,22 @@
         <thead class="thead-dark">
         <tr>
             <th scope="col">User ID</th>
-            <th scope="col">Link shared count</th>
-            <th scope="col">Visit via link</th>
-            <th scope="col">Registered</th>
-            <th scope="col">Date & Time</th>
-            <th scope="col"></th>
+            <th scope="col">User Name</th>
+            <th scope="col">User Email</th>
+            <th scope="col">Earned Visits</th>
+            <th scope="col">Earned Registrations</th>
         </tr>
         </thead>
         <tbody style="font-size: 16px; color: white">
+        @foreach($referrals as $index => $referrer)
             <tr style="color: #9fcdff">
-                <td>{{ $view_data[0]->id }}</td>
-                <td>{{ count($view_data) }}</td>
-                <td>{{ count($view_data)}}</td>
-                <td>{{ $register }}</td>
-                <td >{{$shared_date}}</td>
-                <td></td>
+                <td>{{ $referrer->user_id  }}</td>
+                <td>{{ $referrer->name  }}</td>
+                <td>{{ $referrer->email  }}</td>
+                <td>{{ $referrer->visited_count  }}</td>
+                <td>{{ $referrer->registered_count  }}</td>
             </tr>
-
+        @endforeach
         </tbody>
     </table>
 
