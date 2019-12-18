@@ -46,6 +46,8 @@
                         <th>Featured</th>
                         <th>Status</th>
                         <th>Expired on</th>
+                        <th>Created At</th>
+                        <th>Updated At</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
@@ -61,6 +63,8 @@
                             <td>{{$advertisement->is_featured == 1 ? 'YES' : 'NO'}}</td>
                             <td>{{$advertisement->is_inactive == 1 ? 'INACTIVE' : 'ACTIVE'}}</td>
                             <td>{{$advertisement->expire_date}}</td>
+                            <td>{{$advertisement->created_at}}</td>
+                            <td>{{$advertisement->updated_at}}</td>
                             <td class="text-center">
                                 @if( $advertisement->is_inactive == 1 )
                                 <span data-toggle="modal" id="confirmModelLink" data-target="#ConfirmModel"

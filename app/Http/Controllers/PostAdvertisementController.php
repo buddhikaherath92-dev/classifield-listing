@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\SendFeaturedRequest;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Advertisement;
@@ -171,6 +172,8 @@ class PostAdvertisementController extends Controller
             $incomingData['key_words'] = $incomingData['key_words'].','.$this->common
                     ->getCategoryObjectFromID((int)$incomingData['category_id'])['name'].','.$this->common
                     ->getCategoryObjectFromID((int)$incomingData['subcategory_id'])['name'];
+            $incomingData['created_at'] = Carbon::now();
+            $incomingData['updated_at'] = Carbon::now();
             $advertisement=Advertisement::create($incomingData);
             $featured=request('featured');
 

@@ -6,6 +6,7 @@ use App\Advertisement;
 use App\Helpers\Common;
 use App\Mail\SendMaillable;
 use App\Mail\SendMessageMailable;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
@@ -59,7 +60,7 @@ class AdvertisementController extends Controller
             [
                 'advertisements' => $advertisements
                     ->select('advertisements.id','advertisements.title', 'advertisements.category_id', 'advertisements.is_featured',
-            'advertisements.is_inactive', 'advertisements.expire_date', 'users.name as username', 'advertisements.updated_at')
+            'advertisements.is_inactive', 'advertisements.expire_date', 'users.name as username', 'advertisements.updated_at', 'advertisements.created_at')
                     ->orderBy('updated_at', 'desc')->get()
         ]);
     }
@@ -104,9 +105,11 @@ class AdvertisementController extends Controller
                 }
             }
 
+        $data['updated_at'] = Carbon::now();
+
             Advertisement::where('id', request('id'))->update($data);
 
-            return redirect()->back();
+        return redirect('/admin/advertisements');
     }
 
 }
