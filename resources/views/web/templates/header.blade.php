@@ -17,19 +17,38 @@
                         <div class="top-bar-right">
                             <ul>
                                 @if (Auth::check())
-                                    <li>
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                            {{ csrf_field() }}
-                                            <button type="submit" class="login-btn">
-                                                <i class="fa fa-power-off" aria-hidden="true"></i>Logout
-                                            </button>
-
-                                        </form>
-                                    </li>
-                                    <li>
-                                        <a class="login-btn" href="{{ route('my_profile') }}" id="dash-btn">
-                                            <i class="fa fa-dashboard" aria-hidden="true"></i>Dashboard
+                                    <li class="dropdown">
+                                        <a class="login-btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                           aria-expanded="false">
+                                            <i class="fa fa-user" aria-hidden="true"></i> {{ Auth::user()->name }}
                                         </a>
+                                        <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="{{ route('my_profile') }}">
+                                                <button class="login-btn">
+                                                    <i class="fa fa-user" aria-hidden="true"></i>My Profile
+                                                </button>
+                                            </a>
+                                            <a class="dropdown-item" href="{{ route('my_settings') }}#">
+                                                <button class="login-btn">
+                                                    <i class="fa fa-edit" aria-hidden="true"></i>My Settings
+                                                </button>
+                                            </a>
+                                            <a class="dropdown-item" href="{{ route('my_ads') }}">
+                                                <button class="login-btn">
+                                                    <i class="fa fa-adn" aria-hidden="true"></i>My Ads
+                                                </button>
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <form id="logout-form" class="p-0" action="{{ route('logout') }}" method="POST">
+                                                    {{ csrf_field() }}
+                                                    <button type="submit" class="login-btn">
+                                                        <i class="fa fa-power-off" aria-hidden="true"></i>Logout
+                                                    </button>
+
+                                                </form>
+                                            </a>
+                                        </div>
+
                                     </li>
                                 @else
                                     <li>
