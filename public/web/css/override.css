@@ -359,3 +359,7 @@ label{
         margin-left: 0px;
     }
 }
+
+.ad-item-custom{
+    box-shadow: 0px 2px 4px #eff0ef;
+}

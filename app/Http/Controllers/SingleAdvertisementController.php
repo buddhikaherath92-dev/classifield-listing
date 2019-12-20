@@ -35,10 +35,7 @@ class SingleAdvertisementController extends Controller
      */
     public function show(Request $request){
 
-//        $date=(new \Jorenvh\Share\Share)->currentPage()->currentPage()->facebook();
-//        dd($date);
-//        $url=Request::url();
-//dd($url);
+        $previousRoute = str_replace(url('/'), '', url()->previous());
 
         $advertisement = Advertisement::where('slug', $request->slug)->first();
         $topKeyWord = explode(',', $advertisement->key_words)[0];
@@ -48,7 +45,7 @@ class SingleAdvertisementController extends Controller
             ->limit(4)->whereActive()->get();
         $advertisement->increment('views');
 
-        if($advertisement->is_inactive === 0){
+        if($advertisement->is_inactive === 0 || ($advertisement->is_inactive === 1 && $previousRoute === '/my_dashboard/ads')){
             return view('web.pages.single_advertisement', [
                 'advertisement' => $advertisement,
                 'price_type'=>$advertisement->is_negotiable,
@@ -61,7 +58,7 @@ class SingleAdvertisementController extends Controller
             ]);
         }else{
 
-            $this->common->showAlerts('Your Advertisement is still inactive', 'error', "Your Advertisement is still inactive");
+            $this->common->showAlerts('Your are trying to view inactive advertisement!', 'error', "Your are trying to view inactive advertisement!");
             return redirect()->back();
         }
 

@@ -7,76 +7,89 @@
                 <div class="col-4 text-center-mb">
                     <h2 class="mb10--mb">My Ad List</h2>
                 </div>
-                {{--<div class="col-8">--}}
-                {{--<div class="layout-switcher float-none-mb text-center-mb mb10--mb">--}}
-                {{--<ul>--}}
-                {{--<li class="active"><a href="#" data-type="category-list-layout3" class="product-view-trigger"><i class="fa fa-th-large"></i></a></li>--}}
-                {{--<li><a href="#" data-type="category-grid-layout3" class="product-view-trigger"><i class="fa fa-list"></i></a></li>--}}
-                {{--</ul>--}}
-                {{--</div>--}}
-                {{--</div>--}}
             </div>
         </div>
-        <div id="category-view" class="category-list-layout3 gradient-padding zoom-gallery">
+        <div id="category-view" class="pt-5">
             <div class="row">
 
-                @foreach($advertisements as $AdIndex => $advertisement)
 
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                        <div class="product-box item-mb zoom-gallery">
 
-                            <div class="item-mask-wrapper">
+                   <div class="col-sm-12">
+                       <ul class="list-group">
+                           @foreach($advertisements as $AdIndex => $advertisement)
+                           <li class="list-group-item mb-3 p-0 ad-item-custom" >
+                               <div class="row clearfix m-0">
+                                   <div class="col-md-3 col-sm-12 my-auto text-center" style="background: #f5f6f5">
+                                       <img style="height: 107px" src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_1}}"
+                                            alt="categories" class="img-fluid">
+                                   </div>
+                                   <div class="col-md-9 col-sm-12 pl-0 pr-0">
+                                       <div class="row clearfix p-2">
+                                           <div class="col-md-8 col-sm-12 my-auto">
+                                               <h4 class="text-center text-md-left ellipsis mb-0">{{$advertisement->title}}</h4>
+                                           </div>
+                                           <div class="col-md-4 col-sm-12 text-center text-md-right mt-2 mt-md-0">
+                                               @if($advertisement->is_featured)
+                                                   <span class="badge badge-success p-2">
+                                                       <i class="fa fa-flash" aria-hidden="true"></i>
+                                                       Featured
+                                                   </span>
+                                               @endif
+                                               @if($advertisement->is_inactive === 0)
+                                                   <span class="badge badge-info p-2">
+                                                       <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                                       Active
+                                                   </span>
+                                               @endif
+                                               @if($advertisement->is_inactive === 1)
+                                                   <span class="badge badge-danger p-2">
+                                                       <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                                       Inactive
+                                                   </span>
+                                               @endif
+                                           </div>
+                                       </div>
+                                       <hr class="m-0">
+                                       <div class="row clearfix p-2">
+                                            <div class="col-md-8 col-sm-12 text-center text-md-left mt-2 mt-md-0">
+                                                <span class="badge badge-light p-2 text-primary">
+                                                    <img class="img-fluid" width="12px" src="{{config('constance.categories')[$advertisement->category_id]['image']}}">
+                                                {{config('constance.categories')[$advertisement->category_id]['name']}}
+                                                </span>
+                                                <span class="badge badge-light p-2 text-primary">
+                                                    <i class="fa fa-clock-o" aria-hidden="true"></i> {{$advertisement->created_at}}
+                                                </span>
+                                                <span class="badge badge-light p-2 text-primary">
+                                                    <i class="fa fa-eye" aria-hidden="true"></i> {{$advertisement->views}}
+                                                </span>
+                                            </div >
+                                            <div class="col-md-4 col-sm-12 text-center text-md-right mt-2 mt-md-0">
+                                                <a class="btn btn-sm btn-info text-white"
+                                                   data-toggle="tooltip" data-placement="bottom" title="View"
+                                                   href="{{url('/ad/'.config('constance.categories')[$advertisement
+                                        ->category_id]['slug']).'/'.$advertisement->slug}}" target="_blank">
+                                                    <i class="fa fa-expand" aria-hidden="true"></i>
+                                                </a>
+                                                <a class="btn btn-sm btn-warning text-white"
+                                                   data-toggle="tooltip" data-placement="bottom" title="Edit">
+                                                    <i class="fa fa-edit" aria-hidden="true"></i>
+                                                </a>
+                                                <a class="btn btn-sm btn-danger text-white"
+                                                   data-toggle="tooltip" data-placement="bottom" title="Delete">
+                                                    <i class="fa fa-close" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                       </div>
 
-                                <div id="ad-box-img-wrapper" class="item-mask bg-body">
+                                   </div>
+                               </div>
+                           </li>
+                           @endforeach
+                       </ul>
+                   </div>
 
-                                    <img src="{{env('APP_URL').'images/advertisements/'.$advertisement->img_1}}" alt="categories"
-                                         class="img-thumbnail">
-                                    <div class="trending-sign" data-tips="Featured"> <i class="fa fa-bolt" aria-hidden="true"></i> </div>
-                                    <div class="title-ctg">{{config('constance.categories')[$advertisement->category_id]['name']}}</div>
 
-                                    <div class="symbol-featured @if($advertisement->is_featured) active @endif">
-                                        <img src="https://radiustheme.com/demo/html/classipost/classipost/img/banner/symbol-featured.png" alt="symbol" class="img-fluid">
-                                    </div>
-                                </div>
 
-                            </div>
-
-                            <div class="item-content" style="width: 80%">
-                                <div class="title-ctg">
-                                    {{config('constance.categories')[$advertisement->category_id]['name']}}
-                                </div>
-
-                                <h3 class="short-title ellipsis" style="width: 55%"><a href="#" style="overflow-wrap: break-word;">{{$advertisement->title}}</a></h3>
-                                <h3 class="long-title ellipsis" style="width: 55%"><a href="#" style="overflow-wrap: break-word;">{{$advertisement->title}}</a></h3>
-
-                                <ul class="upload-info">
-                                    <li class="place">
-                                        @if($advertisement->is_inactive === 0)
-                                            <i class="fa fa-check-circle" aria-hidden="true"></i><span style="color: #0b9876">Active</span>
-                                        @endif
-                                        @if($advertisement->is_inactive === 1)
-                                            <i class="fa fa-times-circle" aria-hidden="true" style="color: red"></i><span style="color: red">Inactive</span>
-                                        @endif
-                                    </li>
-                                    <li class="date" id="createDate">
-                                        <i class="fa fa-clock-o" aria-hidden="true"></i>{{$advertisement->created_at}}
-                                    </li>
-                                    <li class="tag-ctg">
-                                        <i class="fa fa-tag" aria-hidden="true"></i>{{config('constance.categories')[$advertisement->category_id]['name']}}
-                                    </li>
-                                </ul>
-
-                                <p class="ellipsis">{{$advertisement->description}}</p>
-
-                                <div id="price" class="price ellipsis">{{$advertisement->price != null ? 'Rs '.number_format($advertisement->price):'N/A'}}</div>
-
-                                <a href="{{url('/ad/'.config('constance.categories')[$advertisement
-                                        ->category_id]['slug']).'/'.$advertisement->slug}}" class="product-details-btn" id="product-btn">Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                @endforeach
 
             </div>
         </div>

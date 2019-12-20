@@ -14,6 +14,14 @@
         </div>
         <!-- Where End -->
 
+        @if($advertisement->is_inactive === 1)
+        <div class="container">
+            <div class="alert alert-danger" role="alert">
+                This is <b>only a preview.</b> The advertisement is still inactive!
+            </div>
+        </div>
+        @endif
+
         <div class="container">
             <div class="row">
                 <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12 col-12">
