@@ -11,9 +11,6 @@
         </div>
         <div id="category-view" class="pt-5">
             <div class="row">
-
-
-
                    <div class="col-sm-12">
                        <ul class="list-group">
                            @foreach($advertisements as $AdIndex => $advertisement)
@@ -33,7 +30,7 @@
                                                    <span class="text-warning p-2">
                                                        <i class="fa fa-flash" aria-hidden="true"></i>
                                                        Featured
-                               x                    </span>
+                                                  </span>
                                                @endif
                                                @if($advertisement->is_inactive === 0)
                                                    <span class="text-success p-2">
@@ -70,7 +67,8 @@
                                         ->category_id]['slug']).'/'.$advertisement->slug}}" target="_blank">
                                                     <i class="fa fa-expand" aria-hidden="true"></i>
                                                 </a>
-                                                <a class="btn btn-sm btn-warning text-white" href="{{route('my_ads_edit')}}"
+                                                <a class="btn btn-sm btn-warning text-white"
+                                                   href="{{url('/my_dashboard/edit_ad/'.$advertisement->id)}}"
                                                    data-toggle="tooltip" data-placement="bottom" title="Edit">
                                                     <i class="fa fa-edit" aria-hidden="true"></i>
                                                 </a>
