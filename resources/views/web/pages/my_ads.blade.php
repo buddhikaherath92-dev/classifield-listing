@@ -2,11 +2,38 @@
 
 @section('child-content')
     <div class="gradient-wrapper item-mb border-none">
-        <div class="gradient-title">
-            <div class="row no-gutters">
-                <div class="col-4 text-center-mb">
-                    <h2 class="mb10--mb">My Ad List</h2>
-                </div>
+        <h2 class="title-section">My Ad List</h2>
+        <div class="row mt-2 mb-2">
+            <div class="col-md-12">
+                <form class="form-inline" method="GET" action="{{route('my_ads')}}">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <select class="form-control" id="order_by" name="order_by">
+                                <option value="created_at"
+                                        {{ $order_by === 'created_at' ? 'selected' : '' }}>Created Date</option>
+                                <option value="updated_at"
+                                        {{ $order_by === 'updated_at' ? 'selected' : '' }}>Updated Date</option>
+                                <option value="title"
+                                        {{ $order_by === 'title' ? 'selected' : '' }}>Title(Alphabetical)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <select class="form-control" id="status" name="status">
+                                <option value="null"
+                                        {{ $status === 'null' ? 'selected' : '' }}>All</option>
+                                <option value="active"
+                                        {{ $status === 'active' ? 'selected' : '' }}>Live</option>
+                                <option value="inactive"
+                                        {{ $status === 'inactive' ? 'selected' : '' }}>Pending Review / Inactive</option>
+                                <option value="featured"
+                                        {{ $status === 'featured' ? 'selected' : '' }}>Featured</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 col-sm-12 text-right">
+                            <button type="submit" class="btn btn-primary">Apply Filters</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
         <div id="category-view" class="pt-5">

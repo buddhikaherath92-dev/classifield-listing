@@ -35,8 +35,26 @@ class MyAdsController extends Controller
      */
     public function index()
     {
+        $advertisements = Advertisement::WhereAuthUser();
+        $orderBy = request()->has('order_by')? request('order_by') :'created_at';
+        $status = request()->has('status')? request('status') : null;
+
+        if(request()->has('status')){
+            if(request('status') === 'active'){
+                $advertisements = $advertisements->where('is_inactive', 0);
+            }
+            if(request('status') === 'inactive'){
+                $advertisements = $advertisements->where('is_inactive', 1);
+            }
+            if(request('status') === 'featured'){
+                $advertisements = $advertisements->where('is_featured', 1);
+            }
+        }
+
         return view('web.pages.my_ads', [
-            'advertisements' => Advertisement::WhereAuthUser()->orderBy('created_at', 'dec')->get()
+            'advertisements' => $advertisements->orderBy($orderBy, 'dec')->get(),
+            'order_by' => $orderBy,
+            'status' => $status
         ]);
     }
 
