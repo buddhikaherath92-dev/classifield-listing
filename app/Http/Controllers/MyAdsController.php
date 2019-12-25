@@ -16,7 +16,7 @@ class MyAdsController extends Controller
     public function index()
     {
         return view('web.pages.my_ads', [
-            'advertisements' => Advertisement::WhereAuthUser()->get()
+            'advertisements' => Advertisement::WhereAuthUser()->orderBy('created_at', 'dec')->get()
 
         ]);
     }
