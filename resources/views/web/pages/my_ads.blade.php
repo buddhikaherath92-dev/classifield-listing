@@ -73,6 +73,7 @@
                                                     <i class="fa fa-edit" aria-hidden="true"></i>
                                                 </a>
                                                 <a class="btn btn-sm btn-danger text-white"
+                                                   href="{{url('/my_dashboard/delete_ad/'.$advertisement->id)}}"
                                                    data-toggle="tooltip" data-placement="bottom" title="Delete">
                                                     <i class="fa fa-close" aria-hidden="true"></i>
                                                 </a>

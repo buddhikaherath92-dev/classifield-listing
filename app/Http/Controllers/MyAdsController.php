@@ -135,10 +135,26 @@ class MyAdsController extends Controller
         $featured=request('featured');
         if ($featured){
             Mail::to(config('constance.admin_email'))->send(new SendFeaturedRequest(Auth::user(), Advertisement::find(request('id'))));
-            $this->common->showAlerts('Posting Featured Advertisement !','success',"Advertisement posted successfully!");
+            $this->common->showAlerts('Updating Advertisement !','success',"Advertisement updated successfully!");
             return redirect('/my_dashboard/ads');
         }
         $this->common->showAlerts('Updating Advertisement !','success',"Advertisement updated successfully!");
+        return redirect('/my_dashboard/ads');
+    }
+
+    /**
+     * Delete advertisement
+     *
+     */
+    public function deleteAd() {
+        $advertisement = Advertisement::find(request('id'));
+        if($advertisement->is_inactive){
+            Advertisement::where('id', request('id'))->delete();
+            $this->common->showAlerts('Deleting Advertisement !','success',"Advertisement deleted successfully!");
+        }else{
+            Advertisement::where('id', request('id'))->update(['is_inactive'=> 1]);
+            $this->common->showAlerts('Deleting Advertisement !','success',"We made your live advertisement inactive!");
+        }
         return redirect('/my_dashboard/ads');
     }
 

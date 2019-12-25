@@ -71,4 +71,5 @@ Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'my_dashboard' ], functio
     Route::get('/ads',   'MyAdsController@index')->name('my_ads');
     Route::get('/edit_ad/{id}',   'MyAdsController@editAd')->name('my_ads_edit');
     Route::post('/edit_ad',   'MyAdsController@updateAd')->name('my_ads_edit_real');
+    Route::get('/delete_ad/{id}',   'MyAdsController@deleteAd')->name('delete_ad');
 });
