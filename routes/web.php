@@ -69,4 +69,5 @@ Route::group([ 'middleware' => [ 'auth' ], 'prefix' => 'my_dashboard' ], functio
     Route::get('/settings',   'MySettingsController@index')->name('my_settings');
     Route::post('/settings',   'MySettingsController@store')->name('update_my_settings');
     Route::get('/ads',   'MyAdsController@index')->name('my_ads');
+    Route::get('/edit_ads',   'MyAdsController@editAd')->name('my_ads_edit');
 });

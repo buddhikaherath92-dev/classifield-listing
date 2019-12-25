@@ -30,19 +30,19 @@
                                            </div>
                                            <div class="col-md-4 col-sm-12 text-center text-md-right mt-2 mt-md-0">
                                                @if($advertisement->is_featured)
-                                                   <span class="badge badge-success p-2">
+                                                   <span class="text-warning p-2">
                                                        <i class="fa fa-flash" aria-hidden="true"></i>
                                                        Featured
-                                                   </span>
+                               x                    </span>
                                                @endif
                                                @if($advertisement->is_inactive === 0)
-                                                   <span class="badge badge-info p-2">
+                                                   <span class="text-success p-2">
                                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
                                                        Active
                                                    </span>
                                                @endif
                                                @if($advertisement->is_inactive === 1)
-                                                   <span class="badge badge-danger p-2">
+                                                   <span class="text-danger p-2">
                                                        <i class="fa fa-times-circle" aria-hidden="true"></i>
                                                        Inactive
                                                    </span>
@@ -70,7 +70,7 @@
                                         ->category_id]['slug']).'/'.$advertisement->slug}}" target="_blank">
                                                     <i class="fa fa-expand" aria-hidden="true"></i>
                                                 </a>
-                                                <a class="btn btn-sm btn-warning text-white"
+                                                <a class="btn btn-sm btn-warning text-white" href="{{route('my_ads_edit')}}"
                                                    data-toggle="tooltip" data-placement="bottom" title="Edit">
                                                     <i class="fa fa-edit" aria-hidden="true"></i>
                                                 </a>

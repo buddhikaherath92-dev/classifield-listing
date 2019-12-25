@@ -17,7 +17,16 @@ class MyAdsController extends Controller
     {
         return view('web.pages.my_ads', [
             'advertisements' => Advertisement::WhereAuthUser()->orderBy('created_at', 'dec')->get()
+        ]);
+    }
 
+    /**
+     * Show edit advertisement page
+     */
+    public function editAd() {
+        return view('web.pages.my_ads_edit', [
+            'categories' => config('constance.categories'),
+            'districts' => config('constance.districts')
         ]);
     }
 

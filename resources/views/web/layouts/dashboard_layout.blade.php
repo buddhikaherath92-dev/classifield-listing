@@ -16,6 +16,10 @@
                     @if(Route::currentRouteName() === 'my_ads')
                         <li class="active">My Ads</li>
                     @endif
+                    @if(Route::currentRouteName() === 'my_ads_edit')
+                        <li><a href="#">My Ads</a> -</li>
+                        <li class="active">Edit</li>
+                    @endif
                 </ul>
             </div>
         </div>
@@ -31,7 +35,8 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="{{Route::currentRouteName() === 'my_ads' ? "active" : ''}}"
+                                <a class="{{Route::currentRouteName() === 'my_ads' || Route::currentRouteName() === 'my_ads_edit'
+? "active" : ''}}"
                                    href="{{route('my_ads')}}">
                                     My Ads
                                 </a>
