@@ -1,7 +1,7 @@
 @extends('web.layouts.dashboard_layout')
 
 @section('child-content')
-    <h3 class="title-section">Edit Advertisement</h3>
+    <h3 class="title-section">Edit Ad : '{{ $advertisement->title }}' </h3>
     <div id="post-ad-form-wrapper">
         <p class="text-center" style="color: white"><small>Loading sub categories...</small></p>
         <div id="post-ad-loading-wrap"></div>
@@ -9,7 +9,7 @@
     <div class="input-layout1 gradient-padding post-ad-page">
 
         <form id="post-add-form" method="POST" enctype="multipart/form-data"
-              action="{{ route('post_ad') }}" name="post_ad">
+              action="{{ route('my_ads_edit_real') }}" name="post_ad">
 
             {{ csrf_field() }}
 
@@ -20,6 +20,8 @@
             @endif
 
             <div class="mb-50 pb-30">
+
+                <input type="hidden" name="id" value="{{$advertisement->id}}">
 
                 <div class="row">
                     <div class="col-sm-3 col-12">
