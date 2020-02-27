@@ -418,6 +418,9 @@
                     if($(this).find('option:selected').val() === '6'){
                         $("#lblPrice").css('display', 'none');
                         $("#lblSalary").css('display', 'block');
+                    }else{
+                        $("#lblPrice").css('display', 'block');
+                        $("#lblSalary").css('display', 'none');
                     }
                     $.ajax({
                         url:"sub",
