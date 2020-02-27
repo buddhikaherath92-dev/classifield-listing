@@ -59,7 +59,19 @@
                         <tr>
                             <td>{{$advertisement->title}}</td>
                             <td>{{config('constance.categories')[$advertisement->category_id]['name']}}</td>
-                            <td>{{$advertisement->username}}</td>
+                            <td>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <i class="fa fa-user-tie mr-2"></i> {{$advertisement->username}}
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="fa fa-envelope mr-2"></i> {{$advertisement->user_email}}
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="fa fa-phone-square mr-2"></i> {{$advertisement->user_tel}}
+                                    </li>
+                                </ul>
+                            </td>
                             <td>{{$advertisement->is_featured == 1 ? 'YES' : 'NO'}}</td>
                             <td>{{$advertisement->is_inactive == 1 ? 'INACTIVE' : 'ACTIVE'}}</td>
                             <td>{{$advertisement->expire_date}}</td>
