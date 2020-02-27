@@ -124,7 +124,10 @@
                                             <i class="fas fa-fw fa-clock" style="color: white"></i>
                                         </a>
                                 </span> |
-                                <a class="btn btn-info" href="{{URL('/admin/view_advertisement?id='.$advertisement->id)}}">Preview</a>
+                                <a class="btn btn-primary" href="{{URL('/admin/view_advertisement?id='.$advertisement->id)}}"
+                                   data-toggle="tooltip" data-placement="top" title="PREVIEW">
+                                    <i class="fas fa-fw fa-eye" style="color: white"></i>
+                                </a>
                             </td>
                         </tr>
                     @endforeach

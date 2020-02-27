@@ -39,7 +39,7 @@
     <script>
         $(document).ready(function() {
             $('#dataTable').DataTable({
-                "order": [[ 6, "desc" ]]
+                "order": [[ 5, "desc" ]]
             });
         });
     </script>
