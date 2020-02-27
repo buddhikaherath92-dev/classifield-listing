@@ -192,6 +192,7 @@
                                     <div class="row">
                                         <div class="col-sm-3 col-12">
                                             <label class="control-label" id="lblPrice" for="first-name">Set Price <span id="span"> *</span></label>
+                                            <label class="control-label" id="lblSalary" for="first-name">Set Salary <span id="span"> *</span></label>
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
@@ -413,6 +414,11 @@
                 if($(this).find('option:selected').val() !== null){
                     $('#post-ad-form-wrapper').css("display", "block");
                     $('#post-ad-loading-wrap').css("display", "block");
+                    //todo:: make this login dynamic
+                    if($(this).find('option:selected').val() === '6'){
+                        $("#lblPrice").css('display', 'none');
+                        $("#lblSalary").css('display', 'block');
+                    }
                     $.ajax({
                         url:"sub",
                         method:'get',

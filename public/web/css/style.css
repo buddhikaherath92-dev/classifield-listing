@@ -2842,6 +2842,9 @@ p.text-bold-primary {
     z-index: 99999;
     background-color: transparent;
 }
+#lblSalary{
+    display: none;
+}
 @media only screen and (max-width: 991px) {
     .mean-container .mean-bar a {
         padding: 6px 16px;
