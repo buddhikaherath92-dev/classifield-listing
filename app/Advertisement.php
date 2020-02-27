@@ -8,8 +8,6 @@ use Illuminate\Support\Facades\Auth;
 
 class Advertisement extends Model
 {
-    public $timestamps = false;
-
     /**
      * The attributes that are mass assignable.
      *
@@ -42,6 +40,11 @@ class Advertisement extends Model
      */
     public function scopeWhereAuthUser($query){
         return $query->where('user_id', Auth::id());
+    }
+
+    public function setUpdatedAtAttribute($value)
+    {
+       ;
     }
 
     /**
