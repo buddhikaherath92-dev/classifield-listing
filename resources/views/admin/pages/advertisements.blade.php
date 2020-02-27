@@ -45,7 +45,8 @@
                         <th>Posted By</th>
                         <th>Status</th>
                         <th>Expired on</th>
-                        <th>Timestamps</th>
+                        <th>Created At</th>
+                        <th>Updated At</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
@@ -82,14 +83,10 @@
                             </td>
                             <td>{{$advertisement->expire_date}}</td>
                             <td>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <b>C :</b> {{$advertisement->created_at}}
-                                    </li>
-                                    <li class="list-group-item">
-                                        <b>U :</b> {{$advertisement->updated_at}}
-                                    </li>
-                                </ul>
+                                {{$advertisement->created_at}}
+                            </td>
+                            <td>
+                                {{$advertisement->updated_at}}
                             </td>
                             <td class="text-center">
                                 @if( $advertisement->is_inactive == 1 )
