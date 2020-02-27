@@ -314,7 +314,7 @@
                                         </div>
                                         <div class="col-sm-9 col-12">
                                             <div class="form-group">
-                                                <button type="submit" class="cp-default-btn-sm" id="submit_button">Submit For Review!</button>
+                                                <button type="submit" class="cp-default-btn-sm" id="submit_button">Submit</button>
                                             </div>
                                         </div>
                                     </div>
