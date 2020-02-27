@@ -313,6 +313,9 @@
                                         <div class="col-sm-3 col-12">
                                         </div>
                                         <div class="col-sm-9 col-12">
+                                            <div class="alert alert-info">
+                                                <strong>Info!</strong> You can edit your advertisement after submitting from 'My Ads' in your account dashboard
+                                            </div>
                                             <div class="form-group">
                                                 <button type="submit" class="cp-default-btn-sm" id="submit_button">Submit</button>
                                             </div>
