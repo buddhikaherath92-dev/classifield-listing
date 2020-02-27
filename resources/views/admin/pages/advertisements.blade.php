@@ -43,11 +43,9 @@
                         <th>Title</th>
                         <th>Category</th>
                         <th>Posted By</th>
-                        <th>Featured</th>
                         <th>Status</th>
                         <th>Expired on</th>
-                        <th>Created At</th>
-                        <th>Updated At</th>
+                        <th>Timestamps</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
@@ -72,11 +70,27 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>{{$advertisement->is_featured == 1 ? 'YES' : 'NO'}}</td>
-                            <td>{{$advertisement->is_inactive == 1 ? 'INACTIVE' : 'ACTIVE'}}</td>
+                            <td>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        {{$advertisement->is_featured == 1 ? 'Featured Ad' : 'Free Ad'}}
+                                    </li>
+                                    <li class="list-group-item">
+                                        {{$advertisement->is_inactive == 1 ? 'Inactive' : 'Active'}}
+                                    </li>
+                                </ul>
+                            </td>
                             <td>{{$advertisement->expire_date}}</td>
-                            <td>{{$advertisement->created_at}}</td>
-                            <td>{{$advertisement->updated_at}}</td>
+                            <td>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b>C :</b> {{$advertisement->created_at}}
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b>U :</b> {{$advertisement->updated_at}}
+                                    </li>
+                                </ul>
+                            </td>
                             <td class="text-center">
                                 @if( $advertisement->is_inactive == 1 )
                                 <span data-toggle="modal" id="confirmModelLink" data-target="#ConfirmModel"
