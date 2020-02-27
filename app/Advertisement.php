@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 
 class Advertisement extends Model
 {
+    public $timestamps = false;
+
     /**
      * The attributes that are mass assignable.
      *
