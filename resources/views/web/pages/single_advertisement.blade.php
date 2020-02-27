@@ -31,7 +31,11 @@
                         </div>
                         <div class="gradient-padding reduce-padding">
                             <div id="carouselExampleIndicators" class="carousel slide custom-carousel" data-ride="carousel">
-                                <span class="price">$1,550</span>
+                                @if($advertisement->price === null)
+                                    <span class="price">Negotiable</span>
+                                    @else
+                                    <span class="price">{{'Rs '.number_format($advertisement->price)}}</span>
+                                @endif
                                 <ol class="carousel-indicators">
                                     @if($advertisement->img_1 !==null)
                                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
