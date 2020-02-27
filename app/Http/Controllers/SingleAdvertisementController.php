@@ -43,7 +43,7 @@ class SingleAdvertisementController extends Controller
             ->orWhere('subcategory_id', $advertisement->subcategory_id)
             ->orWhere('category_id', $advertisement->category_id )
             ->limit(4)->whereActive()->get();
-        $advertisement->increment('views');
+        //$advertisement->increment('views');
 
         if($advertisement->is_inactive === 0 || ($advertisement->is_inactive === 1 && $previousRoute === '/my_dashboard/ads')){
             return view('web.pages.single_advertisement', [

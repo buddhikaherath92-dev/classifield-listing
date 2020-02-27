@@ -42,11 +42,6 @@ class Advertisement extends Model
         return $query->where('user_id', Auth::id());
     }
 
-    public function setUpdatedAtAttribute($value)
-    {
-       ;
-    }
-
     /**
      * Filters advertisements which are active
      * @param $query
