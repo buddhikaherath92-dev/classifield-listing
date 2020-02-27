@@ -2845,6 +2845,30 @@ p.text-bold-primary {
 #lblSalary{
     display: none;
 }
+.gradient-wrapper .gradient-padding .price{
+    position: absolute;
+    background-image: url("./img/product-price-back.png");
+    top: 13px;
+    right: -13px;
+    padding: 12px 36px 32px 62px;
+    z-index: 8;
+    font-size: 26px;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media only screen and (max-width: 767px){
+    .gradient-wrapper .gradient-padding  span.price {
+        right: -8px;
+        padding: 0px 9px 5px 34px;
+        font-size: 20px;
+    }
+}
+
 @media only screen and (max-width: 991px) {
     .mean-container .mean-bar a {
         padding: 6px 16px;

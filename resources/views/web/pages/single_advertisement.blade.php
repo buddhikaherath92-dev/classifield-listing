@@ -31,6 +31,7 @@
                         </div>
                         <div class="gradient-padding reduce-padding">
                             <div id="carouselExampleIndicators" class="carousel slide custom-carousel" data-ride="carousel">
+                                <span class="price">$1,550</span>
                                 <ol class="carousel-indicators">
                                     @if($advertisement->img_1 !==null)
                                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -211,21 +212,25 @@
                                         <img src="{{asset('web/img/user/bank.png')}}" alt="user"
                                              class="img-fluid pull-left">
                                         <div class="media-body">
-                                            <span>Price</span>
+                                            @if($advertisement->category_id == 6)
+                                                <span>Salary</span>
+                                            @else
+                                                <span>Price</span>
+                                            @endif
                                             <h4>{{$price_type == 1 ? 'Negotiable':'Fixed'}}</h4>
                                         </div>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="media">
-                                        <img src="{{asset('web/img/user/bank.png')}}" alt="user"
-                                             class="img-fluid pull-left">
-                                        <div class="media-body">
-                                            <span>Price</span>
-                                            <h4>{{$advertisement->price != null ? $advertisement->price : 'N/A'}}</h4>
-                                        </div>
-                                    </div>
-                                </li>
+{{--                                <li>--}}
+{{--                                    <div class="media">--}}
+{{--                                        <img src="{{asset('web/img/user/bank.png')}}" alt="user"--}}
+{{--                                             class="img-fluid pull-left">--}}
+{{--                                        <div class="media-body">--}}
+{{--                                            <span>Price</span>--}}
+{{--                                            <h4>{{$advertisement->price != null ? $advertisement->price : 'N/A'}}</h4>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </li>--}}
                                 <li>
                                     <div class="media">
                                         <img src="{{asset('web/img/user/eye.png')}}" alt="user"
