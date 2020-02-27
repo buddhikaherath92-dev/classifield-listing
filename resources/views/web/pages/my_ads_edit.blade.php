@@ -347,6 +347,7 @@
                 url: "/sub",
                 method: 'get',
                 dataType: 'json',
+                cache : false,
                 data: {id: $(this).find('option:selected').val()}
 
             }).done(function (res) {
@@ -376,6 +377,7 @@
                         url:"/sub",
                         method:'get',
                         dataType:'json',
+                        cache : false,
                         data:{ id:$(this).find('option:selected').val()}
                     }).done(function (res) {
                         setTimeout(function(){

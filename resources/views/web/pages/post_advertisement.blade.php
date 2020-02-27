@@ -388,6 +388,7 @@
             $.ajax({
                 url: "sub",
                 method: 'get',
+                cache : false,
                 dataType: 'json',
                 data: {id: $(this).find('option:selected').val()}
 
@@ -425,6 +426,7 @@
                     $.ajax({
                         url:"sub",
                         method:'get',
+                        cache : false,
                         dataType:'json',
                         data:{ id:$(this).find('option:selected').val()}
                     }).done(function (res) {

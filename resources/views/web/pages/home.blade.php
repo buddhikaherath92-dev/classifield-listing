@@ -88,7 +88,7 @@
                                                 {{$featured_advertisement->title}}
                                             </div>
                                             <div class="item-pirce text-center">
-                                                {{$featured_advertisement->price ? 'Rs '.number_format($featured_advertisement->price).' (Fixed)' :  'Negotiable'}}
+                                                {{$featured_advertisement->price ? 'Rs '.number_format($featured_advertisement->price) :  'Negotiable'}}
                                             </div>
                                             <div class="item-views-date">
                                                 <div class="item-date text-center">
@@ -199,7 +199,7 @@
                                         {{$recent_advertisement->title}}
                                     </div>
                                     <div class="item-pirce text-center">
-                                        {{$recent_advertisement->price ? 'Rs '.number_format($recent_advertisement->price).' (Fixed)' :  'Negotiable'}}
+                                        {{$recent_advertisement->price ? 'Rs '.number_format($recent_advertisement->price) :  'Negotiable'}}
                                     </div>
                                     <div class="item-views-date">
                                         <div class="item-date text-center">
