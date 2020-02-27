@@ -92,7 +92,7 @@
                                             </div>
                                             <div class="item-views-date">
                                                 <div class="item-date text-center">
-                                                    {{ucwords(trans($featured_advertisement->created_at->diffForHumans()))}}
+                                                    {{ucwords(trans($featured_advertisement->updated_at->diffForHumans()))}}
                                                 </div>
                                                 <div class="item-views text-center">
                                                     <span class="fa fa-eye"></span> {{$featured_advertisement->views}}
@@ -203,7 +203,7 @@
                                     </div>
                                     <div class="item-views-date">
                                         <div class="item-date text-center">
-                                            {{ucwords(trans($recent_advertisement->created_at->diffForHumans()))}}
+                                            {{ucwords(trans($recent_advertisement->updated_at->diffForHumans()))}}
                                         </div>
                                         <div class="item-views text-center">
                                             <span class="fa fa-eye"></span> {{$recent_advertisement->views}}
