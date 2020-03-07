@@ -21,7 +21,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="{{ route('admin_newsletters_store') }}" method="post" id="newsletter_form">
+                        <form action="{{ route('post_banner_ads') }}" method="post" id="newsletter_form">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label class="control-label col-sm-2" for="page_select">Page :</label>
@@ -31,6 +31,11 @@
                                             <option value="{{ $index }}">{{$page}}</option>
                                         @endforeach
                                     </select>
+                                    @if ($errors->has('page'))
+                                        <span class="invalid-feedback" style="display: block">
+                                                        <small>{{ $errors->first('page') }}</small>
+                                                    </span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-group">
@@ -41,6 +46,12 @@
                                             <option value="{{ $index }}">{{$location}}</option>
                                         @endforeach
                                     </select>
+
+                                    @if ($errors->has('location'))
+                                        <span class="invalid-feedback" style="display: block">
+                                                        <small>{{ $errors->first('location') }}</small>
+                                                    </span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-group">
@@ -54,24 +65,34 @@
                                                     <small>Ad Image is required!</small>
                                                 </span>
 
-                                    @if ($errors->has('img_1'))
+                                    @if ($errors->has('img'))
                                         <span class="invalid-feedback" style="display: block">
-                                                                <small>{{ $errors->first('img_1') }}</small>
+                                                                <small>{{ $errors->first('img') }}</small>
                                                             </span>
                                     @endif
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-sm-2" for="exDate">Expire Date :</label>
-                                <input type="date" id="exDate"
+                                <input type="date" id="exDate" min="{{ \Carbon\Carbon::now()->toDateString()}}"
                                        value="{{ \Carbon\Carbon::now()->addDays(10)->toDateString()}}" class="form-control" name="expire_date">
+                                @if ($errors->has('expire_date'))
+                                    <span class="invalid-feedback" style="display: block">
+                                                                <small>{{ $errors->first('expire_date') }}</small>
+                                                            </span>
+                                @endif
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-sm-2" for="exDate">Ad Status :</label>
                                 <select class="form-control" id="status_select" name="is_active">
-                                    <option value="true">Active</option>
-                                    <option value="false">Inactive</option>
+                                    <option value="1">Active</option>
+                                    <option value="0">Inactive</option>
                                 </select>
+                                @if ($errors->has('is_active'))
+                                    <span class="invalid-feedback" style="display: block">
+                                                                <small>{{ $errors->first('is_active') }}</small>
+                                                            </span>
+                                @endif
                             </div>
                             <button class="btn btn-primary" type="submit">Add</button>
                             <button class="btn btn-info" type="reset">Clear Data</button>
@@ -111,6 +132,7 @@
         </div>
     </table>
     <script type="text/javascript">
+        $('#exampleModalCenter').modal({ 'show' : {{ count($errors) > 0 ? 'true' : 'false' }}  });
         $("#img_ad").change(function() {
             readURL(this, 'img_1_preview');
         });
