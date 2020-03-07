@@ -21,7 +21,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="{{ route('post_banner_ads') }}" method="post" id="newsletter_form">
+                        <form action="{{ route('post_banner_ads') }}" method="post" id="newsletter_form" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label class="control-label col-sm-2" for="page_select">Page :</label>
@@ -114,19 +114,21 @@
                 </tr>
                 </thead>
                 <tbody style="font-size: 16px; color: white">
-{{--                @foreach($newsletters as $index=>$newsletter)--}}
-{{--                    <tr style="color: #9fcdff">--}}
-{{--                        <td>{{ $newsletter->id }}</td>--}}
-{{--                        <td>{{ $newsletter->title }}</td>--}}
-{{--                        <td>{{ $newsletter->description }}</td>--}}
-{{--                        <td @if($newsletter->status == 1)--}}
-{{--                            style="color: green"--}}
-{{--                            @elseif($newsletter->status == 0)--}}
-{{--                            style="color: #ff1744"--}}
-{{--                                @endif>{{ $newsletter->status == 1 ? "Sent" : "Pending" }}</td>--}}
-{{--                        <td><a type="submit" href="{{ url('/admin/newsletter_preview/'.$newsletter->id) }}" class="btn btn-success">Preview</a></td>--}}
-{{--                    </tr>--}}
-{{--                @endforeach--}}
+                @foreach($bannerAds as $index=>$bannerAd)
+                    <tr style="color: #9fcdff">
+                        <td>{{ $bannerAd->id }}</td>
+                        <td>{{config('constance.pages')[$bannerAd->page]}}</td>
+                        <td>{{config('constance.locations')[$bannerAd->location]}}</td>
+                        <td>
+                            <img id="img_tbl" src="{{asset('images/banner_ads/'.$bannerAd->img)}}" class="img-thumbnail"
+                                 style="max-height: 50px; max-width: 100px; margin: 5px;" />
+                        </td>
+                        <td>{{$bannerAd->expire_date}}</td>
+                        <td>{{$bannerAd->expire_date? 'Active' : 'In Active'}}</td>
+                        <td>Edit</td>
+
+                    </tr>
+                @endforeach
                 </tbody>
             </table>
         </div>
