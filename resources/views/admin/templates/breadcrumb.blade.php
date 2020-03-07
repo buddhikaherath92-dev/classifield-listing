@@ -16,4 +16,10 @@
             </li>
         @endif
 
+        @if(Route::current()->uri === 'admin/banner_ads')
+            <li class="breadcrumb-item">
+                <a href="#">Banner Ads</a>
+            </li>
+        @endif
+
 </ol>

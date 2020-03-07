@@ -23,4 +23,10 @@
             <span>Referrals</span>
         </a>
     </li>
+    <li class="nav-item @if(Route::currentRouteName() === 'banner_ads') active @endif">
+        <a class="nav-link" href="{{route('banner_ads')}}">
+            <i class="fas fa-audio-description"></i>
+            <span>Banner Ads</span>
+        </a>
+    </li>
 </ul>
