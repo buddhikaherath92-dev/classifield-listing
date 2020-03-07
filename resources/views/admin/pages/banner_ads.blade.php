@@ -12,73 +12,72 @@
         <!-- Modal -->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close" style="color: red; font-size: 35px; right: 5px">
-                        <span aria-hidden="true" style="float: right; right: 0">×</span>
-                    </button>
-                    <br>
-{{--                    <form action="{{ route('admin_newsletters_store') }}" method="post" id="newsletter_form">--}}
-{{--                        {{ csrf_field() }}--}}
-{{--                        <div class="form-group">--}}
-{{--                            <label class="control-label col-sm-2" for="title">Title :</label>--}}
-{{--                            <div class="col-sm-10">--}}
-{{--                                <input type="text" name="title" class="form-control" id="title"--}}
-{{--                                       placeholder="Title For News Letter">--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="form-group">--}}
-{{--                            <label class="control-label col-sm-2" for="description">Description :</label>--}}
-{{--                            <div class="col-sm-10">--}}
-{{--                        <textarea placeholder="What makes your ad unique"--}}
-{{--                                  class="textarea form-control" name="description" id="description" rows="4" cols="20"--}}
-{{--                                  data-error="Description field is required" required></textarea>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="form-group" id="advertisementPendingBar">--}}
-{{--                            <label class="control-label col-sm-2" for="description">Advertisements :</label>--}}
-{{--                            <div class="row container" id="singleAdvertisement">--}}
-{{--                                <div class="col-10">--}}
-{{--                                    <select class="form-control" id="advertisement_combo" name="advertisement_combo">--}}
-{{--                                        @foreach($advertisements as $index => $advertisement)--}}
-{{--                                            <option value="{{ $advertisement->id }}"--}}
-{{--                                                    data-title="{{ $advertisement->title }}"--}}
-{{--                                                    id="{{'option'.$advertisement->id}}"--}}
-{{--                                                    name="select_ad">{{$advertisement->title}}</option>--}}
-{{--                                        @endforeach--}}
-{{--                                    </select>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-2">--}}
-{{--                                    <div class="form-group">--}}
-{{--                                        <div class="col-sm-offset-2 col-sm-10">--}}
-{{--                                            <button id="btn_add" type="button" name="add"--}}
-{{--                                                    class="btn btn-primary btnConfirm">--}}
-{{--                                                Add--}}
-{{--                                            </button>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-8">--}}
-{{--                                    <br>--}}
-{{--                                    <ul style="list-style: none;" id="title_area">--}}
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add new Banner ad</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close" style="color: red; font-size: 35px; right: 5px">
+                            <span aria-hidden="true" style="float: right; right: 0">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{{ route('admin_newsletters_store') }}" method="post" id="newsletter_form">
+                            {{ csrf_field() }}
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="page_select">Page :</label>
+                                <div class="col-sm-12">
+                                    <select class="form-control" id="page_select" name="page">
+                                        @foreach($pages as $index => $page)
+                                            <option value="{{ $index }}">{{$page}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="location_select">Location :</label>
+                                <div class="col-sm-12">
+                                    <select class="form-control" id="location_select" name="location">
+                                        @foreach($locations as $index => $location)
+                                            <option value="{{ $index }}">{{$location}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="img_ad">Ad :</label>
+                                <div class="col-sm-12">
+                                    <input type="file" class="form-control" id="img_ad"
+                                           name="img" value="{{ old('img') }}">
+                                    <img id="img_1_preview" class="img-thumbnail" style="max-height: 50px; max-width: 100px; margin: 5px; display: none" />
 
-{{--                                    </ul>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-4">--}}
-{{--                                    <br>--}}
-{{--                                    <ul style="list-style: none;" id="button_area">--}}
+                                    <span class="invalid-feedback" id="img_error">
+                                                    <small>Ad Image is required!</small>
+                                                </span>
 
-{{--                                    </ul>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <br>--}}
-{{--                            <div class="col-sm-offset-2 col-sm-10">--}}
-{{--                                <input type="hidden" value="" id="array_data" name="array_data">--}}
-{{--                                <button type="submit" class="btn btn-primary" id="btn_submit">Submit</button>--}}
-{{--                            </div>--}}
-{{--                            <br>--}}
-{{--                        </div>--}}
-{{--                    </form>--}}
+                                    @if ($errors->has('img_1'))
+                                        <span class="invalid-feedback" style="display: block">
+                                                                <small>{{ $errors->first('img_1') }}</small>
+                                                            </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="exDate">Expire Date :</label>
+                                <input type="date" id="exDate"
+                                       value="{{ \Carbon\Carbon::now()->addDays(10)->toDateString()}}" class="form-control" name="expire_date">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="exDate">Ad Status :</label>
+                                <select class="form-control" id="status_select" name="is_active">
+                                    <option value="true">Active</option>
+                                    <option value="false">Inactive</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary" type="submit">Add</button>
+                            <button class="btn btn-info" type="reset">Clear Data</button>
+                        </form>
+                    </div>
+
                 </div>
             </div>
             <table class="table">
@@ -111,4 +110,24 @@
             </table>
         </div>
     </table>
+    <script type="text/javascript">
+        $("#img_ad").change(function() {
+            readURL(this, 'img_1_preview');
+        });
+
+        function readURL(input, target) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#'+target).attr('src', e.target.result);
+                    $('#'+target).css('display', 'block');
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
 @endsection
+
+
