@@ -171,8 +171,8 @@ class RegisterController extends Controller
     protected function registered(Request $request, $user)
     {
         $connection = null;//create a connection variable
-        system("ping -c 1 google.com", $connection);//check if connection is available
-        if ($connection == 0) {
+       //system("ping -c 1 google.com", $connection);//check if connection is available
+        if ($connection == null) {
             $email = $user->email;
             $pin = $user->email_code;
             Mail::to($email)->send(new SendMaillable($pin));

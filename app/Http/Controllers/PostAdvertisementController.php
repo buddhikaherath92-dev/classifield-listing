@@ -78,10 +78,10 @@ class PostAdvertisementController extends Controller
                 'category_id' => 'required|integer',
                 'subcategory_id' => 'required|integer',
                 'district' => 'string|nullable',
-                'img_1' => 'image|mimes:jpeg,jpg,png|max:2000|required',
-                'img_2' => 'image|mimes:jpeg,jpg,png|max:2000',
-                'img_3' => 'image|mimes:jpeg,jpg,png|max:2000',
-                'img_4' => 'image|mimes:jpeg,jpg,png|max:2000',
+                'img_1' => 'mimes:jpeg,jpg,png|max:2000|required',
+                'img_2' => 'mimes:jpeg,jpg,png|max:2000',
+                'img_3' => 'mimes:jpeg,jpg,png|max:2000',
+                'img_4' => 'mimes:jpeg,jpg,png|max:2000',
                 'is_negotiable' => 'integer',
                 'price' => request('is_negotiable') == '0' ? 'required|min:2|regex:/^\d*(\.\d{1,2})?$/' :
                     'nullable|regex:/^\d*(\.\d{1,2})?$/',
@@ -171,7 +171,7 @@ class PostAdvertisementController extends Controller
             $incomingData['img_4'] = $img_4;
             $incomingData['key_words'] = $incomingData['key_words'].','.$this->common
                     ->getCategoryObjectFromID((int)$incomingData['category_id'])['name'].','.$this->common
-                    ->getCategoryObjectFromID((int)$incomingData['subcategory_id'])['name'];
+                    ->getCategoryObjectFromSubID((int)$incomingData['subcategory_id'])['name'];
             $incomingData['created_at'] = Carbon::now();
             $incomingData['updated_at'] = Carbon::now();
             $advertisement=Advertisement::create($incomingData);
