@@ -101,7 +101,7 @@ class PostAdvertisementController extends Controller
 
                 $imagePath   = 'images/advertisements/';
                 $file        = request()->file('img_1');
-                $img_1    = $slug."_img_1.".$file->getClientOriginalExtension();
+                $img_1    = $slug."_img_1.".'jpg';
 
                 // move the file from tmp to the destination path
                 $file->move($imagePath, $img_1);
@@ -118,7 +118,7 @@ class PostAdvertisementController extends Controller
 
                 $imagePath   = 'images/advertisements/';
                 $file        = request()->file('img_2');
-                $img_2    = $slug."_img_2.".$file->getClientOriginalExtension();
+                $img_2    = $slug."_img_2.".'jpg';
 
                 // move the file from tmp to the destination path
                 $file->move($imagePath, $img_2);
@@ -134,7 +134,7 @@ class PostAdvertisementController extends Controller
 
                 $imagePath   = 'images/advertisements/';
                 $file        = request()->file('img_3');
-                $img_3    = $slug."_img_3.".$file->getClientOriginalExtension();
+                $img_3    = $slug."_img_3.".'jpg';
 
                 // move the file from tmp to the destination path
                 $file->move($imagePath, $img_3);
@@ -150,7 +150,7 @@ class PostAdvertisementController extends Controller
 
                 $imagePath   = 'images/advertisements/';
                 $file        = request()->file('img_4');
-                $img_4    = $slug."_img_4.".$file->getClientOriginalExtension();
+                $img_4    = $slug."_img_4.".'jpg';
 
                 // move the file from tmp to the destination path
                 $file->move($imagePath, $img_4);
