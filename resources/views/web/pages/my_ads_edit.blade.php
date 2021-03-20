@@ -149,9 +149,7 @@
                                                 <textarea placeholder="What makes your ad unique"
                                                           class="form-control"
                                                           name="summary-ckeditor" rows="4" cols="20"
-                                                          data-error="Description field is required" wrap="hard">
-                                                    {{ htmlspecialchars_decode($advertisement['summary-ckeditor'])  }}
-                                                </textarea>
+                                                          data-error="Description field is required" wrap="hard">{{ htmlspecialchars_decode($advertisement['summary-ckeditor'])  }}</textarea>
 
                             <span class="invalid-feedback" id="ad_description_error">
                                                     <small>Please type a descrition for advertisement!</small>
