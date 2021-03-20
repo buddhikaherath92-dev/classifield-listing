@@ -40,7 +40,7 @@ class MyProfileController extends Controller
             'name' => 'required|string|max:255',
             'tel_no' => 'required|string',
             'account_type' => 'required|integer',
-            'logo' => 'image|mimes:jpeg,jpg,png|max:2000',
+            'logo' => 'mimes:jpeg,jpg,png|max:2000',
         ]);
 
         $logo = null;
