@@ -7,6 +7,12 @@ return [
      * -----------------------------------------------------------------------------------------------------------------
      */
     'categories' => [
+        0 => [
+            'name'   => "All",
+            'slug'   => "all",
+            'image'  => env('APP_URL').'images/categories/electronics.png',
+            'sub_cat'    => []
+        ],
         1 => [
             'name'   => "Electronics",
             'slug'   => "electronics",

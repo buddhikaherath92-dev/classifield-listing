@@ -20,7 +20,7 @@
                             <div class="form-group search-input-area input-icon-category">
                                 <div id="SelectLocation" class="form-group search-input-area input-icon-category">
                                     <select id="categories" class="select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" name="p_cat">
-                                        <option class="first" value="all">Select Category</option>
+                                        <option class="first" value="0">Select Category</option>
                                         @foreach($categories as $catIndex => $category)
                                             <option class="" value="{{ $category['id'] }}"
                                                     {{ (int)$p_cat === $category['id'] ? 'selected' :'' }}>{{ $category['name'] }}</option>
