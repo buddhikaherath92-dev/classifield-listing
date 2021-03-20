@@ -58,7 +58,7 @@ class MyProfileController extends Controller
 
         }
 
-        $incomingData['logo'] = $logo;
+        if( $logo !== null ) $incomingData['logo'] = $logo;
         $incomingData['type'] = $incomingData['account_type'];
 
         Auth::user()->update($incomingData);
