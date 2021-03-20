@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Facades\Redirect;
 
 class ForgotPasswordController extends Controller
 {
@@ -49,9 +50,24 @@ class ForgotPasswordController extends Controller
             $request->only('email')
         );
 
+
         return $response == Password::RESET_LINK_SENT
-            ? $this->sendResetLinkResponse($response)
+            ? $this->sendResetLinkResponse(true, $request->email)
             : $this->sendResetLinkFailedResponse($request, $response);
+    }
+
+    /**
+     * Get the response for a successful password reset link.
+     *
+     * @param  string  $response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     */
+    protected function sendResetLinkResponse($staus, $email)
+    {
+        return view('auth.passwords.email', [
+            'status' => $staus,
+            'email' => $email
+        ]);
     }
 
 }
